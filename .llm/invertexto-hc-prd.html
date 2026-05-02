@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PRD — Invertexto-HC | Plataforma Clínica para o Hospital das Clínicas</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --brand: #0F766E;
+    --brand-dark: #134E4A;
+    --brand-light: #CCFBF1;
+    --accent: #F59E0B;
+    --bg: #F8FAFC;
+    --ink: #0F172A;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  .gradient-hero {
+    background: linear-gradient(135deg, #0F766E 0%, #134E4A 60%, #042f2e 100%);
+  }
+  .section-title {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--brand-dark);
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .card {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px -12px rgba(15, 118, 110, 0.18);
+  }
+  .toc a {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: #475569;
+    font-size: 13px;
+    transition: all .15s;
+  }
+  .toc a:hover { background: var(--brand-light); color: var(--brand-dark); }
+  .check::before { content: "✓"; color: #059669; font-weight: 800; margin-right: 8px; }
+  .cross::before { content: "✗"; color: #DC2626; font-weight: 800; margin-right: 8px; }
+  .warn::before { content: "▲"; color: #D97706; font-weight: 800; margin-right: 8px; }
+  .grid-feature::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--brand) 0%, var(--accent) 100%);
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  table.matrix th { background: var(--brand-dark); color: white; padding: 10px; text-align: left; font-size: 13px; }
+  table.matrix td { padding: 10px; border-bottom: 1px solid #E2E8F0; font-size: 14px; vertical-align: top; }
+  table.matrix tr:nth-child(even) td { background: #F8FAFC; }
+  .risk-high { background: #FEF2F2; border-left: 4px solid #DC2626; }
+  .risk-med { background: #FFFBEB; border-left: 4px solid #D97706; }
+  .risk-low { background: #F0FDF4; border-left: 4px solid #059669; }
+  .step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--brand); color: white; font-weight: 700; font-size: 14px;
+  }
+  .kbd {
+    background: #1E293B; color: #CBD5E1;
+    padding: 2px 8px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  }
+  @media print {
+    .no-print { display: none !important; }
+    body { background: white; }
+    .card { box-shadow: none; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="gradient-hero text-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <div class="flex items-center gap-2 mb-4">
+      <span class="pill bg-white/15 text-white">PRD · v1.0</span>
+      <span class="pill bg-amber-400/20 text-amber-200">MVP · Pre-launch</span>
+      <span class="pill bg-white/10 text-white">Confidencial</span>
+    </div>
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">Invertexto-HC</h1>
+    <p class="text-xl md:text-2xl text-teal-100 mt-3 font-light max-w-3xl">
+      Plataforma web operacional para médicos, residentes e internos do Hospital das Clínicas — notepad clínico sem fricção e arsenal de ferramentas integradas.
+    </p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+      <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+        <div class="text-xs uppercase tracking-wider text-teal-200">Product Owner</div>
+        <div class="font-semibold mt-1">Techlead solo</div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+        <div class="text-xs uppercase tracking-wider text-teal-200">Modelo</div>
+        <div class="font-semibold mt-1">100% Gratuito</div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+        <div class="text-xs uppercase tracking-wider text-teal-200">Stack</div>
+        <div class="font-semibold mt-1">Vercel · Supabase</div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+        <div class="text-xs uppercase tracking-wider text-teal-200">Data</div>
+        <div class="font-semibold mt-1">Maio · 2026</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- LAYOUT -->
+<div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-12 gap-10">
+
+  <!-- TOC -->
+  <aside class="col-span-12 md:col-span-3 no-print">
+    <nav class="toc sticky top-6 bg-white border border-slate-200 rounded-xl p-4">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 px-2">Índice</div>
+      <a href="#executivo">1 · Resumo Executivo</a>
+      <a href="#problema">2 · Problema & Persona</a>
+      <a href="#valor">3 · Proposta de Valor</a>
+      <a href="#features">4 · Funcionalidades Core</a>
+      <a href="#jornada">5 · Casos de Uso & Jornada</a>
+      <a href="#finer">6 · Diagnóstico FINER</a>
+      <a href="#riscos">7 · Riscos & Mitigações</a>
+      <a href="#nfr">8 · Requisitos Não-Funcionais</a>
+      <a href="#arquitetura">9 · Arquitetura</a>
+      <a href="#roadmap">10 · Roadmap & Próximos Passos</a>
+      <a href="#metricas">11 · Métricas de Sucesso</a>
+    </nav>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="col-span-12 md:col-span-9 space-y-16">
+
+    <!-- 1. EXECUTIVO -->
+    <section id="executivo">
+      <h2 class="text-3xl section-title">1. Resumo Executivo</h2>
+      <p class="mt-4 text-slate-700 text-lg">
+        O Invertexto-HC é uma plataforma web focada no fluxo operacional clínico do Hospital das Clínicas de São Paulo. Nasce de uma dor concreta observada no chão de hospital: residentes e internos perdem tempo trafegando anotações de prontuário entre dispositivos, e fragmentam o atendimento navegando por dezenas de sites avulsos para acessar calculadoras, escores, CID-10, receituários e guidelines.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-4 mt-6">
+        <div class="card p-6">
+          <div class="text-xs uppercase tracking-wider text-teal-700 font-bold">Visão</div>
+          <p class="mt-2 text-slate-700">
+            Tornar-se o "navegador clínico" padrão do residente médico brasileiro — a primeira aba aberta na consulta, a última fechada no plantão.
+          </p>
+        </div>
+        <div class="card p-6">
+          <div class="text-xs uppercase tracking-wider text-teal-700 font-bold">Missão</div>
+          <p class="mt-2 text-slate-700">
+            Reduzir o atrito operacional do médico em formação, devolvendo minutos de cada consulta para o que importa — o paciente.
+          </p>
+        </div>
+        <div class="card p-6">
+          <div class="text-xs uppercase tracking-wider text-teal-700 font-bold">Escopo MVP</div>
+          <p class="mt-2 text-slate-700">
+            Notepad em URL pública (<span class="kbd">/username</span>), com auto-save, e sidebar com ferramentas clínicas curadas — sem login, sem app móvel, sem IA.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-teal-50 border-l-4 border-teal-600 p-5 rounded-r-lg">
+        <div class="font-bold text-teal-900">Hipótese central de negócio</div>
+        <p class="text-teal-900/90 mt-1">
+          <em>Se</em> oferecermos um notepad clínico de adoção zero-fricção combinado com um arsenal de ferramentas em uma única tela, <em>então</em> capturaremos o comportamento atual de <em>"Invertexto + 8 abas abertas"</em> e nos tornaremos o substrato operacional do residente — gerando, em fases futuras, terreno fértil para camada de IA, integrações com prontuário e expansão para outros hospitais-escola.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. PROBLEMA -->
+    <section id="problema">
+      <h2 class="text-3xl section-title">2. Definição do Problema & Público-Alvo</h2>
+
+      <div class="card p-6 mt-4">
+        <div class="text-xs uppercase tracking-wider text-rose-700 font-bold">Problema em uma frase</div>
+        <p class="mt-2 text-2xl font-semibold text-slate-800 leading-snug">
+          O registro do prontuário é demorado e o acesso a ferramentas clínicas está pulverizado em dezenas de sites — o residente paga esse imposto a cada paciente atendido.
+        </p>
+      </div>
+
+      <h3 class="text-xl font-bold mt-10 text-slate-800">Os dois eixos da dor</h3>
+      <div class="grid md:grid-cols-2 gap-5 mt-4">
+        <div class="card p-6">
+          <div class="text-amber-600 font-bold text-sm">EIXO 1 · Trânsito de anotações</div>
+          <p class="mt-2 text-slate-700">
+            O residente atende, anota e precisa apresentar o caso ao preceptor em outra sala. Hoje, isso significa imprimir folhas, mandar por e-mail e abrir o e-mail no computador da preceptoria, ou recorrer a soluções improvisadas como Invertexto.com público ou Livenotes (pago, com login).
+          </p>
+        </div>
+        <div class="card p-6">
+          <div class="text-amber-600 font-bold text-sm">EIXO 2 · Fragmentação de ferramentas</div>
+          <p class="mt-2 text-slate-700">
+            Durante a consulta o médico cruza calculadoras, escores clínicos, CID-10, dose de medicações, antimicrobianos e guidelines em sites distintos. Cada nova aba é uma quebra de raciocínio e um custo cognitivo somado ao plantão.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-bold mt-10 text-slate-800">Personas-alvo</h3>
+      <div class="grid md:grid-cols-3 gap-5 mt-4">
+        <div class="card p-6">
+          <div class="text-3xl">🩺</div>
+          <div class="font-bold mt-2 text-slate-800">Residente Médico</div>
+          <div class="text-xs text-slate-500 uppercase tracking-wider">Persona primária</div>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>• Atende sob preceptoria e precisa apresentar casos rapidamente.</li>
+            <li>• Alta carga horária, baixa tolerância a fricção.</li>
+            <li>• Já adota atalhos próprios (sites, planilhas, blocos de notas).</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <div class="text-3xl">👩‍⚕️</div>
+          <div class="font-bold mt-2 text-slate-800">Interno de Medicina</div>
+          <div class="text-xs text-slate-500 uppercase tracking-wider">Persona primária</div>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>• Em formação, ainda construindo repertório de ferramentas.</li>
+            <li>• Alto valor percebido em guidelines e escores clínicos.</li>
+            <li>• Mais aberto a adotar uma ferramenta nova como padrão.</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <div class="text-3xl">🧑‍🏫</div>
+          <div class="font-bold mt-2 text-slate-800">Preceptor / Médico Sênior</div>
+          <div class="text-xs text-slate-500 uppercase tracking-wider">Persona secundária</div>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>• Recebe o caso do residente — beneficiário indireto.</li>
+            <li>• Potencial curador de conteúdo (guidelines).</li>
+            <li>• Influenciador de adoção dentro da equipe.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. VALOR -->
+    <section id="valor">
+      <h2 class="text-3xl section-title">3. Proposta de Valor & Diferenciais</h2>
+      <p class="mt-4 text-slate-700 text-lg">
+        A proposta é simples e deliberada: <strong>zero fricção de adoção</strong>. O residente abre <span class="kbd">invertexto-hc/seu-nome</span> e tem, simultaneamente, um bloco persistente e um cinto de utilidades clínicas — sem cadastro, sem onboarding, sem custo.
+      </p>
+
+      <table class="matrix w-full mt-6 rounded-lg overflow-hidden">
+        <thead>
+          <tr>
+            <th>Dimensão</th>
+            <th>Invertexto.com</th>
+            <th>Livenotes</th>
+            <th class="bg-teal-700">Invertexto-HC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Login obrigatório</td><td>Não</td><td>Sim</td><td><strong>Não</strong></td></tr>
+          <tr><td>Custo</td><td>Gratuito</td><td>Pago</td><td><strong>Gratuito</strong></td></tr>
+          <tr><td>Ferramentas clínicas integradas</td><td>—</td><td>—</td><td><strong>Sim, curadas</strong></td></tr>
+          <tr><td>CID-10 / Escores / Calculadoras</td><td>—</td><td>—</td><td><strong>Nativo</strong></td></tr>
+          <tr><td>Guidelines com curadoria médica</td><td>—</td><td>—</td><td><strong>Atualização mensal</strong></td></tr>
+          <tr><td>Foco no fluxo do residente HC</td><td>—</td><td>—</td><td><strong>Sim</strong></td></tr>
+        </tbody>
+      </table>
+
+      <div class="grid md:grid-cols-2 gap-5 mt-8">
+        <div class="card p-6 border-l-4 border-teal-600">
+          <div class="font-bold text-slate-800">Diferenciais defensáveis</div>
+          <ul class="mt-2 space-y-1 text-slate-700 text-sm">
+            <li class="check">Curadoria por preceptores do HC com cadência mensal.</li>
+            <li class="check">Notepad <em>self-routing</em> via URL — adoção viral por boca-a-boca.</li>
+            <li class="check">Stack enxuta (Vercel + Supabase) → custo marginal próximo de zero.</li>
+            <li class="check">Foco vertical em medicina hospitalar brasileira.</li>
+          </ul>
+        </div>
+        <div class="card p-6 border-l-4 border-amber-500">
+          <div class="font-bold text-slate-800">O que <em>não</em> é diferencial</div>
+          <ul class="mt-2 space-y-1 text-slate-700 text-sm">
+            <li class="cross">Tecnologia — qualquer competidor pode replicar a stack.</li>
+            <li class="cross">Notepad isolado — Invertexto.com já oferece de graça.</li>
+            <li class="cross">Banco de calculadoras genérico — MDCalc é referência.</li>
+          </ul>
+          <p class="mt-3 text-xs text-slate-500 italic">
+            O moat real é a combinação <strong>notepad + ferramentas + curadoria HC</strong> em uma única superfície.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FEATURES -->
+    <section id="features">
+      <h2 class="text-3xl section-title">4. Funcionalidades Core (MVP)</h2>
+      <p class="mt-4 text-slate-700">
+        O MVP é deliberadamente enxuto. Toda feature abaixo precisa estar viva no lançamento; tudo que extrapola está roadmapped para fases posteriores.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-5 mt-6">
+        <div class="card p-6 grid-feature">
+          <div class="font-bold text-slate-800">F1 · Notepad <span class="kbd">/username</span></div>
+          <p class="mt-2 text-sm text-slate-600">
+            Editor de texto persistente, sem login, com auto-save. URL pública roteia direto ao bloco. Suporte a markdown leve, listas, e formatação clínica básica.
+          </p>
+        </div>
+        <div class="card p-6 grid-feature">
+          <div class="font-bold text-slate-800">F2 · Calculadoras Clínicas</div>
+          <p class="mt-2 text-sm text-slate-600">
+            Conjunto curado: clearance de creatinina, IMC, dose pediátrica por peso, balanço hídrico, conversão de drogas, etc.
+          </p>
+        </div>
+        <div class="card p-6 grid-feature">
+          <div class="font-bold text-slate-800">F3 · Escores Clínicos</div>
+          <p class="mt-2 text-sm text-slate-600">
+            CHA₂DS₂-VASc, GRACE, qSOFA, Glasgow, Wells, NIHSS e demais escores rotineiros, com referência da fonte.
+          </p>
+        </div>
+        <div class="card p-6 grid-feature">
+          <div class="font-bold text-slate-800">F4 · Buscador CID-10</div>
+          <p class="mt-2 text-sm text-slate-600">
+            Busca instantânea por código ou termo. Integração futura: copiar direto para o notepad com um clique.
+          </p>
+        </div>
+        <div class="card p-6 grid-feature">
+          <div class="font-bold text-slate-800">F5 · Receituários</div>
+          <p class="mt-2 text-sm text-slate-600">
+            Templates de receituários (simples, controlado, especial) — geração textual sem assinatura digital no MVP.
+          </p>
+        </div>
+        <div class="card p-6 grid-feature">
+          <div class="font-bold text-slate-800">F6 · Guia de Procedimentos</div>
+          <p class="mt-2 text-sm text-slate-600">
+            Passo-a-passo de procedimentos comuns (acesso central, intubação, paracentese, etc.) curado por preceptores.
+          </p>
+        </div>
+        <div class="card p-6 grid-feature">
+          <div class="font-bold text-slate-800">F7 · Diluição & Dose de Medicações</div>
+          <p class="mt-2 text-sm text-slate-600">
+            Calculadora de bomba de infusão, diluições e velocidade — referência de plantão de UTI/PS.
+          </p>
+        </div>
+        <div class="card p-6 grid-feature">
+          <div class="font-bold text-slate-800">F8 · Guia de Antimicrobianos</div>
+          <p class="mt-2 text-sm text-slate-600">
+            Esquemas empíricos por foco infeccioso, com perfil local de resistência quando disponível.
+          </p>
+        </div>
+        <div class="card p-6 grid-feature">
+          <div class="font-bold text-slate-800">F9 · Compactador de Exames Laboratoriais</div>
+          <p class="mt-2 text-sm text-slate-600">
+            Cola valores brutos, recebe relatório textual condensado pronto para evolução de prontuário.
+          </p>
+        </div>
+        <div class="card p-6 grid-feature">
+          <div class="font-bold text-slate-800">F10 · Guia de Revisão por Doença</div>
+          <p class="mt-2 text-sm text-slate-600">
+            Resumos atualizados das principais doenças, organizados pelas 5 grandes áreas das provas de residência médica.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-slate-100 rounded-xl p-5">
+        <div class="font-bold text-slate-800 text-sm uppercase tracking-wider">Fora do escopo do MVP</div>
+        <ul class="mt-2 text-sm text-slate-600 space-y-1">
+          <li>· Autenticação e contas privadas</li>
+          <li>· Aplicativo mobile nativo (apenas web responsiva pós-MVP)</li>
+          <li>· Camadas de IA (sumarização, extração estruturada, transcrição)</li>
+          <li>· Compartilhamento entre usuários e ACL</li>
+          <li>· Integração com sistemas de prontuário hospitalar (HL7/FHIR)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. JORNADA -->
+    <section id="jornada">
+      <h2 class="text-3xl section-title">5. Casos de Uso & Jornada do Usuário</h2>
+
+      <h3 class="text-xl font-bold mt-6 text-slate-800">Caso de uso #1 — Apresentação ao preceptor</h3>
+      <ol class="mt-4 space-y-3">
+        <li class="flex gap-4"><span class="step-num">1</span><div><strong>Atendimento.</strong> Residente abre <span class="kbd">invertexto-hc/joao</span> no consultório e digita anotações da consulta.</div></li>
+        <li class="flex gap-4"><span class="step-num">2</span><div><strong>Auto-save.</strong> O conteúdo persiste continuamente — nada a salvar, nada a perder.</div></li>
+        <li class="flex gap-4"><span class="step-num">3</span><div><strong>Trânsito.</strong> Residente caminha até a sala da preceptoria e abre a mesma URL no computador do preceptor.</div></li>
+        <li class="flex gap-4"><span class="step-num">4</span><div><strong>Discussão.</strong> Caso é apresentado em segundos; preceptor lê direto da tela.</div></li>
+        <li class="flex gap-4"><span class="step-num">5</span><div><strong>Volta.</strong> Residente volta ao consultório e continua editando o mesmo bloco.</div></li>
+      </ol>
+
+      <h3 class="text-xl font-bold mt-10 text-slate-800">Caso de uso #2 — Consulta com ferramenta integrada</h3>
+      <ol class="mt-4 space-y-3">
+        <li class="flex gap-4"><span class="step-num">1</span><div><strong>Hipótese diagnóstica.</strong> Médico suspeita de TEP e precisa do escore de Wells.</div></li>
+        <li class="flex gap-4"><span class="step-num">2</span><div><strong>Sidebar.</strong> Sem trocar de aba, abre o ícone "Escores" e seleciona Wells-TEP.</div></li>
+        <li class="flex gap-4"><span class="step-num">3</span><div><strong>Cálculo.</strong> Preenche critérios, recebe pontuação e estratificação de risco.</div></li>
+        <li class="flex gap-4"><span class="step-num">4</span><div><strong>Registro.</strong> Resultado é colado no notepad com um clique e segue na evolução.</div></li>
+      </ol>
+
+      <h3 class="text-xl font-bold mt-10 text-slate-800">Caso de uso #3 — Plantão noturno</h3>
+      <ol class="mt-4 space-y-3">
+        <li class="flex gap-4"><span class="step-num">1</span><div><strong>Antibiótico empírico.</strong> Paciente com pneumonia hospitalar; residente abre Guia de Antimicrobianos.</div></li>
+        <li class="flex gap-4"><span class="step-num">2</span><div><strong>Diluição.</strong> Confirma dose e taxa de infusão na calculadora integrada.</div></li>
+        <li class="flex gap-4"><span class="step-num">3</span><div><strong>Compactação.</strong> Cola exames laboratoriais brutos e recebe resumo pronto para evolução.</div></li>
+      </ol>
+    </section>
+
+    <!-- 6. FINER -->
+    <section id="finer">
+      <h2 class="text-3xl section-title">6. Diagnóstico FINER</h2>
+      <p class="mt-4 text-slate-700">Avaliação estruturada da viabilidade do projeto sob cinco eixos clássicos de validação.</p>
+
+      <table class="matrix w-full mt-6 rounded-lg overflow-hidden">
+        <thead><tr><th>Eixo</th><th>Status</th><th>Análise</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Factível</strong></td>
+            <td><span class="pill bg-amber-100 text-amber-800">Parcial</span></td>
+            <td>Stack disponível e dentro do orçamento. Riscos: mudança de comportamento dos médicos e necessidade de curadoria contínua de guidelines.</td>
+          </tr>
+          <tr>
+            <td><strong>Interesse</strong></td>
+            <td><span class="pill bg-green-100 text-green-800">Alto</span></td>
+            <td>Dor real, frequente e validada empiricamente no chão do HC. Economia de tempo direta por consulta.</td>
+          </tr>
+          <tr>
+            <td><strong>Novo</strong></td>
+            <td><span class="pill bg-amber-100 text-amber-800">Diferenciado</span></td>
+            <td>Concorrentes (Livenotes, Invertexto, MedAssist, Voa, Tothai, Plaud) cobrem partes do problema; nenhum integra notepad + ferramentas curadas para residentes brasileiros.</td>
+          </tr>
+          <tr>
+            <td><strong>Ético</strong></td>
+            <td><span class="pill bg-rose-100 text-rose-800">Risco crítico</span></td>
+            <td>Notepad sem login + dados clínicos sensíveis = exposição LGPD e CFM. Demanda mitigação ativa antes do lançamento (ver Seção 7).</td>
+          </tr>
+          <tr>
+            <td><strong>Relevante</strong></td>
+            <td><span class="pill bg-green-100 text-green-800">Alto</span></td>
+            <td>Mercado endereçável amplo (residências médicas brasileiras), replicável a outros hospitais-escola, alinhado a propósito de carreira do PO.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 7. RISCOS -->
+    <section id="riscos">
+      <h2 class="text-3xl section-title">7. Riscos & Mitigações</h2>
+      <p class="mt-4 text-slate-700">
+        O projeto carrega um risco regulatório-jurídico estruturalmente alto. A arquitetura "URL pública + notepad" é o motor de adoção viral, <strong>e</strong> a fonte do maior passivo. Esta seção é a mais crítica do PRD.
+      </p>
+
+      <div class="space-y-4 mt-6">
+        <div class="risk-high p-5 rounded-r-lg">
+          <div class="flex items-start gap-3">
+            <span class="warn"></span>
+            <div class="flex-1">
+              <div class="font-bold text-rose-900">R1 — Dado clínico sensível em URL pública (LGPD/CFM)</div>
+              <p class="text-sm text-rose-900/90 mt-1">Mesmo "sem identificar paciente", residentes registrarão fragmentos de prontuário. Sem auth, criptografia em repouso e controle de acesso, há violação direta de LGPD e do Código de Ética Médica.</p>
+              <div class="text-xs uppercase font-bold text-rose-800 mt-3">Mitigações</div>
+              <ul class="text-sm text-rose-900/90 mt-1 space-y-1">
+                <li>· Disclaimer obrigatório antes do primeiro uso ("não inserir dados identificáveis").</li>
+                <li>· URL com slug aleatório de alta entropia como default; nome amigável é opt-in.</li>
+                <li>· Criptografia em repouso no Supabase (transparente) + TTL configurável.</li>
+                <li>· Sprint dedicada a auth opcional na fase 2 — não-bloqueante para MVP, mas roadmapped.</li>
+                <li>· Consultoria jurídica especializada em saúde digital antes do go-live público.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="risk-high p-5 rounded-r-lg">
+          <div class="flex items-start gap-3">
+            <span class="warn"></span>
+            <div class="flex-1">
+              <div class="font-bold text-rose-900">R2 — Responsabilidade civil sobre conteúdo clínico</div>
+              <p class="text-sm text-rose-900/90 mt-1">Guidelines, diluições e antimicrobianos defasados podem influenciar conduta clínica. Sem versionamento e revisão formal, o passivo recai sobre o operador.</p>
+              <div class="text-xs uppercase font-bold text-rose-800 mt-3">Mitigações</div>
+              <ul class="text-sm text-rose-900/90 mt-1 space-y-1">
+                <li>· Curadoria mensal por preceptores nomeados, com data de última revisão visível em cada artefato.</li>
+                <li>· Disclaimer legal robusto: ferramenta de apoio, não substitui julgamento clínico nem prescrição.</li>
+                <li>· Versionamento explícito de conteúdo (changelog público).</li>
+                <li>· Citação obrigatória da fonte primária em cada escore/guideline.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="risk-med p-5 rounded-r-lg">
+          <div class="flex items-start gap-3">
+            <span class="warn"></span>
+            <div class="flex-1">
+              <div class="font-bold text-amber-900">R3 — Resistência à mudança de comportamento</div>
+              <p class="text-sm text-amber-900/90 mt-1">Médicos têm atalhos consolidados. Convencer a trocar é difícil; o produto precisa ser <em>nitidamente</em> melhor que a soma das soluções atuais.</p>
+              <div class="text-xs uppercase font-bold text-amber-800 mt-3">Mitigações</div>
+              <ul class="text-sm text-amber-900/90 mt-1 space-y-1">
+                <li>· Fricção zero: URL direta funciona em segundos.</li>
+                <li>· Rollout via 3 a 5 residentes-embaixadores no HC antes do lançamento aberto.</li>
+                <li>· Performance percebida abaixo de 1s em qualquer interação.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="risk-med p-5 rounded-r-lg">
+          <div class="flex items-start gap-3">
+            <span class="warn"></span>
+            <div class="flex-1">
+              <div class="font-bold text-amber-900">R4 — Ausência de versão mobile no MVP</div>
+              <p class="text-sm text-amber-900/90 mt-1">Médicos consultam ferramentas no celular durante a consulta. Web não-responsiva = abandono imediato.</p>
+              <div class="text-xs uppercase font-bold text-amber-800 mt-3">Mitigações</div>
+              <ul class="text-sm text-amber-900/90 mt-1 space-y-1">
+                <li>· Web responsiva mobile-first como requisito não-funcional bloqueante.</li>
+                <li>· PWA na fase 2 para instalação como ícone no home screen.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="risk-low p-5 rounded-r-lg">
+          <div class="flex items-start gap-3">
+            <span class="warn"></span>
+            <div class="flex-1">
+              <div class="font-bold text-emerald-900">R5 — Custo de operação</div>
+              <p class="text-sm text-emerald-900/90 mt-1">Stack Vercel + Supabase tem free tiers generosos; sem IA no MVP, custo marginal por usuário tende a zero. Escala financeira não é risco no curto prazo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. NFR -->
+    <section id="nfr">
+      <h2 class="text-3xl section-title">8. Requisitos Não-Funcionais</h2>
+
+      <table class="matrix w-full mt-6 rounded-lg overflow-hidden">
+        <thead><tr><th>Categoria</th><th>Requisito</th><th>Critério de aceite</th></tr></thead>
+        <tbody>
+          <tr><td>Performance</td><td>Latência percebida</td><td>TTI &lt; 1.5s · keystroke-to-paint &lt; 50ms · auto-save imperceptível.</td></tr>
+          <tr><td>Disponibilidade</td><td>Uptime mensal</td><td>≥ 99.5% (compatível com SLA Vercel/Supabase free).</td></tr>
+          <tr><td>Persistência</td><td>Auto-save</td><td>Debounce 500ms; nenhum keystroke perdido em desconexão temporária (offline-first com sync).</td></tr>
+          <tr><td>Segurança</td><td>Transporte e repouso</td><td>HTTPS-only · HSTS · criptografia em repouso no Supabase · slug aleatório de 12+ chars como default.</td></tr>
+          <tr><td>Privacidade</td><td>Conformidade LGPD</td><td>Disclaimer no primeiro acesso · política de privacidade pública · TTL configurável · botão "apagar este bloco".</td></tr>
+          <tr><td>Acessibilidade</td><td>WCAG 2.1</td><td>Nível AA em contraste, navegação por teclado, ARIA labels nas ferramentas.</td></tr>
+          <tr><td>Responsividade</td><td>Mobile-first</td><td>Layout funcional de 320px a 1920px; sidebar colapsa em drawer no mobile.</td></tr>
+          <tr><td>Internacionalização</td><td>Locale</td><td>pt-BR como única locale do MVP; arquitetura preparada para i18n.</td></tr>
+          <tr><td>Observabilidade</td><td>Telemetria mínima</td><td>Logs anônimos de uso por feature; nenhum dado pessoal capturado sem consentimento explícito.</td></tr>
+          <tr><td>Manutenibilidade</td><td>Conteúdo clínico</td><td>Pipeline de revisão mensal com responsável nomeado por área e changelog público.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 9. ARQUITETURA -->
+    <section id="arquitetura">
+      <h2 class="text-3xl section-title">9. Arquitetura & Stack</h2>
+      <div class="grid md:grid-cols-2 gap-5 mt-4">
+        <div class="card p-6">
+          <div class="font-bold text-slate-800">Front-end</div>
+          <ul class="mt-2 text-sm text-slate-700 space-y-1">
+            <li>· Next.js (App Router) hospedado na Vercel</li>
+            <li>· Tailwind + design system Claude Design</li>
+            <li>· Editor leve com markdown shortcuts</li>
+            <li>· Service worker para offline-first do notepad</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <div class="font-bold text-slate-800">Back-end & dados</div>
+          <ul class="mt-2 text-sm text-slate-700 space-y-1">
+            <li>· Supabase Postgres como camada de persistência</li>
+            <li>· Row-level access via slug + token de sessão</li>
+            <li>· Edge Functions para sumarização de exames (regex-based no MVP)</li>
+            <li>· Sem AI layer no MVP — slot reservado para fase 2</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-6 bg-slate-100 rounded-xl p-5 text-sm text-slate-700">
+        <strong>Princípios arquiteturais:</strong> simplicidade radical · custo marginal próximo de zero · separação clara entre conteúdo curado (versionado em repositório) e dados de usuário (Supabase) · ausência deliberada de auth como vantagem de adoção, com porta de saída arquitetural pronta para a fase 2.
+      </div>
+    </section>
+
+    <!-- 10. ROADMAP -->
+    <section id="roadmap">
+      <h2 class="text-3xl section-title">10. Roadmap & Próximos Passos</h2>
+
+      <div class="grid md:grid-cols-3 gap-5 mt-6">
+        <div class="card p-6">
+          <div class="text-xs font-bold uppercase tracking-wider text-teal-700">Fase 1 · MVP</div>
+          <div class="font-bold mt-1 text-slate-800">Lançamento HC</div>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>· Notepad <span class="kbd">/username</span></li>
+            <li>· 10 ferramentas core curadas</li>
+            <li>· Web responsiva</li>
+            <li>· Disclaimer LGPD/CFM</li>
+            <li>· Rollout fechado: 3-5 embaixadores</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <div class="text-xs font-bold uppercase tracking-wider text-amber-700">Fase 2 · Pós-validação</div>
+          <div class="font-bold mt-1 text-slate-800">Maturidade</div>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>· Auth opcional (Supabase Auth)</li>
+            <li>· PWA instalável</li>
+            <li>· Compartilhamento residente↔preceptor</li>
+            <li>· Tema escuro</li>
+            <li>· Versionamento de blocos</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <div class="text-xs font-bold uppercase tracking-wider text-purple-700">Fase 3 · Escala</div>
+          <div class="font-bold mt-1 text-slate-800">IA & Expansão</div>
+          <ul class="mt-3 text-sm text-slate-700 space-y-1">
+            <li>· Sumarização clínica via API Anthropic</li>
+            <li>· Extração estruturada de exames</li>
+            <li>· Expansão para outros hospitais-escola</li>
+            <li>· App nativo iOS/Android</li>
+            <li>· Integrações HL7/FHIR exploratórias</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-bold mt-10 text-slate-800">Próximas ações imediatas</h3>
+      <ol class="mt-4 space-y-2 text-slate-700">
+        <li><span class="step-num">1</span><span class="ml-3">Validar disclaimer legal LGPD/CFM com consultoria jurídica especializada.</span></li>
+        <li><span class="step-num">2</span><span class="ml-3">Recrutar 2-3 preceptores como curadores oficiais dos guidelines.</span></li>
+        <li><span class="step-num">3</span><span class="ml-3">Definir os 10 escores e calculadoras de maior impacto via entrevista com residentes.</span></li>
+        <li><span class="step-num">4</span><span class="ml-3">Build do MVP em Next.js + Supabase com deploy contínuo Vercel.</span></li>
+        <li><span class="step-num">5</span><span class="ml-3">Beta fechado com 3-5 residentes-embaixadores; instrumentação de uso.</span></li>
+        <li><span class="step-num">6</span><span class="ml-3">Iteração de 2 sprints curtas baseada em uso real; só então abertura pública.</span></li>
+      </ol>
+    </section>
+
+    <!-- 11. METRICAS -->
+    <section id="metricas">
+      <h2 class="text-3xl section-title">11. Métricas de Sucesso</h2>
+
+      <div class="grid md:grid-cols-2 gap-5 mt-6">
+        <div class="card p-6">
+          <div class="text-xs uppercase font-bold tracking-wider text-teal-700">North Star Metric</div>
+          <div class="text-3xl font-extrabold text-slate-800 mt-2">Consultas registradas / dia</div>
+          <p class="text-sm text-slate-600 mt-2">Captura adoção real, não apenas tráfego — uma anotação de prontuário é o evento de maior intenção possível.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-xs uppercase font-bold tracking-wider text-amber-700">Métrica de fricção</div>
+          <div class="text-3xl font-extrabold text-slate-800 mt-2">TTV &lt; 30 segundos</div>
+          <p class="text-sm text-slate-600 mt-2">Time-to-value: tempo entre primeiro acesso e primeira anotação salva. Meta agressiva, condizente com a promessa de zero fricção.</p>
+        </div>
+      </div>
+
+      <table class="matrix w-full mt-6 rounded-lg overflow-hidden">
+        <thead><tr><th>Categoria</th><th>Métrica</th><th>Meta MVP (90 dias)</th></tr></thead>
+        <tbody>
+          <tr><td>Aquisição</td><td>Residentes ativos no HC</td><td>≥ 50</td></tr>
+          <tr><td>Engajamento</td><td>DAU/MAU</td><td>≥ 35%</td></tr>
+          <tr><td>Engajamento</td><td>Sessões por usuário/semana</td><td>≥ 5</td></tr>
+          <tr><td>Retenção</td><td>Retenção W4</td><td>≥ 40%</td></tr>
+          <tr><td>Profundidade</td><td>Ferramentas usadas/sessão</td><td>≥ 2</td></tr>
+          <tr><td>Qualidade</td><td>Erros JS por sessão</td><td>&lt; 0,1</td></tr>
+          <tr><td>Performance</td><td>p95 Largest Contentful Paint</td><td>&lt; 2,0s</td></tr>
+          <tr><td>Satisfação</td><td>NPS qualitativo (entrevistas)</td><td>≥ 8/10 nos 5 primeiros embaixadores</td></tr>
+        </tbody>
+      </table>
+
+      <div class="mt-8 bg-teal-50 border-l-4 border-teal-600 p-5 rounded-r-lg">
+        <div class="font-bold text-teal-900">Critério de "go" para abertura pública</div>
+        <p class="text-teal-900/90 mt-1 text-sm">
+          Embaixadores com retenção W4 ≥ 60%, NPS qualitativo ≥ 8/10, zero incidente de privacidade reportado, disclaimer aprovado por consultoria jurídica e curadoria mensal operando há ≥ 2 ciclos. Sem esses critérios, a plataforma permanece em beta fechado.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t pt-8 text-sm text-slate-500">
+      <div class="flex justify-between flex-wrap gap-4">
+        <div>
+          <strong class="text-slate-700">Invertexto-HC · PRD v1.0</strong><br>
+          Documento de requisitos de produto · 2026-05-02
+        </div>
+        <div class="text-right">
+          Product Owner & Tech Lead · solo<br>
+          Distribuição: confidencial · interno
+        </div>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>
