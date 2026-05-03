@@ -46,19 +46,12 @@ export function Sidebar({ activeTool, onSelectTool, onNotepadHome }: SidebarProp
       <aside
         className={cn(
           "fixed inset-y-0 left-0 z-50 flex w-72 flex-col border-r border-neutral-200 bg-white transition-transform duration-slow ease-out-soft",
-          "md:sticky md:top-0 md:z-auto md:h-screen md:w-20 md:translate-x-0",
+          "md:sticky md:top-0 md:z-auto md:h-screen md:w-64 md:translate-x-0",
           mobileOpen ? "translate-x-0" : "-translate-x-full",
         )}
       >
-        <div className="flex h-16 items-center justify-between border-b border-neutral-200 px-4 md:justify-center md:px-0">
-          <Logo size="sm" href="/" className="md:hidden" />
-          <Link
-            href="/"
-            className="hidden md:flex h-9 w-9 items-center justify-center rounded-md bg-gradient-to-br from-brand-600 to-brand-700 font-extrabold text-white shadow-sm focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
-            aria-label="Página inicial"
-          >
-            i
-          </Link>
+        <div className="flex h-16 items-center justify-between border-b border-neutral-200 px-4 md:px-5">
+          <Logo size="sm" href="/" />
           <button
             type="button"
             onClick={() => setMobileOpen(false)}
@@ -71,7 +64,7 @@ export function Sidebar({ activeTool, onSelectTool, onNotepadHome }: SidebarProp
 
         <nav
           aria-label="Ferramentas clínicas"
-          className="flex flex-1 flex-col gap-1 overflow-y-auto p-3 md:items-center md:p-2"
+          className="flex flex-1 flex-col gap-1 overflow-y-auto p-3"
         >
           {/* Notepad — item fixo acima das ferramentas */}
           <button
@@ -80,15 +73,16 @@ export function Sidebar({ activeTool, onSelectTool, onNotepadHome }: SidebarProp
             aria-label="Notepad"
             title="Notepad"
             className={cn(
-              "group flex items-center gap-3 rounded-md p-3 text-left transition-colors duration-fast",
-              "md:h-12 md:w-12 md:justify-center md:p-0",
+              "group flex items-center gap-3 rounded-xl p-3 text-left transition-colors duration-fast",
               "text-neutral-600 hover:bg-neutral-100 hover:text-brand-700",
             )}
           >
-            <NotebookPen className="h-5 w-5 shrink-0" aria-hidden />
-            <span className="text-body font-medium md:hidden">Notepad</span>
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-neutral-50 group-hover:bg-white">
+              <NotebookPen className="h-5 w-5" aria-hidden />
+            </div>
+            <span className="text-small font-semibold">Notepad</span>
           </button>
-          <div className="my-1 border-t border-neutral-100 md:mx-2" />
+          <div className="my-2 border-t border-neutral-100 mx-2" />
 
           {TOOLS.map((tool) => {
             const isActive = activeTool === tool.id;
@@ -101,22 +95,29 @@ export function Sidebar({ activeTool, onSelectTool, onNotepadHome }: SidebarProp
                 aria-label={tool.label}
                 title={tool.label}
                 className={cn(
-                  "group flex items-center gap-3 rounded-md p-3 text-left transition-colors duration-fast",
-                  "md:h-12 md:w-12 md:justify-center md:p-0",
+                  "group flex items-center gap-3 rounded-xl p-3 text-left transition-colors duration-fast",
                   isActive
-                    ? "bg-brand-100 text-brand-700"
+                    ? "bg-brand-50 text-brand-700"
                     : "text-neutral-600 hover:bg-neutral-100 hover:text-brand-700",
                 )}
               >
-                <tool.icon className="h-5 w-5 shrink-0" aria-hidden />
-                <span className="text-body font-medium md:hidden">{tool.label}</span>
+                <div className={cn(
+                  "flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors",
+                  isActive ? "bg-brand-100" : "bg-neutral-50 group-hover:bg-white"
+                )}>
+                  <tool.icon className="h-5 w-5" aria-hidden />
+                </div>
+                <span className="text-small font-medium truncate">{tool.label}</span>
               </button>
             );
           })}
         </nav>
 
-        <div className="border-t border-neutral-200 p-3 md:flex md:justify-center">
-          <span className="text-caption uppercase tracking-wider text-neutral-400">v0.1</span>
+        <div className="border-t border-neutral-200 p-4">
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-green-500" />
+            <span className="text-caption font-bold uppercase tracking-widest text-neutral-400">Versão Alpha 0.1</span>
+          </div>
         </div>
       </aside>
     </>
