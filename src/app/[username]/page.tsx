@@ -31,12 +31,13 @@ export default async function WorkspacePage({ params, searchParams }: PageProps)
       .from("notes")
       .select("slug, content, updated_at")
       .eq("slug", slug)
-      .maybeSingle(),
+      .maybeSingle() as any,
   ]);
 
   if (!profile) notFound();
 
   // log de view (best-effort, não bloqueia render)
+  // @ts-expect-error - access_log is not in generated types yet
   void supabase.from("access_log").insert({ slug, event: "view" });
 
   return (
