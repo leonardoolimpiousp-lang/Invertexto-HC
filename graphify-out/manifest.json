@@ -1,0 +1,182 @@
+{
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/postcss.config.mjs": {
+    "mtime": 1777757777.6239564,
+    "hash": "c735540bb63936a123bc867d950c9f69"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/next.config.mjs": {
+    "mtime": 1777757774.8365355,
+    "hash": "2dec9bf9fb4999d9ab750c12bb2bf7e1"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/next-env.d.ts": {
+    "mtime": 1777760951.1256764,
+    "hash": "b5ed9dd8b4c5ba8e5ab8e6a379c15838"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/tailwind.config.ts": {
+    "mtime": 1777757794.5425797,
+    "hash": "b9e3855a5fbf83fafc15bd874c60e88e"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/supabase/schema.sql": {
+    "mtime": 1777757838.8149776,
+    "hash": "29a8f13425f3a628190a6da8ff3ee185"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/types/database.ts": {
+    "mtime": 1777757898.4970913,
+    "hash": "e276ef0fe5eb52c9dba99fa432b9e7ba"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/app/layout.tsx": {
+    "mtime": 1777757864.2520692,
+    "hash": "c732576ba4ec89353d554f2e82ce3e6f"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/app/page.tsx": {
+    "mtime": 1777758076.0427067,
+    "hash": "83218b0ea3204acf5eae3c0564bc024a"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/app/cadastro/actions.ts": {
+    "mtime": 1777814320.1242237,
+    "hash": "2e449433c6f03a1e589bbc2e5dde0b9b"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/app/cadastro/page.tsx": {
+    "mtime": 1777758134.1355727,
+    "hash": "085c5e89ff24bde2a8d4a2ad2b83817f"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/app/[username]/page.tsx": {
+    "mtime": 1777814172.4957182,
+    "hash": "a3ae9ab241c8ce79025febd8a436e5fe"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/app/[username]/not-found.tsx": {
+    "mtime": 1777758157.942303,
+    "hash": "0305695056901c34a12024483f85bfa6"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/ui/Card.tsx": {
+    "mtime": 1777757952.1362376,
+    "hash": "e7814b2fc542d8545272c1e4d1ff8269"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/ui/Logo.tsx": {
+    "mtime": 1777757988.9309635,
+    "hash": "7d600ed31a2f0862816f539cd7132e17"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/ui/Badge.tsx": {
+    "mtime": 1777757981.8958924,
+    "hash": "131f89f776c9b8ea514e4d1d0829af06"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/ui/Button.tsx": {
+    "mtime": 1777757941.8416808,
+    "hash": "77eff2e09815dbe0cac229af25c05c19"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/ui/Select.tsx": {
+    "mtime": 1777757975.4279497,
+    "hash": "440f86390074e10f26554c8b40ee42fa"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/ui/Input.tsx": {
+    "mtime": 1777757965.3127532,
+    "hash": "e34d8c4b9df27dc5f102d49c6a5922a7"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/landing/Hero.tsx": {
+    "mtime": 1777758026.890132,
+    "hash": "bb4fe5bc1a2d7925ffbd3b8f52fa3970"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/landing/CTASection.tsx": {
+    "mtime": 1777758063.3754313,
+    "hash": "d6511fa8a67b308299f2f6018073cb25"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/landing/Features.tsx": {
+    "mtime": 1777758035.1342418,
+    "hash": "46e1fca471be033878a952aaa460a95a"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/landing/HowItWorks.tsx": {
+    "mtime": 1777758046.1446078,
+    "hash": "99e1639d1d2ee643034b2923f6dfd715"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/landing/ForWhom.tsx": {
+    "mtime": 1777758056.6114256,
+    "hash": "c5e4720b97f61cbe1cac2b25693c7673"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/landing/Footer.tsx": {
+    "mtime": 1777758071.5598028,
+    "hash": "4888584c0b8bfcc3ce66361be7240002"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/landing/Header.tsx": {
+    "mtime": 1777758003.1133523,
+    "hash": "ee8ab4402c7903c4e1c72a7f35e9fe3e"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/tools/EscoresPanel.tsx": {
+    "mtime": 1777814679.1294668,
+    "hash": "2a80bdf468c86c937d758b8017e480a7"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/tools/ReceituariosPanel.tsx": {
+    "mtime": 1777814724.536428,
+    "hash": "1da2983be0e52e443d54272aa5ec4e75"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/tools/CalculadorasPanel.tsx": {
+    "mtime": 1777814628.4179316,
+    "hash": "c58f3513668d671f0f20f0afe9efdd71"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/tools/CidPanel.tsx": {
+    "mtime": 1777814698.5181248,
+    "hash": "8ad777c9b69c0c44fce64c2ba73d7746"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/workspace/Notepad.tsx": {
+    "mtime": 1777814369.4644558,
+    "hash": "d5d70913221523a6752003a19b51db31"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/workspace/Workspace.tsx": {
+    "mtime": 1777758243.0186806,
+    "hash": "73b2203b23f3fbd047b7a952f3610a17"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/workspace/WelcomeBanner.tsx": {
+    "mtime": 1777758228.7133203,
+    "hash": "1d5436968f2704a39e40078924580666"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/workspace/Sidebar.tsx": {
+    "mtime": 1777758175.4365363,
+    "hash": "5bb9bd2bd6773adf661effb16c0e5002"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/workspace/SaveStatus.tsx": {
+    "mtime": 1777758186.2048926,
+    "hash": "bcfad9d6fd57209a387cb67345b53276"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/workspace/ToolPanel.tsx": {
+    "mtime": 1777758217.722612,
+    "hash": "54f90aa4e06bb49d419bbd1eb3f30a6b"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/components/cadastro/RegistrationForm.tsx": {
+    "mtime": 1777758115.9616203,
+    "hash": "e85089faeb9a271cbc771dadcd0d4927"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/lib/constants/cid10.ts": {
+    "mtime": 1777814579.095825,
+    "hash": "7260f99953eaf9b51bbd180bff841397"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/lib/constants/levels.ts": {
+    "mtime": 1777757907.104652,
+    "hash": "e7a5bfd1d2dd1de75cdc19c673cea567"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/lib/constants/tools.ts": {
+    "mtime": 1777757921.9091465,
+    "hash": "7281397dfd9e7cc72ab5f99d6ecaa0eb"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/lib/utils/slug.ts": {
+    "mtime": 1777757879.341453,
+    "hash": "9cf6062e5f754535907a9442560af4a1"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/lib/utils/cn.ts": {
+    "mtime": 1777757867.3636127,
+    "hash": "d9837f38cc05303254571985e3164050"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/lib/supabase/client.ts": {
+    "mtime": 1777757885.057528,
+    "hash": "7cfa95cc45c38dc0cb7779b2baea9fdc"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/src/lib/supabase/server.ts": {
+    "mtime": 1777814371.4699469,
+    "hash": "f86e222682d77f2e169db3b00b82c5f1"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/README.md": {
+    "mtime": 1777813746.1826918,
+    "hash": "2c03cf5567966f98169b61c8b0a16a8a"
+  },
+  "/Users/leonardoolimpio/vibecoding/Antigravity.projects/invertexto-hc/CLAUDE.md": {
+    "mtime": 1777814812.5297823,
+    "hash": "8ee39dcfe68a23b3797b02648930d699"
+  }
+}
