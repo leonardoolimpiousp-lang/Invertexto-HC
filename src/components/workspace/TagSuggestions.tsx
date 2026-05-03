@@ -1,8 +1,9 @@
 "use client";
 
 import { useMemo } from "react";
-import { Search, Calculator, BookOpen, Pill, Bug } from "lucide-react";
+import { Search, Calculator, BookOpen, Pill, Bug, Stethoscope } from "lucide-react";
 import { CID10_DATA } from "@/lib/constants/cid10";
+import { PROCEDIMENTOS } from "@/lib/constants/procedimentos";
 import type { ContextType, EspecialidadeBase } from "@/lib/constants/specialties";
 import type { ToolId } from "@/lib/constants/tools";
 
@@ -27,6 +28,7 @@ const TOOL_META: Partial<Record<ToolId, ToolSuggestion>> = {
   antimicrobianos: { id: "antimicrobianos", label: "Antimicrobianos", icon: Bug },
   guias: { id: "guias", label: "Guias", icon: BookOpen },
   diluicao: { id: "diluicao", label: "Diluição & dose", icon: Calculator },
+  procedimentos: { id: "procedimentos", label: "Guia de Procedimentos", icon: Stethoscope },
 };
 
 const CONTEXT_TOOLS: Record<ContextType, ToolId[]> = {
@@ -44,6 +46,16 @@ const SPECIALTY_TOOLS: Partial<Record<EspecialidadeBase, ToolId[]>> = {
 };
 
 export function TagSuggestions({ hdList, context, specialty, onSelectTool }: TagSuggestionsProps) {
+  const procedureSuggestions = useMemo(() => {
+    if (!hdList.length) return [];
+    const hdWords = hdList.map((hd) => hd.toLowerCase());
+    return PROCEDIMENTOS.filter(
+      (proc) =>
+        proc.context.includes(context) &&
+        proc.hdTags.some((tag) => hdWords.some((hd) => hd.includes(tag))),
+    );
+  }, [hdList, context]);
+
   const cidSuggestions = useMemo(() => {
     if (!hdList.length) return [];
     const seen = new Set<string>();
@@ -128,6 +140,28 @@ export function TagSuggestions({ hdList, context, specialty, onSelectTool }: Tag
               >
                 <Icon className="h-3.5 w-3.5" aria-hidden />
                 {label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {procedureSuggestions.length > 0 && (
+        <div>
+          <p className="mb-2 flex items-center gap-1.5 text-caption font-medium text-neutral-500">
+            <Stethoscope className="h-3.5 w-3.5" aria-hidden />
+            Procedimentos sugeridos
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {procedureSuggestions.map((proc) => (
+              <button
+                key={proc.id}
+                type="button"
+                onClick={() => onSelectTool("procedimentos")}
+                className="inline-flex items-center gap-1.5 rounded-full border border-brand-200 bg-white px-3 py-1 text-caption font-medium text-brand-700 transition-colors hover:bg-brand-100"
+              >
+                <Stethoscope className="h-3.5 w-3.5" aria-hidden />
+                {proc.name}
               </button>
             ))}
           </div>
