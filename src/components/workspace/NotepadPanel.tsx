@@ -17,7 +17,14 @@ interface NotepadPanelProps {
 }
 
 export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
-  const supabase = useMemo(() => createSupabaseBrowserClient(), []);
+  const supabase = useMemo(() => {
+    const client = createSupabaseBrowserClient();
+    console.log("Supabase client initialized:", {
+      url: process.env.NEXT_PUBLIC_SUPABASE_URL,
+      keyExists: !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+    });
+    return client;
+  }, []);
   const [folders, setFolders] = useState<ClinicalFolder[]>([]);
   const [notes, setNotes] = useState<Record<string, ClinicalNote[]>>({});
   const [showModal, setShowModal] = useState(false);
@@ -53,7 +60,8 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
           setNotes(notesMap);
         }
       } catch (error) {
-        console.error("Error fetching folders:", error);
+        const errorMsg = error instanceof Error ? error.message : JSON.stringify(error);
+        console.error("Error fetching folders:", errorMsg, error);
       } finally {
         setIsLoading(false);
       }
@@ -141,6 +149,9 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
         .update({
           content: updated.content,
           hd_list: updated.hd_list,
+          conduct_doubts: updated.conduct_doubts,
+          unexpected_outcome: updated.unexpected_outcome,
+          procedures: updated.procedures,
           updated_at: new Date().toISOString(),
         })
         .eq("id", updated.id);

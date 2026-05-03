@@ -79,6 +79,9 @@ export interface Database {
           folder_id: string;
           content: string;
           hd_list: string[];
+          conduct_doubts: boolean;
+          unexpected_outcome: boolean;
+          procedures: string[];
           created_at: string;
           updated_at: string;
         };
@@ -87,6 +90,9 @@ export interface Database {
           folder_id: string;
           content?: string;
           hd_list?: string[];
+          conduct_doubts?: boolean;
+          unexpected_outcome?: boolean;
+          procedures?: string[];
           created_at?: string;
           updated_at?: string;
         };
