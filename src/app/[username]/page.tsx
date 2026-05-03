@@ -21,18 +21,11 @@ export default async function WorkspacePage({ params, searchParams }: PageProps)
 
   const supabase = createSupabaseServerClient();
 
-  const [{ data: profile }, { data: note }] = await Promise.all([
-    supabase
-      .from("profiles")
-      .select("slug, full_name, level, hospital, created_at")
-      .eq("slug", slug)
-      .maybeSingle(),
-    supabase
-      .from("notes")
-      .select("slug, content, updated_at")
-      .eq("slug", slug)
-      .maybeSingle() as any,
-  ]);
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("slug, full_name, level, hospital, created_at")
+    .eq("slug", slug)
+    .maybeSingle();
 
   if (!profile) notFound();
 
@@ -43,8 +36,6 @@ export default async function WorkspacePage({ params, searchParams }: PageProps)
   return (
     <Workspace
       profile={profile}
-      initialContent={note?.content ?? ""}
-      initialUpdatedAt={note?.updated_at ?? null}
       isWelcome={searchParams.welcome === "1"}
     />
   );

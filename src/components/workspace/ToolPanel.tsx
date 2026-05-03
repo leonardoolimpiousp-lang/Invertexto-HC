@@ -10,6 +10,7 @@ import { CalculadorasPanel } from "@/components/tools/CalculadorasPanel";
 import { EscoresPanel } from "@/components/tools/EscoresPanel";
 import { CidPanel } from "@/components/tools/CidPanel";
 import { ReceituariosPanel } from "@/components/tools/ReceituariosPanel";
+import { PlantonistaPanel } from "@/components/tools/PlantonistaPanel";
 
 interface ToolPanelProps {
   toolId: ToolId;
@@ -30,6 +31,8 @@ export function ToolPanel({ toolId, onClose }: ToolPanelProps) {
         return <CidPanel />;
       case "receituarios":
         return <ReceituariosPanel />;
+      case "plantonista":
+        return <PlantonistaPanel />;
       default:
         return (
           <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">

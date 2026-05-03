@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, NotebookPen, X } from "lucide-react";
 import { useState } from "react";
 import { Logo } from "@/components/ui/Logo";
 import { TOOLS, type ToolId } from "@/lib/constants/tools";
@@ -10,9 +10,10 @@ import { cn } from "@/lib/utils/cn";
 interface SidebarProps {
   activeTool: ToolId | null;
   onSelectTool: (tool: ToolId | null) => void;
+  onNotepadHome: () => void;
 }
 
-export function Sidebar({ activeTool, onSelectTool }: SidebarProps) {
+export function Sidebar({ activeTool, onSelectTool, onNotepadHome }: SidebarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleSelect = (id: ToolId) => {
@@ -72,6 +73,23 @@ export function Sidebar({ activeTool, onSelectTool }: SidebarProps) {
           aria-label="Ferramentas clínicas"
           className="flex flex-1 flex-col gap-1 overflow-y-auto p-3 md:items-center md:p-2"
         >
+          {/* Notepad — item fixo acima das ferramentas */}
+          <button
+            type="button"
+            onClick={() => { onNotepadHome(); setMobileOpen(false); }}
+            aria-label="Notepad"
+            title="Notepad"
+            className={cn(
+              "group flex items-center gap-3 rounded-md p-3 text-left transition-colors duration-fast",
+              "md:h-12 md:w-12 md:justify-center md:p-0",
+              "text-neutral-600 hover:bg-neutral-100 hover:text-brand-700",
+            )}
+          >
+            <NotebookPen className="h-5 w-5 shrink-0" aria-hidden />
+            <span className="text-body font-medium md:hidden">Notepad</span>
+          </button>
+          <div className="my-1 border-t border-neutral-100 md:mx-2" />
+
           {TOOLS.map((tool) => {
             const isActive = activeTool === tool.id;
             return (

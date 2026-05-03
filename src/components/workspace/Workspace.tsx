@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { Database } from "@/types/database";
 import { Sidebar } from "@/components/workspace/Sidebar";
-import { Notepad } from "@/components/workspace/Notepad";
+import { NotepadPanel } from "@/components/workspace/NotepadPanel";
 import { ToolPanel } from "@/components/workspace/ToolPanel";
 import { WelcomeBanner } from "@/components/workspace/WelcomeBanner";
 import { Badge } from "@/components/ui/Badge";
@@ -19,22 +19,20 @@ const LEVEL_LABEL: Record<Profile["level"], string> = {
 
 interface WorkspaceProps {
   profile: Profile;
-  initialContent: string;
-  initialUpdatedAt: string | null;
   isWelcome: boolean;
 }
 
-export function Workspace({
-  profile,
-  initialContent,
-  initialUpdatedAt,
-  isWelcome,
-}: WorkspaceProps) {
+export function Workspace({ profile, isWelcome }: WorkspaceProps) {
   const [activeTool, setActiveTool] = useState<ToolId | null>(null);
+  const [notepadKey, setNotepadKey] = useState(0);
 
   return (
     <div className="flex min-h-screen bg-neutral-50">
-      <Sidebar activeTool={activeTool} onSelectTool={setActiveTool} />
+      <Sidebar
+        activeTool={activeTool}
+        onSelectTool={setActiveTool}
+        onNotepadHome={() => setNotepadKey((k) => k + 1)}
+      />
 
       <main className="flex-1 min-w-0">
         <div className="mx-auto max-w-5xl px-4 py-6 pl-16 md:py-10 md:pl-8 md:pr-8">
@@ -56,10 +54,10 @@ export function Workspace({
           {isWelcome && <WelcomeBanner slug={profile.slug} />}
 
           <div className={activeTool ? "grid gap-6 lg:grid-cols-2" : ""}>
-            <Notepad
+            <NotepadPanel
+              key={notepadKey}
               slug={profile.slug}
-              initialContent={initialContent}
-              initialUpdatedAt={initialUpdatedAt}
+              onSelectTool={(id) => setActiveTool(id)}
             />
 
             {activeTool && (
