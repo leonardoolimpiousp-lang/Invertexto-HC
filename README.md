@@ -60,3 +60,4 @@ supabase/
 - **Fase 1 (atual)**: MVP — notepad + sidebar de ferramentas (stub).
 - **Fase 2**: Auth opcional, PWA, compartilhamento residente↔preceptor.
 - **Fase 3**: IA (sumarização, extração estruturada), expansão multi-hospital.
+# Invertexto-HC
