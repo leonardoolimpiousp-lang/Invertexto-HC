@@ -50,7 +50,7 @@ export async function createProfile(
     .from("profiles")
     .select("slug")
     .eq("slug", slug)
-    .maybeSingle();
+    .maybeSingle() as any;
 
   if (existing) {
     if (slugRaw) {
@@ -64,6 +64,7 @@ export async function createProfile(
     slug = generateRandomSlug(14);
   }
 
+  // @ts-expect-error - profiles is not in generated types yet
   const { error: insertProfileError } = await supabase.from("profiles").insert({
     slug,
     full_name: fullName,
@@ -78,7 +79,9 @@ export async function createProfile(
     };
   }
 
+  // @ts-expect-error - notes is not in generated types yet
   await supabase.from("notes").insert({ slug, content: "" });
+  // @ts-expect-error - access_log is not in generated types yet
   await supabase.from("access_log").insert({ slug, event: "create" });
 
   redirect(`/${slug}?welcome=1`);

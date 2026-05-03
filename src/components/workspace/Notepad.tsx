@@ -41,6 +41,7 @@ export function Notepad({ slug, initialContent, initialUpdatedAt }: NotepadProps
       setSaveState("saving");
       const { error } = await supabaseRef
         .current!.from("notes")
+        // @ts-expect-error - notes is not in generated types yet
         .update({ content: text })
         .eq("slug", slug);
 
