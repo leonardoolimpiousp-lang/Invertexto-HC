@@ -61,3 +61,4 @@ supabase/
 - **Fase 2**: Auth opcional, PWA, compartilhamento residente↔preceptor.
 - **Fase 3**: IA (sumarização, extração estruturada), expansão multi-hospital.
 # Invertexto-HC
+# Invertexto-HC
