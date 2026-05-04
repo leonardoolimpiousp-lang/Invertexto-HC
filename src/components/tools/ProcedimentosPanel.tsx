@@ -9,6 +9,8 @@ const CONTEXT_LABELS: Record<ContextType, string> = {
   ps: "PS",
   uti: "UTI",
   ambulatorial: "Ambulatório",
+  sala_de_emergencia: "Sala de Emergência",
+  cirurgia: "Cirurgia",
 };
 
 function ProcedimentoCard({ proc }: { proc: Procedimento }) {
