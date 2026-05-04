@@ -1,4 +1,4 @@
-export type ContextType = "ps" | "uti" | "ambulatorial" | "sala_de_emergencia" | "cirurgia";
+export type ContextType = "ps" | "uti" | "ambulatorial" | "sala_de_emergencia" | "cirurgia" | "enfermaria";
 
 export type EspecialidadeBase =
   | "cirurgia"
@@ -13,6 +13,7 @@ export const CONTEXT_LABELS: Record<ContextType, string> = {
   ambulatorial: "Consulta Ambulatorial",
   sala_de_emergencia: "Sala de Emergência",
   cirurgia: "Cirurgia",
+  enfermaria: "Enfermaria",
 };
 
 export const ESPECIALIDADE_BASE_LABELS: Record<EspecialidadeBase, string> = {

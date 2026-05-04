@@ -1,5 +1,5 @@
 export type EducationLevel = "medico" | "residente" | "interno";
-export type ContextType = "ps" | "uti" | "ambulatorial" | "sala_de_emergencia" | "cirurgia";
+export type ContextType = "ps" | "uti" | "ambulatorial" | "sala_de_emergencia" | "cirurgia" | "enfermaria";
 export type Specialty = "cirurgia" | "clinica_medica" | "pediatria" | "ginecologia" | "obstetricia";
 
 export interface Database {
@@ -20,13 +20,7 @@ export interface Database {
           hospital: string;
           created_at?: string;
         };
-        Update: {
-          slug?: string;
-          full_name?: string;
-          level?: EducationLevel;
-          hospital?: string;
-          created_at?: string;
-        };
+        Update: Partial<Database["public"]["Tables"]["profiles"]["Insert"]>;
       };
       notes: {
         Row: {
@@ -39,11 +33,7 @@ export interface Database {
           content?: string;
           updated_at?: string;
         };
-        Update: {
-          slug?: string;
-          content?: string;
-          updated_at?: string;
-        };
+        Update: Partial<Database["public"]["Tables"]["notes"]["Insert"]>;
       };
       access_log: {
         Row: {
@@ -58,12 +48,7 @@ export interface Database {
           event: string;
           created_at?: string;
         };
-        Update: {
-          id?: string;
-          slug?: string | null;
-          event?: string;
-          created_at?: string;
-        };
+        Update: Partial<Database["public"]["Tables"]["access_log"]["Insert"]>;
       };
       clinical_folders: {
         Row: {
@@ -73,7 +58,6 @@ export interface Database {
           specialty: Specialty | null;
           sub_specialty: string | null;
           label: string;
-          parent_id: string | null;
           created_at: string;
           updated_at: string;
         };
@@ -84,21 +68,10 @@ export interface Database {
           specialty?: Specialty | null;
           sub_specialty?: string | null;
           label: string;
-          parent_id?: string | null;
           created_at?: string;
           updated_at?: string;
         };
-        Update: {
-          id?: string;
-          slug?: string;
-          context?: ContextType;
-          specialty?: Specialty | null;
-          sub_specialty?: string | null;
-          label?: string;
-          parent_id?: string | null;
-          created_at?: string;
-          updated_at?: string;
-        };
+        Update: Partial<Database["public"]["Tables"]["clinical_folders"]["Insert"]>;
       };
       clinical_notes: {
         Row: {
@@ -109,7 +82,6 @@ export interface Database {
           conduct_doubts: boolean;
           unexpected_outcome: boolean;
           procedures: string[];
-          title: string | null;
           created_at: string;
           updated_at: string;
         };
@@ -121,22 +93,10 @@ export interface Database {
           conduct_doubts?: boolean;
           unexpected_outcome?: boolean;
           procedures?: string[];
-          title?: string | null;
           created_at?: string;
           updated_at?: string;
         };
-        Update: {
-          id?: string;
-          folder_id?: string;
-          content?: string;
-          hd_list?: string[];
-          conduct_doubts?: boolean;
-          unexpected_outcome?: boolean;
-          procedures?: string[];
-          title?: string | null;
-          created_at?: string;
-          updated_at?: string;
-        };
+        Update: Partial<Database["public"]["Tables"]["clinical_notes"]["Insert"]>;
       };
     };
   };

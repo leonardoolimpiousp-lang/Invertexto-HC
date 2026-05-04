@@ -35,8 +35,9 @@ const CONTEXT_TOOLS: Record<ContextType, ToolId[]> = {
   ps: ["calculadoras", "escores", "antimicrobianos", "receituarios"],
   uti: ["calculadoras", "diluicao", "antimicrobianos", "escores"],
   ambulatorial: ["receituarios", "guias", "cid"],
-  sala_de_emergencia: ["calculadoras", "escores", "antimicrobianos"],
-  cirurgia: ["calculadoras", "antimicrobianos", "procedimentos"],
+  sala_de_emergencia: ["calculadoras", "escores", "antimicrobianos", "receituarios"],
+  cirurgia: ["calculadoras", "antimicrobianos", "escores"],
+  enfermaria: ["calculadoras", "escores", "antimicrobianos", "receituarios", "guias"],
 };
 
 const SPECIALTY_TOOLS: Partial<Record<EspecialidadeBase, ToolId[]>> = {

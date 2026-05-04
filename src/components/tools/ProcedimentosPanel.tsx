@@ -3,26 +3,26 @@
 import { useState } from "react";
 import { Copy, Check, ChevronDown, ChevronUp } from "lucide-react";
 import { PROCEDIMENTOS, type Procedimento } from "@/lib/constants/procedimentos";
+import { CONTEXT_LABELS } from "@/lib/constants/specialties";
 import type { ContextType } from "@/lib/constants/specialties";
 
-const CONTEXT_LABELS: Record<ContextType, string> = {
-  ps: "PS",
-  uti: "UTI",
-  ambulatorial: "Ambulatório",
-  sala_de_emergencia: "Sala de Emergência",
-  cirurgia: "Cirurgia",
-};
+const INFO_SECTIONS = [
+  { key: "indicacoes", label: "Indicações" },
+  { key: "contraindicacoes", label: "Contra-indicações" },
+  { key: "complicacoes", label: "Complicações" },
+] as const;
 
 function ProcedimentoCard({ proc }: { proc: Procedimento }) {
   const [checked, setChecked] = useState<Record<number, boolean>>({});
   const [expanded, setExpanded] = useState(true);
+  const [infoExpanded, setInfoExpanded] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const toggle = (i: number) =>
     setChecked((prev) => ({ ...prev, [i]: !prev[i] }));
 
   const copyText = () => {
-    const text = `Procedimento: ${proc.name}\n\n${proc.steps.map((s) => `- ${s.text}`).join("\n")}`;
+    const text = `# ${proc.name}\n\n${proc.steps.map((s) => s.text).join("\n")}\n\nProcedimento realizado por: (nome do profissional), às __h__, sem intercorrências.`;
     navigator.clipboard.writeText(text).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
@@ -30,6 +30,7 @@ function ProcedimentoCard({ proc }: { proc: Procedimento }) {
   };
 
   const completedCount = Object.values(checked).filter(Boolean).length;
+  const info = proc.info;
 
   return (
     <div className="rounded-xl border border-neutral-200 bg-white overflow-hidden">
@@ -98,6 +99,56 @@ function ProcedimentoCard({ proc }: { proc: Procedimento }) {
           ))}
         </ol>
       )}
+
+      {/* Info toggle — outside the copyable area */}
+      <div className="border-t border-neutral-100">
+        <button
+          type="button"
+          onClick={() => setInfoExpanded((v) => !v)}
+          className="flex w-full items-center justify-between px-4 py-2.5 text-caption font-medium text-neutral-500 hover:bg-neutral-50 transition-colors"
+        >
+          <span>Indicações · Contra-indicações · Complicações · Bizus</span>
+          {infoExpanded ? (
+            <ChevronUp className="h-3.5 w-3.5 shrink-0" />
+          ) : (
+            <ChevronDown className="h-3.5 w-3.5 shrink-0" />
+          )}
+        </button>
+
+        {infoExpanded && (
+          <div className="px-4 pb-4 space-y-4">
+            {INFO_SECTIONS.map(({ key, label }) => {
+              const items = info?.[key] ?? [];
+              return (
+                <div key={key}>
+                  <p className="text-caption font-semibold text-neutral-700 mb-1">{label}</p>
+                  {items.length > 0 ? (
+                    <ul className="space-y-1">
+                      {items.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2 text-caption text-neutral-600">
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-400" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-caption text-neutral-400 italic">—</p>
+                  )}
+                </div>
+              );
+            })}
+
+            <div>
+              <p className="text-caption font-semibold text-neutral-700 mb-1">Bizus</p>
+              {info?.bizus ? (
+                <p className="text-caption text-neutral-600 whitespace-pre-line">{info.bizus}</p>
+              ) : (
+                <p className="text-caption text-neutral-400 italic">—</p>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
@@ -105,7 +156,7 @@ function ProcedimentoCard({ proc }: { proc: Procedimento }) {
 export function ProcedimentosPanel() {
   const [activeContext, setActiveContext] = useState<ContextType | "all">("all");
 
-  const contexts: Array<ContextType | "all"> = ["all", "ps", "uti", "ambulatorial"];
+  const contexts: Array<ContextType | "all"> = ["all", "ps", "uti", "sala_de_emergencia", "enfermaria", "cirurgia", "ambulatorial"];
 
   const filtered =
     activeContext === "all"
