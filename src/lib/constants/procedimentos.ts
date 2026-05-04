@@ -46,4 +46,38 @@ export const PROCEDIMENTOS: readonly Procedimento[] = [
       },
     ],
   },
+  {
+    id: "cvc_3_vias",
+    name: "Passagem de Cateter Venoso Central 3 Vias",
+    context: ["ps", "uti", "sala_de_emergencia", "cirurgia"],
+    hdTags: ["choque", "npt", "falha de acesso", "dhe"],
+    steps: [
+      {
+        text: "Assepsia do paciente, escovação de mãos, paramentação com gorro, capote estéril e luva estéril",
+      },
+      {
+        text: "Antissepsia e colocação de campos estéreis por sobre o paciente",
+      },
+      { text: "Avaliação do sítio de punção com USG novamente" },
+      {
+        text: "Anestesia com lidocaína 5% - 1 ml sobre sítio de punção",
+      },
+      { text: "Salinizado 3 vias do cateter" },
+      {
+        text: "Punção de veia femoral em primeira tentativa, confirmada através da visualização do fio guia dentro do trajeto venoso nos planos transversal e longitudinal",
+      },
+      { text: "Dilatação de pele e subcutâneo" },
+      {
+        text: "Passagem de cateter pelo fio guia sem intercorrências",
+      },
+      {
+        text: "Realizado teste com refluxo nas três vias e lavado após",
+      },
+      {
+        text: "Sutura após anestesia com mais 2ml de Lidocaína 5% sobre pontos de fixação de fábrica do cateter (4 pontos)",
+      },
+      { text: "Curativo com gaze estéril bem locado" },
+      { text: "Radiografia de controle após" },
+    ],
+  },
 ] as const;
