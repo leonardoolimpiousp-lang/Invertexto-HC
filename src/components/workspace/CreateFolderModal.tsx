@@ -28,6 +28,8 @@ const CONTEXT_DESCRIPTIONS: Record<ContextType, string> = {
   ps: "Atendimentos de urgência e emergência",
   uti: "Pacientes em terapia intensiva",
   ambulatorial: "Consultas eletivas por especialidade",
+  sala_de_emergencia: "Atendimento em sala de emergência",
+  cirurgia: "Procedimentos cirúrgicos",
 };
 
 export function CreateFolderModal({ onClose, onCreate }: CreateFolderModalProps) {
