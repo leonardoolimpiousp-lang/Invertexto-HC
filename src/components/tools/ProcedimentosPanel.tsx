@@ -15,7 +15,7 @@ function ProcedimentoCard({ proc }: { proc: Procedimento }) {
     setChecked((prev) => ({ ...prev, [i]: !prev[i] }));
 
   const copyText = () => {
-    const text = `Procedimento: ${proc.name}\n\n${proc.steps.map((s) => `- ${s.text}`).join("\n")}`;
+    const text = `# ${proc.name}\n\n${proc.steps.map((s) => s.text).join("\n")}\n\nProcedimento realizado por: (nome do profissional), às __h__, sem intercorrências.`;
     navigator.clipboard.writeText(text).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
