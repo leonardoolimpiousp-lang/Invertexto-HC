@@ -49,7 +49,7 @@ export const PROCEDIMENTOS: readonly Procedimento[] = [
   {
     id: "cvc_3_vias",
     name: "Passagem de Cateter Venoso Central 3 Vias",
-    context: ["ps", "uti"],
+    context: ["ps", "uti", "sala_de_emergencia", "cirurgia"],
     hdTags: ["choque", "npt", "falha de acesso", "dhe"],
     steps: [
       {
