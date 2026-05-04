@@ -114,4 +114,33 @@ export const PROCEDIMENTOS: readonly Procedimento[] = [
       { text: "Fixação com curativo." },
     ],
   },
+  {
+    id: "toracocentese",
+    name: "Toracocentese Diagnóstica e de Alívio",
+    context: ["sala_de_emergencia", "enfermaria", "uti"],
+    hdTags: ["derrame pleural", "pneumotorax", "insuficiencia respiratoria"],
+    steps: [
+      { text: "Paciente sentado e confortável." },
+      {
+        text: "USG com transdutor curvo, identificando local de punção mais favorável em hemitórax D.",
+      },
+      { text: "Antissepsia e assepsia + campos estéreis." },
+      {
+        text: "Infundo cerca de 10ml de Lidocaína 2% sem vaso em subcutâneo e pleura.",
+      },
+      {
+        text: "Posiciono jelco 14 e punciono local, com saída de secreção sero-hemático claro.",
+      },
+      {
+        text: "Coleto 1 seringa de 20ml para análise bioquímica e biológica.",
+      },
+      { text: "Fixo equipo e conecto-o ao sistema coletor aberto." },
+      { text: "Encaminho amostras das seringas ao laboratório." },
+      {
+        text: "Acompanho paciente por cerca de 10min com drenagem estimada de 300mL de conteúdo pleural sero-hemático claro.",
+      },
+      { text: "Realizo curativo simples com gaze e esparadrapo." },
+      { text: "Rx de tórax de controle após." },
+    ],
+  },
 ] as const;

@@ -98,7 +98,7 @@ function ProcedimentoCard({ proc }: { proc: Procedimento }) {
 export function ProcedimentosPanel() {
   const [activeContext, setActiveContext] = useState<ContextType | "all">("all");
 
-  const contexts: Array<ContextType | "all"> = ["all", "ps", "uti", "sala_de_emergencia", "cirurgia", "ambulatorial"];
+  const contexts: Array<ContextType | "all"> = ["all", "ps", "uti", "sala_de_emergencia", "enfermaria", "cirurgia", "ambulatorial"];
 
   const filtered =
     activeContext === "all"

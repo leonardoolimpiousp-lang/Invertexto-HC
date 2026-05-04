@@ -24,6 +24,7 @@ const CONTEXT_DESCRIPTIONS: Record<ContextType, string> = {
   ambulatorial: "Consultas eletivas por especialidade",
   sala_de_emergencia: "Atendimentos em sala de emergência",
   cirurgia: "Procedimentos e pós-operatório cirúrgico",
+  enfermaria: "Pacientes internados em enfermaria",
 };
 
 export function CreateFolderModal({ onClose, onCreate }: CreateFolderModalProps) {
