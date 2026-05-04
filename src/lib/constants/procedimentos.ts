@@ -80,4 +80,21 @@ export const PROCEDIMENTOS: readonly Procedimento[] = [
       { text: "Radiografia de controle após" },
     ],
   },
+  {
+    id: "gasometria_arterial",
+    name: "Coleta de Gasometria Arterial",
+    context: ["ps", "uti", "sala_de_emergencia"],
+    hdTags: ["dhe", "insuficiencia respiratoria", "cetoacidose diabetica"],
+    steps: [
+      {
+        text: "O paciente foi preparado e posicionado com campos estéreis de maneira habitual, utilizando antissepsia com clorexidina. Lidocaína a 1% foi utilizada para anestesiar a região.",
+      },
+      {
+        text: "A artéria radial <ESQUERDA/DIREITA> foi palpada e canulada com sucesso na primeira tentativa. Foi visualizado sangue arterial pulsátil e, em seguida, a artéria foi cateterizada utilizando a técnica de Seldinger, com o cateter sendo fixado no local por sutura.",
+      },
+      {
+        text: "Foi obtida boa forma de onda. O paciente tolerou bem o procedimento, sem complicações imediatas. A área foi limpa e aplicado curativo com Tegaderm.",
+      },
+    ],
+  },
 ] as const;
