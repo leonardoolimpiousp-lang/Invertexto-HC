@@ -6,9 +6,9 @@ import {
   CONTEXT_LABELS,
   ESPECIALIDADE_BASE_LABELS,
   SUBESPECIALIDADES,
-  type ContextType,
   type EspecialidadeBase,
 } from "@/lib/constants/specialties";
+import type { ContextType } from "@/types/database";
 
 interface CreateFolderModalProps {
   onClose: () => void;

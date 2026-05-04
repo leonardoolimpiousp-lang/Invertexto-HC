@@ -1,5 +1,5 @@
 export type EducationLevel = "medico" | "residente" | "interno";
-export type ContextType = "ps" | "uti" | "ambulatorial";
+export type ContextType = "ps" | "uti" | "ambulatorial" | "sala_de_emergencia" | "cirurgia";
 export type Specialty = "cirurgia" | "clinica_medica" | "pediatria" | "ginecologia" | "obstetricia";
 
 export interface Database {

@@ -103,7 +103,7 @@ export function NoteEditor({ note, folder, onBack, onUpdate, onSelectTool }: Not
     folder.sub_specialty ??
     (folder.specialty
       ? folder.label
-      : { ps: "Pronto-Socorro", uti: "UTI", ambulatorial: "Ambulatório" }[folder.context]);
+      : { ps: "Pronto-Socorro", uti: "UTI", ambulatorial: "Ambulatório", sala_de_emergencia: "Sala de Emergência", cirurgia: "Cirurgia" }[folder.context]);
 
   const placeholder = PLACEHOLDERS[folder.context] ?? PLACEHOLDERS.ambulatorial;
 
