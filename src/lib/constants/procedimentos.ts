@@ -4,6 +4,13 @@ export interface ProcedimentoStep {
   text: string;
 }
 
+export interface ProcedimentoInfo {
+  indicacoes: string[];
+  contraindicacoes: string[];
+  complicacoes: string[];
+  bizus: string;
+}
+
 export interface Procedimento {
   id: string;
   name: string;
@@ -11,6 +18,7 @@ export interface Procedimento {
   /** HD keywords that trigger a suggestion for this procedure */
   hdTags: string[];
   steps: ProcedimentoStep[];
+  info?: ProcedimentoInfo;
 }
 
 export const PROCEDIMENTOS: readonly Procedimento[] = [
@@ -79,6 +87,30 @@ export const PROCEDIMENTOS: readonly Procedimento[] = [
       { text: "Curativo com gaze estéril bem locado" },
       { text: "Radiografia de controle após" },
     ],
+    info: {
+      indicacoes: [
+        "Medicações hiperosmolares/vesicantes (ex: G50%, KCl)",
+        "Vasopressores",
+        "Nutrição parenteral",
+        "Falência de acesso periférico",
+        "Monitorização hemodinâmica",
+        "Hemodiálise",
+        "Marcapasso provisório transvenoso",
+      ],
+      contraindicacoes: [],
+      complicacoes: [],
+      bizus: `Em qual sítio puncionar? Janelar USG em todos. Verificar anatomia, presença de trombos, distância pele-vaso.
+
+1º) Subclávia – preferencial, menos infecção de todos, mais complicações (pneumotórax, pegar artéria, não compressível). Se optar, deixar USG longitudinal; clavícula faz sombra acústica, pleura logo abaixo.
+
+2º) VJID – trajeto menor. VJIE tem ducto torácico.
+
+3º) VJIE – se houver chance de precisar de Shilley, deixar VJID livre.
+
+4º) Femoral – preferível no trauma/choque com ABCDE em andamento (controverso: mais infecção; só se diarreia ou obeso).
+
+Shilley: sítio preferencial (mais calibroso) VJID > femoral > subclávia.`,
+    },
   },
   {
     id: "gasometria_arterial",
