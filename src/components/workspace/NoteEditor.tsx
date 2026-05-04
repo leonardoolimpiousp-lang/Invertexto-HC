@@ -78,7 +78,7 @@ export function NoteEditor({ note, folder, onBack, onUpdate, onSelectTool }: Not
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
     };
-  }, [content, hdList, conductDoubts, unexpectedOutcome, procedures]);
+  }, [content, hdList, conductDoubts, unexpectedOutcome, procedures, note, onUpdate]);
 
   const addHD = () => {
     const trimmed = hdInput.trim();
@@ -103,7 +103,7 @@ export function NoteEditor({ note, folder, onBack, onUpdate, onSelectTool }: Not
     folder.sub_specialty ??
     (folder.specialty
       ? folder.label
-      : { ps: "Pronto-Socorro", uti: "UTI", ambulatorial: "Ambulatório" }[folder.context]);
+      : { ps: "Pronto-Socorro", uti: "UTI", ambulatorial: "Ambulatório", sala_de_emergencia: "Sala de Emergência", cirurgia: "Cirurgia" }[folder.context]);
 
   const placeholder = PLACEHOLDERS[folder.context] ?? PLACEHOLDERS.ambulatorial;
 
@@ -121,14 +121,18 @@ export function NoteEditor({ note, folder, onBack, onUpdate, onSelectTool }: Not
             <ArrowLeft className="h-4 w-4" />
           </button>
           <div>
-            <p className="text-overline uppercase text-brand-700">{contextLabel}</p>
-            <p className="text-caption text-neutral-400">
-              {new Date(note.created_at).toLocaleDateString("pt-BR", {
-                day: "2-digit",
-                month: "short",
-                year: "numeric",
-              })}
-            </p>
+            <h2 className="text-h4 font-bold text-neutral-900">{note.title || "Nova nota"}</h2>
+            <div className="flex items-center gap-2">
+              <span className="text-overline uppercase text-brand-700">{contextLabel}</span>
+              <span className="text-caption text-neutral-300">•</span>
+              <p className="text-caption text-neutral-400">
+                {new Date(note.created_at).toLocaleDateString("pt-BR", {
+                  day: "2-digit",
+                  month: "short",
+                  year: "numeric",
+                })}
+              </p>
+            </div>
           </div>
         </div>
         <SaveStatus state={saveState} lastSavedAt={lastSavedAt ? new Date(lastSavedAt) : null} />
@@ -289,7 +293,7 @@ export function NoteEditor({ note, folder, onBack, onUpdate, onSelectTool }: Not
       <TagSuggestions
         hdList={hdList}
         context={folder.context}
-        specialty={folder.specialty}
+        specialty={(folder.specialty as any) || undefined}
         onSelectTool={onSelectTool}
       />
     </div>
