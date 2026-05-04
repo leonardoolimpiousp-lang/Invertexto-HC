@@ -1,12 +1,10 @@
 import { createSupabaseServerClient } from "./server";
 import type { Database } from "@/types/database";
 
-type ClinicalNote = Database["public"]["Tables"]["clinical_notes"]["Row"];
-type CreateNoteInput = Database["public"]["Tables"]["clinical_notes"]["Insert"];
-type UpdateNoteInput = Database["public"]["Tables"]["clinical_notes"]["Update"];
+type ClinicalNoteRow = Database["public"]["Tables"]["clinical_notes"]["Row"];
 
-export async function getNotesByFolderId(folderId: string): Promise<ClinicalNote[]> {
-  const supabase = createSupabaseServerClient();
+export async function getNotesByFolderId(folderId: string): Promise<ClinicalNoteRow[]> {
+  const supabase = createSupabaseServerClient() as any;
   const { data, error } = await supabase
     .from("clinical_notes")
     .select("*")
@@ -17,8 +15,8 @@ export async function getNotesByFolderId(folderId: string): Promise<ClinicalNote
   return data || [];
 }
 
-export async function getNote(id: string): Promise<ClinicalNote | null> {
-  const supabase = createSupabaseServerClient();
+export async function getNote(id: string): Promise<ClinicalNoteRow | null> {
+  const supabase = createSupabaseServerClient() as any;
   const { data, error } = await supabase
     .from("clinical_notes")
     .select("*")
@@ -26,15 +24,15 @@ export async function getNote(id: string): Promise<ClinicalNote | null> {
     .maybeSingle();
 
   if (error) throw error;
-  return data;
+  return data || null;
 }
 
 export async function createNote(
   folderId: string,
   content?: string,
   hdList?: string[],
-): Promise<ClinicalNote> {
-  const supabase = createSupabaseServerClient();
+): Promise<ClinicalNoteRow> {
+  const supabase = createSupabaseServerClient() as any;
   const { data, error } = await supabase
     .from("clinical_notes")
     .insert({
@@ -46,14 +44,21 @@ export async function createNote(
     .single();
 
   if (error) throw error;
-  return data;
+  return data as unknown as ClinicalNoteRow;
 }
 
 export async function updateNote(
   id: string,
-  updates: UpdateNoteInput,
-): Promise<ClinicalNote> {
-  const supabase = createSupabaseServerClient();
+  updates: {
+    content?: string;
+    hd_list?: string[];
+    conduct_doubts?: boolean;
+    unexpected_outcome?: boolean;
+    procedures?: string[];
+    title?: string | null;
+  },
+): Promise<ClinicalNoteRow> {
+  const supabase = createSupabaseServerClient() as any;
   const { data, error } = await supabase
     .from("clinical_notes")
     .update({
@@ -65,11 +70,11 @@ export async function updateNote(
     .single();
 
   if (error) throw error;
-  return data;
+  return data as unknown as ClinicalNoteRow;
 }
 
 export async function deleteNote(id: string): Promise<void> {
-  const supabase = createSupabaseServerClient();
+  const supabase = createSupabaseServerClient() as any;
   const { error } = await supabase.from("clinical_notes").delete().eq("id", id);
   if (error) throw error;
 }

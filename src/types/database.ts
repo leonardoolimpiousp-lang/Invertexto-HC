@@ -20,7 +20,13 @@ export interface Database {
           hospital: string;
           created_at?: string;
         };
-        Update: Partial<Database["public"]["Tables"]["profiles"]["Insert"]>;
+        Update: {
+          slug?: string;
+          full_name?: string;
+          level?: EducationLevel;
+          hospital?: string;
+          created_at?: string;
+        };
       };
       notes: {
         Row: {
@@ -33,7 +39,11 @@ export interface Database {
           content?: string;
           updated_at?: string;
         };
-        Update: Partial<Database["public"]["Tables"]["notes"]["Insert"]>;
+        Update: {
+          slug?: string;
+          content?: string;
+          updated_at?: string;
+        };
       };
       access_log: {
         Row: {
@@ -48,7 +58,12 @@ export interface Database {
           event: string;
           created_at?: string;
         };
-        Update: Partial<Database["public"]["Tables"]["access_log"]["Insert"]>;
+        Update: {
+          id?: string;
+          slug?: string | null;
+          event?: string;
+          created_at?: string;
+        };
       };
       clinical_folders: {
         Row: {
@@ -58,6 +73,7 @@ export interface Database {
           specialty: Specialty | null;
           sub_specialty: string | null;
           label: string;
+          parent_id: string | null;
           created_at: string;
           updated_at: string;
         };
@@ -68,10 +84,21 @@ export interface Database {
           specialty?: Specialty | null;
           sub_specialty?: string | null;
           label: string;
+          parent_id?: string | null;
           created_at?: string;
           updated_at?: string;
         };
-        Update: Partial<Database["public"]["Tables"]["clinical_folders"]["Insert"]>;
+        Update: {
+          id?: string;
+          slug?: string;
+          context?: ContextType;
+          specialty?: Specialty | null;
+          sub_specialty?: string | null;
+          label?: string;
+          parent_id?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
       };
       clinical_notes: {
         Row: {
@@ -82,6 +109,7 @@ export interface Database {
           conduct_doubts: boolean;
           unexpected_outcome: boolean;
           procedures: string[];
+          title: string | null;
           created_at: string;
           updated_at: string;
         };
@@ -93,10 +121,22 @@ export interface Database {
           conduct_doubts?: boolean;
           unexpected_outcome?: boolean;
           procedures?: string[];
+          title?: string | null;
           created_at?: string;
           updated_at?: string;
         };
-        Update: Partial<Database["public"]["Tables"]["clinical_notes"]["Insert"]>;
+        Update: {
+          id?: string;
+          folder_id?: string;
+          content?: string;
+          hd_list?: string[];
+          conduct_doubts?: boolean;
+          unexpected_outcome?: boolean;
+          procedures?: string[];
+          title?: string | null;
+          created_at?: string;
+          updated_at?: string;
+        };
       };
     };
   };

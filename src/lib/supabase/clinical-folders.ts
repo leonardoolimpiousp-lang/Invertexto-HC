@@ -1,11 +1,9 @@
 import { createSupabaseServerClient } from "./server";
 import type { Database, ContextType, Specialty } from "@/types/database";
 
-type ClinicalFolder = Database["public"]["Tables"]["clinical_folders"]["Row"];
-type CreateFolderInput = Database["public"]["Tables"]["clinical_folders"]["Insert"];
-type UpdateFolderInput = Database["public"]["Tables"]["clinical_folders"]["Update"];
+type ClinicalFolderRow = Database["public"]["Tables"]["clinical_folders"]["Row"];
 
-export async function getFoldersBySlug(slug: string): Promise<ClinicalFolder[]> {
+export async function getFoldersBySlug(slug: string): Promise<ClinicalFolderRow[]> {
   const supabase = createSupabaseServerClient();
   const { data, error } = await supabase
     .from("clinical_folders")
@@ -23,8 +21,8 @@ export async function createFolder(
   label: string,
   specialty?: Specialty | null,
   subSpecialty?: string | null,
-): Promise<ClinicalFolder> {
-  const supabase = createSupabaseServerClient();
+): Promise<ClinicalFolderRow> {
+  const supabase = createSupabaseServerClient() as any;
   const { data, error } = await supabase
     .from("clinical_folders")
     .insert({
@@ -38,14 +36,21 @@ export async function createFolder(
     .single();
 
   if (error) throw error;
-  return data;
+  return data as unknown as ClinicalFolderRow;
 }
 
 export async function updateFolder(
   id: string,
-  updates: UpdateFolderInput,
-): Promise<ClinicalFolder> {
-  const supabase = createSupabaseServerClient();
+  updates: {
+    slug?: string;
+    context?: ContextType;
+    specialty?: Specialty | null;
+    sub_specialty?: string | null;
+    label?: string;
+    parent_id?: string | null;
+  },
+): Promise<ClinicalFolderRow> {
+  const supabase = createSupabaseServerClient() as any;
   const { data, error } = await supabase
     .from("clinical_folders")
     .update({
@@ -57,11 +62,11 @@ export async function updateFolder(
     .single();
 
   if (error) throw error;
-  return data;
+  return data as unknown as ClinicalFolderRow;
 }
 
 export async function deleteFolder(id: string): Promise<void> {
-  const supabase = createSupabaseServerClient();
+  const supabase = createSupabaseServerClient() as any;
   const { error } = await supabase.from("clinical_folders").delete().eq("id", id);
   if (error) throw error;
 }

@@ -17,11 +17,12 @@ export type ToolId =
   | "receituarios"
   | "procedimentos"
   | "exames"
+  | "escores"
   | "calculadoras"
   | "diluicao"
   | "antimicrobianos"
   | "guias"
-  | "escores"
+  | "score_residente"
   | "cid"
   | "duvidas"
   | "plantonista";
@@ -59,6 +60,13 @@ export const TOOLS: readonly Tool[] = [
     prdRef: "F9",
   },
   {
+    id: "escores",
+    label: "Escores Clínicos",
+    description: "CHA₂DS₂-VASc, GRACE, qSOFA, Glasgow, Wells, NIHSS.",
+    icon: ClipboardList,
+    prdRef: "F3",
+  },
+  {
     id: "calculadoras",
     label: "Calculadoras",
     description: "Clearance, IMC, dose pediátrica, balanço hídrico.",
@@ -87,11 +95,11 @@ export const TOOLS: readonly Tool[] = [
     prdRef: "F10",
   },
   {
-    id: "escores",
+    id: "score_residente",
     label: "Score do Residente",
-    description: "CHA₂DS₂-VASc, GRACE, qSOFA, Glasgow, Wells, NIHSS.",
+    description: "Acompanhamento de performance e aprendizado.",
     icon: ClipboardList,
-    prdRef: "F3",
+    prdRef: "F13",
   },
   {
     id: "cid",
