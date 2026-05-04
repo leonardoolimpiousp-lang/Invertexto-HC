@@ -97,4 +97,21 @@ export const PROCEDIMENTOS: readonly Procedimento[] = [
       },
     ],
   },
+  {
+    id: "passagem_pai",
+    name: "Passagem de PAI",
+    context: ["sala_de_emergencia", "uti"],
+    hdTags: ["choque"],
+    steps: [
+      { text: "Sítio: __ (AFE, AFD, ARE, ARD). Complicações: nenhuma." },
+      { text: "Antissepsia + assepsia." },
+      { text: "Anestesia local com lidocaína a 2%." },
+      { text: "Canulação da ___ guiada por USG e passagem de fio guia." },
+      { text: "Passado cateter monolúmen." },
+      { text: "Refluxo de sangue arterial, com boa pulsação." },
+      { text: "Conexão do cateter ao sistema de PAI e lavagem da via." },
+      { text: "Zerado sistema. Boa curva ao monitor." },
+      { text: "Fixação com curativo." },
+    ],
+  },
 ] as const;
