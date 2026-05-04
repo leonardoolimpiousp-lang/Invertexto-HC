@@ -3,13 +3,8 @@
 import { useState } from "react";
 import { Copy, Check, ChevronDown, ChevronUp } from "lucide-react";
 import { PROCEDIMENTOS, type Procedimento } from "@/lib/constants/procedimentos";
+import { CONTEXT_LABELS } from "@/lib/constants/specialties";
 import type { ContextType } from "@/lib/constants/specialties";
-
-const CONTEXT_LABELS: Record<ContextType, string> = {
-  ps: "PS",
-  uti: "UTI",
-  ambulatorial: "Ambulatório",
-};
 
 function ProcedimentoCard({ proc }: { proc: Procedimento }) {
   const [checked, setChecked] = useState<Record<number, boolean>>({});
@@ -103,7 +98,7 @@ function ProcedimentoCard({ proc }: { proc: Procedimento }) {
 export function ProcedimentosPanel() {
   const [activeContext, setActiveContext] = useState<ContextType | "all">("all");
 
-  const contexts: Array<ContextType | "all"> = ["all", "ps", "uti", "ambulatorial"];
+  const contexts: Array<ContextType | "all"> = ["all", "ps", "uti", "sala_de_emergencia", "cirurgia", "ambulatorial"];
 
   const filtered =
     activeContext === "all"
