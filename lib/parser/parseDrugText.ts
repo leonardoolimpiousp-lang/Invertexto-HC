@@ -51,7 +51,7 @@ export function parseDrugText(rawText: string): PartialDrugJSON {
   if (text.match(R.CONTRAINDICATION_MARKER)) {
     const match = text.match(/CI:\s*([^\n]+)/i)
     if (match) {
-      contraindications.push(...match[1].split(/[,;/].map(c => c.trim())))
+      contraindications.push(...match[1].split(/[,;]/).map(c => c.trim()))
     }
   }
 
