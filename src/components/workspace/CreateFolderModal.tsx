@@ -6,17 +6,23 @@ import {
   CONTEXT_LABELS,
   ESPECIALIDADE_BASE_LABELS,
   SUBESPECIALIDADES,
-  type ContextType,
   type EspecialidadeBase,
-  type ClinicalFolder,
 } from "@/lib/constants/specialties";
+import type { ContextType } from "@/types/database";
 
 interface CreateFolderModalProps {
   onClose: () => void;
-  onCreate: (data: Omit<ClinicalFolder, "id" | "createdAt" | "notes">) => void;
+  onCreate: (data: {
+    context: ContextType;
+    specialty?: string | null;
+    subSpecialty?: string | null;
+    label: string;
+    patientName: string;
+    patientAge: string;
+  }) => void;
 }
 
-type Step = "context" | "specialty" | "subSpecialty";
+type Step = "context" | "specialty" | "subSpecialty" | "patientInfo";
 
 const CONTEXT_DESCRIPTIONS: Record<ContextType, string> = {
   ps: "Atendimentos de urgência e emergência",
@@ -31,14 +37,16 @@ export function CreateFolderModal({ onClose, onCreate }: CreateFolderModalProps)
   const [step, setStep] = useState<Step>("context");
   const [context, setContext] = useState<ContextType | null>(null);
   const [specialty, setSpecialty] = useState<EspecialidadeBase | null>(null);
+  const [subSpecialty, setSubSpecialty] = useState<string | null>(null);
+  const [patientName, setPatientName] = useState("");
+  const [patientAge, setPatientAge] = useState("");
 
   const handleContext = (ctx: ContextType) => {
     setContext(ctx);
     if (ctx === "ambulatorial") {
       setStep("specialty");
     } else {
-      onCreate({ context: ctx, label: CONTEXT_LABELS[ctx] });
-      onClose();
+      setStep("patientInfo");
     }
   };
 
@@ -47,21 +55,28 @@ export function CreateFolderModal({ onClose, onCreate }: CreateFolderModalProps)
     if (spec === "cirurgia" || spec === "clinica_medica") {
       setStep("subSpecialty");
     } else {
-      onCreate({
-        context: "ambulatorial",
-        specialty: spec,
-        label: `Ambulatório · ${ESPECIALIDADE_BASE_LABELS[spec]}`,
-      });
-      onClose();
+      setStep("patientInfo");
     }
   };
 
   const handleSubSpecialty = (sub: string) => {
+    setSubSpecialty(sub);
+    setStep("patientInfo");
+  };
+
+  const handleFinish = () => {
+    if (!context) return;
+    let label = CONTEXT_LABELS[context];
+    if (context === "ambulatorial" && specialty) {
+      label = `Ambulatório · ${subSpecialty || ESPECIALIDADE_BASE_LABELS[specialty]}`;
+    }
     onCreate({
-      context: "ambulatorial",
-      specialty: specialty!,
-      subSpecialty: sub,
-      label: `Ambulatório · ${sub}`,
+      context,
+      specialty,
+      subSpecialty,
+      label,
+      patientName,
+      patientAge,
     });
     onClose();
   };
@@ -76,11 +91,12 @@ export function CreateFolderModal({ onClose, onCreate }: CreateFolderModalProps)
       <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
         <div className="mb-5 flex items-center justify-between">
           <div>
-            <h2 className="text-h3 text-neutral-900">Nova pasta clínica</h2>
+            <h2 className="text-h3 text-neutral-900">Nova nota clínica</h2>
             <p className="mt-0.5 text-caption text-neutral-400">
               {step === "context" && "Selecione o contexto clínico"}
               {step === "specialty" && "Selecione a especialidade"}
               {step === "subSpecialty" && "Selecione a subespecialidade"}
+              {step === "patientInfo" && "Identificação do paciente"}
             </p>
           </div>
           <button
@@ -95,7 +111,7 @@ export function CreateFolderModal({ onClose, onCreate }: CreateFolderModalProps)
 
         {step === "context" && (
           <div className="space-y-2">
-            {(["ps", "uti", "ambulatorial"] as ContextType[]).map((ctx) => (
+            {(Object.keys(CONTEXT_LABELS) as ContextType[]).map((ctx) => (
               <button
                 key={ctx}
                 type="button"
@@ -160,6 +176,55 @@ export function CreateFolderModal({ onClose, onCreate }: CreateFolderModalProps)
               type="button"
               onClick={() => setStep("specialty")}
               className="mt-3 w-full text-left text-caption text-neutral-400 hover:text-neutral-600"
+            >
+              ← Voltar
+            </button>
+          </div>
+        )}
+
+        {step === "patientInfo" && (
+          <div className="space-y-4">
+            <div className="space-y-3">
+              <div>
+                <label htmlFor="pname" className="text-xs font-medium text-neutral-500">
+                  Nome do Paciente
+                </label>
+                <input
+                  id="pname"
+                  autoFocus
+                  type="text"
+                  value={patientName}
+                  onChange={(e) => setPatientName(e.target.value)}
+                  placeholder="Nome completo ou iniciais"
+                  className="mt-1 w-full rounded-xl border border-neutral-200 px-4 py-3 text-body text-neutral-800 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label htmlFor="page" className="text-xs font-medium text-neutral-500">
+                  Idade
+                </label>
+                <input
+                  id="page"
+                  type="text"
+                  value={patientAge}
+                  onChange={(e) => setPatientAge(e.target.value)}
+                  placeholder="Ex: 45a"
+                  className="mt-1 w-full rounded-xl border border-neutral-200 px-4 py-3 text-body text-neutral-800 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 focus:outline-none"
+                />
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={handleFinish}
+              disabled={!patientName.trim() || !patientAge.trim()}
+              className="w-full rounded-xl bg-brand-600 px-4 py-3 text-body font-semibold text-white transition-colors hover:bg-brand-700 disabled:bg-neutral-200 disabled:text-neutral-400"
+            >
+              Criar nota
+            </button>
+            <button
+              type="button"
+              onClick={() => setStep(context === "ambulatorial" ? (subEsps ? "subSpecialty" : "specialty") : "context")}
+              className="w-full text-left text-caption text-neutral-400 hover:text-neutral-600"
             >
               ← Voltar
             </button>
