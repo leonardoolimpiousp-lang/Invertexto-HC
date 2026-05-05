@@ -68,7 +68,7 @@ export function CreateFolderModal({ onClose, onCreate }: CreateFolderModalProps)
     if (!context) return;
     let label = CONTEXT_LABELS[context];
     if (context === "ambulatorial" && specialty) {
-      label = `Ambulatório · ${subSpecialty || ESPECIALIDADE_BASE_LABELS[specialty]}`;
+      label = subSpecialty || ESPECIALIDADE_BASE_LABELS[specialty];
     }
     onCreate({
       context,

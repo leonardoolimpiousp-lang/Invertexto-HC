@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Database } from "@/types/database";
 import { Sidebar } from "@/components/workspace/Sidebar";
 import { NotepadPanel } from "@/components/workspace/NotepadPanel";
@@ -24,14 +24,50 @@ interface WorkspaceProps {
 
 export function Workspace({ profile, isWelcome }: WorkspaceProps) {
   const [activeTool, setActiveTool] = useState<ToolId | null>(null);
+  const [activeToolSource, setActiveToolSource] = useState<"sidebar" | "notepad" | null>(null);
+  const [activeToolItemId, setActiveToolItemId] = useState<string | null>(null);
+  const [hasActiveNote, setHasActiveNote] = useState(false);
   const [notepadKey, setNotepadKey] = useState(0);
+
+  const selectFromSidebar = (id: ToolId | null) => {
+    setActiveTool(id);
+    setActiveToolSource(id ? "sidebar" : null);
+    setActiveToolItemId(null);
+  };
+
+  const selectFromNotepad = (id: ToolId, itemId?: string) => {
+    setActiveTool(id);
+    setActiveToolSource("notepad");
+    setActiveToolItemId(itemId ?? null);
+  };
+
+  const closeTool = () => {
+    setActiveTool(null);
+    setActiveToolSource(null);
+    setActiveToolItemId(null);
+  };
+
+  const showSplitLayout = Boolean(activeTool && activeToolSource === "notepad" && hasActiveNote);
+  const showToolOnly = Boolean(activeTool && !showSplitLayout);
+
+  const toolPanelRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (showSplitLayout && toolPanelRef.current) {
+      toolPanelRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [showSplitLayout, activeTool]);
 
   return (
     <div className="flex min-h-screen bg-neutral-50">
       <Sidebar
         activeTool={activeTool}
-        onSelectTool={setActiveTool}
-        onNotepadHome={() => setNotepadKey((k) => k + 1)}
+        onSelectTool={selectFromSidebar}
+        onNotepadHome={() => {
+          closeTool();
+          setHasActiveNote(false);
+          setNotepadKey((k) => k + 1);
+        }}
       />
 
       <main className="flex-1 min-w-0">
@@ -53,17 +89,29 @@ export function Workspace({ profile, isWelcome }: WorkspaceProps) {
 
           {isWelcome && <WelcomeBanner slug={profile.slug} />}
 
-          <div className={activeTool ? "grid gap-6 lg:grid-cols-2" : ""}>
-            <NotepadPanel
-              key={notepadKey}
-              slug={profile.slug}
-              onSelectTool={(id) => setActiveTool(id)}
-            />
+          {showToolOnly ? (
+            <ToolPanel toolId={activeTool!} slug={profile.slug} onClose={closeTool} />
+          ) : (
+            <div className={showSplitLayout ? "grid gap-6 md:grid-cols-2" : ""}>
+              <NotepadPanel
+                key={notepadKey}
+                slug={profile.slug}
+                onSelectTool={selectFromNotepad}
+                onActiveNoteChange={setHasActiveNote}
+              />
 
-            {activeTool && (
-              <ToolPanel toolId={activeTool} onClose={() => setActiveTool(null)} />
-            )}
-          </div>
+              {showSplitLayout && activeTool && (
+                <div ref={toolPanelRef}>
+                  <ToolPanel
+                    toolId={activeTool}
+                    slug={profile.slug}
+                    initialItemId={activeToolItemId}
+                    onClose={closeTool}
+                  />
+                </div>
+              )}
+            </div>
+          )}
 
           <footer className="mt-10 border-t border-neutral-200 pt-6">
             <p className="text-caption text-neutral-400">

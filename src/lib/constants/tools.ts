@@ -10,14 +10,15 @@ import {
   BookOpen,
   HelpCircle,
   Clock,
+  Repeat,
   type LucideIcon,
 } from "lucide-react";
 
 export type ToolId =
+  | "passagem"
   | "receituarios"
   | "procedimentos"
   | "exames"
-  | "escores"
   | "calculadoras"
   | "diluicao"
   | "antimicrobianos"
@@ -39,11 +40,25 @@ export interface Tool {
 /** Ordem segue a frequência de uso esperada em consulta/plantão. */
 export const TOOLS: readonly Tool[] = [
   {
+    id: "passagem",
+    label: "Passagem de Plantão",
+    description: "Casos no formato I-PASS para handover.",
+    icon: Repeat,
+    prdRef: "F14",
+  },
+  {
     id: "receituarios",
     label: "Receituários",
-    description: "Templates simples, controlado e especial.",
+    description: "",
     icon: FileText,
     prdRef: "F5",
+  },
+  {
+    id: "calculadoras",
+    label: "Calculadoras",
+    description: "",
+    icon: Calculator,
+    prdRef: "F2",
   },
   {
     id: "procedimentos",
@@ -58,20 +73,6 @@ export const TOOLS: readonly Tool[] = [
     description: "Valores laboratoriais para evolução.",
     icon: FlaskConical,
     prdRef: "F9",
-  },
-  {
-    id: "escores",
-    label: "Escores Clínicos",
-    description: "CHA₂DS₂-VASc, GRACE, qSOFA, Glasgow, Wells, NIHSS.",
-    icon: ClipboardList,
-    prdRef: "F3",
-  },
-  {
-    id: "calculadoras",
-    label: "Calculadoras",
-    description: "Clearance, IMC, dose pediátrica, balanço hídrico.",
-    icon: Calculator,
-    prdRef: "F2",
   },
   {
     id: "diluicao",

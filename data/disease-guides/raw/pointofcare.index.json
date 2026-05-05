@@ -1,0 +1,475 @@
+{
+  "source": "https://www.pointofcaremedicine.com/templates",
+  "generatedAt": "2026-05-05T12:40:48.861Z",
+  "total": 78,
+  "templates": [
+    {
+      "title": "Altered Mental Status - Rapid Response",
+      "url": "https://www.pointofcaremedicine.com/rapid-response/ams-rapid-response",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Hypotension - Rapid Response",
+      "url": "https://www.pointofcaremedicine.com/rapid-response/hypotension-rapid-response",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Respiratory Distress - Rapid Response",
+      "url": "https://www.pointofcaremedicine.com/rapid-response/respiratory-distress-rapid-response",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Preparing for Intubation",
+      "url": "https://www.pointofcaremedicine.com/rapid-response/intubation",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Acute Coronary Syndrome (ACS) and Myocardial Infarction (MI)",
+      "url": "https://www.pointofcaremedicine.com/cardiology/acs-mi",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Acute Decompensated Heart Failure (ADHF)",
+      "url": "https://www.pointofcaremedicine.com/cardiology/adhf",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Acute Limb Ischemia",
+      "url": "https://www.pointofcaremedicine.com/cardiology/acute-limb-ischemia",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Aortic Dissection",
+      "url": "https://www.pointofcaremedicine.com/cardiology/aortic-dissection",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Aortic Stenosis",
+      "url": "https://www.pointofcaremedicine.com/cardiology/aortic-stenosis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Bradycardia",
+      "url": "https://www.pointofcaremedicine.com/cardiology/bradycardia",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Cardiogenic Shock",
+      "url": "https://www.pointofcaremedicine.com/cardiology/cardiogenic-shock",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Hypertensive Urgency and Emergency",
+      "url": "https://www.pointofcaremedicine.com/cardiology/hypertensive-urgency-emergency",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Pericarditis",
+      "url": "https://www.pointofcaremedicine.com/cardiology/pericarditis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Syncope and Loss of Consciousness",
+      "url": "https://www.pointofcaremedicine.com/cardiology/syncope",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "ARDS",
+      "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/ards",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Asthma Exacerbation",
+      "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/asthma-exacerbation",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "COPD Exacerbation",
+      "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/aecopd",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "ICU Bundle",
+      "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/icu-bundle",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Interstitial Lung Disease (ILD)",
+      "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/ild",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Pneumothorax",
+      "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/pneumothorax",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Pulmonary Embolism and VTE",
+      "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/pe",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Pulmonary Hypertension",
+      "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/pulmonary-hypertension",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Respiratory Failure and Intubation/Extubation",
+      "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/respiratory-failure-and-intubation",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Acute Liver Failure",
+      "url": "https://www.pointofcaremedicine.com/gastroenterology/acute-liver-failure",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Alcoholic Hepatitis",
+      "url": "https://www.pointofcaremedicine.com/gastroenterology/alcoholic-hepatitis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "C Difficile Infection",
+      "url": "https://www.pointofcaremedicine.com/gastroenterology/c-difficile-infection",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Cirrhosis and Decompensations",
+      "url": "https://www.pointofcaremedicine.com/gastroenterology/cirrhosis-and-complications",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Constipation",
+      "url": "https://www.pointofcaremedicine.com/gastroenterology/constipation",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Diverticulitis",
+      "url": "https://www.pointofcaremedicine.com/gastroenterology/diverticulitis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "GI Bleed",
+      "url": "https://www.pointofcaremedicine.com/gastroenterology/gi-bleed",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Inflammatory Bowel Disease (IBD) and Flares",
+      "url": "https://www.pointofcaremedicine.com/gastroenterology/ibd",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Nausea and Vomiting",
+      "url": "https://www.pointofcaremedicine.com/gastroenterology/nausea-and-vomiting",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Peptic Ulcer Disease (PUD) and H. Pylori",
+      "url": "https://www.pointofcaremedicine.com/gastroenterology/pud-and-h-pylori",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Small Bowel Obstruction (SBO) and Ileus",
+      "url": "https://www.pointofcaremedicine.com/gastroenterology/small-bowel-obstruction",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Acute Kidney Injury (AKI)",
+      "url": "https://www.pointofcaremedicine.com/nephrology/acute-kidney-injury",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "ESRD and Missed Dialysis",
+      "url": "https://www.pointofcaremedicine.com/nephrology/esrd-missed-dialysis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Hypercalcemia",
+      "url": "https://www.pointofcaremedicine.com/nephrology/hypercalcemia",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Hypernatremia",
+      "url": "https://www.pointofcaremedicine.com/nephrology/hypernatremia",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Hyponatremia",
+      "url": "https://www.pointofcaremedicine.com/nephrology/hyponatremia",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Metabolic Acidosis",
+      "url": "https://www.pointofcaremedicine.com/nephrology/metabolic-acidosis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Nephrolithiasis",
+      "url": "https://www.pointofcaremedicine.com/nephrology/nephrolithiasis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Rhabdomyolysis",
+      "url": "https://www.pointofcaremedicine.com/nephrology/rhabdomyolysis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Acute Leukemia",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/acute-leukemia",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Anemia (Inpatient)",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/anemia-inpatient",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Diffuse Lymphadenopathy",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/diffuse-lymphadenopathy",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Disseminated Intravascular Coagulopathy (DIC)",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/dic",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Eosinophilia",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/eosinophilia",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Heparin-Induced Thrombocytopenia (HIT)",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/hit",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Neutropenic Fever",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/neutropenic-fever",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "New Pancreatic Mass",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/new-pancreatic-mass",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "New Solitary Lung Nodule",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/new-lung-nodule",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Oncology Admission Intake",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/oncology-admission-intake",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Pancytopenia",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/pancytopenia",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Sickle Cell Disease and Vaso-Occlusive Crisis",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/sickle-cell-disease",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Transfusion Reaction",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/transfusion",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Tumor Lysis Syndrome (TLS)",
+      "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/tls",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Cellulitis / Skin and Soft Tissue Infection (SSTI)",
+      "url": "https://www.pointofcaremedicine.com/infectious-disease/cellulitis-and-ssti",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Cholangitis",
+      "url": "https://www.pointofcaremedicine.com/infectious-disease/cholangitis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Endocarditis and Bacteremia",
+      "url": "https://www.pointofcaremedicine.com/infectious-disease/endocarditis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Fever of Unknown Origin (FUO)",
+      "url": "https://www.pointofcaremedicine.com/infectious-disease/fever-of-unknown-origin",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "HIV and AIDS",
+      "url": "https://www.pointofcaremedicine.com/infectious-disease/hiv",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Infectious Disease Social History Intake",
+      "url": "https://www.pointofcaremedicine.com/infectious-disease/id-social-history",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Meningitis and Encephalitis",
+      "url": "https://www.pointofcaremedicine.com/infectious-disease/meningitis-and-encephalitis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "PJP / Pneumocystis Pneumonia (PCP)",
+      "url": "https://www.pointofcaremedicine.com/infectious-disease/pjp",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Tuberculosis",
+      "url": "https://www.pointofcaremedicine.com/infectious-disease/tuberculosis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "UTI and Pyelonephritis",
+      "url": "https://www.pointofcaremedicine.com/infectious-disease/uti-and-pyelonephritis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Diabetic Ketoacidosis (DKA)",
+      "url": "https://www.pointofcaremedicine.com/endocrinology/dka",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Hypoglycemia",
+      "url": "https://www.pointofcaremedicine.com/endocrinology/hypoglycemia",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Inpatient Diabetes Management",
+      "url": "https://www.pointofcaremedicine.com/endocrinology/diabetes",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Acute Arthritis",
+      "url": "https://www.pointofcaremedicine.com/rheumatology-immunology/acute-arthritis",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Rheumatology Review of Systems",
+      "url": "https://www.pointofcaremedicine.com/rheumatology-immunology/rhematology-review-of-systems",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Systemic Lupus Erythematosus (SLE)",
+      "url": "https://www.pointofcaremedicine.com/rheumatology-immunology/lupus",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Altered Mental Status",
+      "url": "https://www.pointofcaremedicine.com/neurology/ams",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Delirium and Agitation",
+      "url": "https://www.pointofcaremedicine.com/neurology/delirium-and-agitation",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Headache and Migraine",
+      "url": "https://www.pointofcaremedicine.com/neurology/headache",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Seizure",
+      "url": "https://www.pointofcaremedicine.com/neurology/seizure",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Spinal Cord Compression",
+      "url": "https://www.pointofcaremedicine.com/neurology/spinal-cord-compression",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    },
+    {
+      "title": "Stroke and TIA",
+      "url": "https://www.pointofcaremedicine.com/neurology/stroke",
+      "category": "Rapid Response",
+      "setting": "Rapid Response"
+    }
+  ]
+}

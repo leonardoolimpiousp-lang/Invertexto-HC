@@ -55,6 +55,12 @@ export async function updateNote(
     conduct_doubts?: boolean;
     unexpected_outcome?: boolean;
     procedures?: string[];
+    patient_destination?: "alta" | "alta_retorno_ambulatorial" | "internacao" | "obito" | null;
+    encounter_closed?: boolean;
+    encounter_closed_at?: string | null;
+    plantao_registro?: string | null;
+    plantao_duvidas?: string | null;
+    plantao_reflexoes?: string | null;
     title?: string | null;
   },
 ): Promise<ClinicalNoteRow> {

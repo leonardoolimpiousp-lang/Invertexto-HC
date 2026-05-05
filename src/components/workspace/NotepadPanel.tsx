@@ -5,20 +5,35 @@ import { Plus, FolderOpen, FileText, ChevronRight, Clock, Trash2 } from "lucide-
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { CreateFolderModal } from "@/components/workspace/CreateFolderModal";
 import { NoteEditor } from "@/components/workspace/NoteEditor";
+import {
+  getNotePatientDestination,
+  getVisibleHdList,
+  isNoteEncounterClosed,
+  type PatientDestination,
+} from "@/lib/clinical-note-metadata";
 import { cn } from "@/lib/utils/cn";
 import { ESPECIALIDADE_BASE_LABELS } from "@/lib/constants/specialties";
+import { getNoteTemplateByContext } from "@/lib/constants/note-templates";
 import type { Database, ContextType, Specialty } from "@/types/database";
 import type { ToolId } from "@/lib/constants/tools";
 
 type ClinicalFolder = Database["public"]["Tables"]["clinical_folders"]["Row"];
 type ClinicalNote = Database["public"]["Tables"]["clinical_notes"]["Row"];
 
+const DESTINATION_LABEL: Record<PatientDestination, string> = {
+  alta: "Alta",
+  alta_retorno_ambulatorial: "Alta c/ retorno ambulatorial",
+  internacao: "Internação",
+  obito: "Óbito",
+};
+
 interface NotepadPanelProps {
   slug: string;
-  onSelectTool: (toolId: ToolId) => void;
+  onSelectTool: (toolId: ToolId, itemId?: string) => void;
+  onActiveNoteChange?: (isActive: boolean) => void;
 }
 
-export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
+export function NotepadPanel({ slug, onSelectTool, onActiveNoteChange }: NotepadPanelProps) {
   const supabase = useMemo(() => {
     const client = createSupabaseBrowserClient() as any;
     console.log("Supabase client initialized:", {
@@ -35,7 +50,22 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [refreshKey, setRefreshKey] = useState(0);
 
-  const loadFoldersAndNotes = async () => {
+  const hasMissingColumnError = (error: any, column: string) => {
+    const message = String(
+      `${error?.code || ""} ${error?.message || ""} ${error?.details || ""} ${error?.hint || ""}`,
+    ).toLowerCase();
+    const normalizedColumn = column.toLowerCase();
+
+    return (
+      message.includes(normalizedColumn) &&
+      (message.includes("does not exist") ||
+        message.includes("schema cache") ||
+        message.includes("could not find") ||
+        message.includes("pgrst204"))
+    );
+  };
+
+  const loadFoldersAndNotes = useCallback(async () => {
     setIsLoading(true);
     try {
       const { data: foldersData, error: foldersError } = await supabase
@@ -68,11 +98,15 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [slug, supabase]);
 
   useEffect(() => {
     loadFoldersAndNotes();
-  }, [slug, supabase, refreshKey]);
+  }, [loadFoldersAndNotes, refreshKey]);
+
+  useEffect(() => {
+    onActiveNoteChange?.(Boolean(activeNote && activeFolder));
+  }, [activeFolder, activeNote, onActiveNoteChange]);
 
   // ── helpers ──────────────────────────────────────────────────────────────
 
@@ -89,12 +123,13 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
 
       // ── Outpatient Hierarchy ──────────────────────────────────────────────
       if (data.context === "ambulatorial") {
-        // 1. Check/Create Root "Ambulatório" folder
         const { data: rootFolder, error: rootError } = await supabase
           .from("clinical_folders")
           .select("id")
           .eq("slug", slug)
+          .eq("context", "ambulatorial")
           .eq("label", "Ambulatório")
+          .is("parent_id", null)
           .maybeSingle();
 
         if (rootError) throw rootError;
@@ -108,6 +143,7 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
               slug,
               context: "ambulatorial",
               label: "Ambulatório",
+              parent_id: null,
             } as any)
             .select()
             .single();
@@ -115,26 +151,35 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
           if (createRootError) throw createRootError;
           if (newRoot) {
             parentId = (newRoot as any).id;
-            setFolders((prev) => [newRoot as any, ...prev]);
+            setFolders((prev) =>
+              prev.some((folder) => folder.id === (newRoot as any).id)
+                ? prev
+                : [newRoot as any, ...prev],
+            );
           }
         }
       }
 
-      // 2. Create the specific folder (or use existing subfolder if it matches?)
-      // For now, we always create a new folder for the specific case/patient 
-      // if it's PS/UTI, but for Ambulatório we might want to group by specialty.
-      // USER SAID: "sub-pasta chamada ambulatorio-especialidade"
-      
+      const specialtyLabel =
+        data.subSpecialty ||
+        (data.specialty ? (ESPECIALIDADE_BASE_LABELS as any)[data.specialty] : "Geral");
       const targetLabel = data.context === "ambulatorial" 
-        ? `Ambulatório · ${data.subSpecialty || (data.specialty ? (ESPECIALIDADE_BASE_LABELS as any)[data.specialty] : "Geral")}`
+        ? specialtyLabel
         : data.label;
 
-      const { data: existingFolder, error: findError } = await supabase
+      let existingFolderQuery = supabase
         .from("clinical_folders")
         .select("*")
         .eq("slug", slug)
-        .eq("label", targetLabel)
-        .maybeSingle();
+        .eq("label", targetLabel);
+
+      existingFolderQuery =
+        data.context === "ambulatorial" && parentId
+          ? existingFolderQuery.eq("parent_id", parentId)
+          : existingFolderQuery.is("parent_id", null);
+
+      const { data: existingFolder, error: findError } =
+        await existingFolderQuery.maybeSingle();
 
       if (findError) throw findError;
 
@@ -165,13 +210,13 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
         setFolders((prev) => [newFolder as any, ...prev]);
       }
 
-      // 3. Create the note with Patient Info as title
-      const title = `${data.patientName} - ${data.patientAge}`;
+      const title = `${data.patientName.trim()} - ${data.patientAge.trim()}`;
+      const templateContent = getNoteTemplateByContext(data.context);
       const { data: newNote, error: noteError } = await supabase
         .from("clinical_notes")
         .insert({
           folder_id: folderId,
-          content: "",
+          content: templateContent,
           title: title,
           hd_list: [],
         } as any)
@@ -202,12 +247,13 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
     if (!patientName || !patientAge) return;
 
     try {
-      const title = `${patientName} - ${patientAge}`;
+      const title = `${patientName.trim()} - ${patientAge.trim()}`;
+      const templateContent = getNoteTemplateByContext(folder.context);
       const { data: newNote, error } = await supabase
         .from("clinical_notes")
         .insert({
           folder_id: folder.id,
-          content: "",
+          content: templateContent,
           title: title,
           hd_list: [],
         } as any)
@@ -277,22 +323,72 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
     }
   };
 
-  const updateNote = async (updated: Partial<ClinicalNote> & { id: string }) => {
-    if (!activeFolder) return;
+  const updateNote = async (updated: Partial<ClinicalNote> & { id: string }): Promise<boolean> => {
+    if (!activeFolder) return false;
     try {
-      const { error } = await supabase
-        .from("clinical_notes")
-        .update({
-          content: updated.content,
-          hd_list: updated.hd_list,
-          conduct_doubts: updated.conduct_doubts,
-          unexpected_outcome: updated.unexpected_outcome,
-          procedures: updated.procedures,
-          updated_at: new Date().toISOString(),
-        } as any)
-        .eq("id", updated.id);
+      const corePayload: Record<string, any> = {
+        content: updated.content,
+        hd_list: updated.hd_list,
+        updated_at: new Date().toISOString(),
+      };
 
-      if (error) throw error;
+      const metadataPayload: Record<string, any> = {
+        conduct_doubts: updated.conduct_doubts,
+        unexpected_outcome: updated.unexpected_outcome,
+        procedures: updated.procedures,
+      };
+
+      if (typeof updated.patient_destination !== "undefined") {
+        metadataPayload.patient_destination = updated.patient_destination;
+      }
+      if (typeof updated.encounter_closed !== "undefined") {
+        metadataPayload.encounter_closed = updated.encounter_closed;
+      }
+      if (typeof updated.encounter_closed_at !== "undefined") {
+        metadataPayload.encounter_closed_at = updated.encounter_closed_at;
+      }
+
+      const runUpdate = async (payload: Record<string, any>) =>
+        supabase.from("clinical_notes").update(payload as any).eq("id", updated.id);
+
+      const { error: coreError } = await runUpdate(corePayload);
+      if (coreError) throw coreError;
+
+      const missingColumns = [
+        "conduct_doubts",
+        "unexpected_outcome",
+        "procedures",
+        "patient_destination",
+        "encounter_closed",
+        "encounter_closed_at",
+      ];
+      let pendingMetadata = Object.fromEntries(
+        Object.entries(metadataPayload).filter(([, value]) => typeof value !== "undefined"),
+      );
+
+      while (Object.keys(pendingMetadata).length > 0) {
+        const { error } = await runUpdate({
+          ...pendingMetadata,
+          updated_at: new Date().toISOString(),
+        });
+
+        if (!error) break;
+
+        const missingColumn = missingColumns.find((column) =>
+          hasMissingColumnError(error, column),
+        );
+
+        if (!missingColumn) {
+          console.error("Error updating note metadata:", error);
+          throw error;
+        }
+
+        delete pendingMetadata[missingColumn];
+
+        if (missingColumn === "encounter_closed") {
+          delete pendingMetadata.encounter_closed_at;
+        }
+      }
 
       const fullNote = { ...activeNote, ...updated } as ClinicalNote;
       setNotes((prev) => ({
@@ -305,12 +401,128 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
 
       // Force refresh to ensure data consistency
       setRefreshKey((k) => k + 1);
+      return true;
     } catch (error) {
       console.error("Error updating note:", error);
+      return false;
     }
   };
 
-  const currentFolderNotes = activeFolder ? notes[activeFolder.id] || [] : [];
+  const currentFolderNotes = useMemo(() => {
+    if (!activeFolder) return [];
+    const list = notes[activeFolder.id] || [];
+    // Open encounters on top, closed on bottom; preserve creation order within each group
+    return [...list].sort((a, b) => {
+      const aClosed = isNoteEncounterClosed(a) ? 1 : 0;
+      const bClosed = isNoteEncounterClosed(b) ? 1 : 0;
+      if (aClosed !== bClosed) return aClosed - bClosed;
+      return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+    });
+  }, [activeFolder, notes]);
+
+  const encounterStats = useMemo(() => {
+    let open = 0;
+    let closed = 0;
+    for (const folderNotes of Object.values(notes)) {
+      for (const note of folderNotes) {
+        if (isNoteEncounterClosed(note)) closed++;
+        else open++;
+      }
+    }
+    return { open, closed };
+  }, [notes]);
+
+  const activeChildFolders = activeFolder
+    ? folders.filter((folder) => folder.parent_id === activeFolder.id)
+    : [];
+  const orderedFolders = useMemo(() => {
+    const childrenByParent = new Map<string, ClinicalFolder[]>();
+    const roots: ClinicalFolder[] = [];
+
+    for (const folder of folders) {
+      if (!folder.parent_id) {
+        roots.push(folder);
+      } else {
+        childrenByParent.set(folder.parent_id, [
+          ...(childrenByParent.get(folder.parent_id) || []),
+          folder,
+        ]);
+      }
+    }
+
+    const ordered = roots.flatMap((folder) => [
+      folder,
+      ...(childrenByParent.get(folder.id) || []),
+    ]);
+    const orderedIds = new Set(ordered.map((folder) => folder.id));
+    const orphanedSubfolders = folders.filter((folder) => !orderedIds.has(folder.id));
+
+    return [...ordered, ...orphanedSubfolders];
+  }, [folders]);
+
+  const getFolderNoteCount = (folder: ClinicalFolder) => {
+    const directNotes = notes[folder.id]?.length || 0;
+    const childNotes = folders
+      .filter((child) => child.parent_id === folder.id)
+      .reduce((total, child) => total + (notes[child.id]?.length || 0), 0);
+
+    return directNotes + childNotes;
+  };
+
+  const openFolder = (folder: ClinicalFolder) => {
+    setActiveNote(null);
+    setActiveFolder(folder);
+  };
+
+  const renderFolderRow = (folder: ClinicalFolder) => {
+    const folderNotesCount = getFolderNoteCount(folder);
+    const isSubfolder = !!folder.parent_id;
+
+    return (
+      <div
+        key={folder.id}
+        className={cn(
+          "group relative flex w-full items-center gap-3 rounded-xl border border-neutral-200 bg-white p-4 transition-colors hover:border-brand-300 hover:bg-brand-50",
+          isSubfolder && "ml-6 border-dashed bg-neutral-50/50",
+        )}
+      >
+        <button
+          type="button"
+          onClick={() => openFolder(folder)}
+          className="flex flex-1 items-center gap-3 text-left min-w-0"
+        >
+          <FolderOpen
+            className={cn(
+              "h-5 w-5 shrink-0",
+              isSubfolder ? "text-neutral-400" : "text-brand-500",
+            )}
+          />
+          <div className="min-w-0 flex-1">
+            <p className="text-body font-medium text-neutral-800">{folder.label}</p>
+            <p className="mt-0.5 text-caption text-neutral-500">
+              {folderNotesCount} {folderNotesCount === 1 ? "nota" : "notas"} ·{" "}
+              {new Date(folder.created_at).toLocaleDateString("pt-BR")}
+            </p>
+          </div>
+        </button>
+
+        <div className="flex shrink-0 items-center gap-3">
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              deleteFolder(folder.id);
+            }}
+            className="p-2 text-neutral-300 hover:text-red-500 transition-colors"
+            title="Excluir pasta"
+          >
+            <Trash2 className="h-4 w-4" />
+          </button>
+          <ChevronRight className="h-4 w-4 text-neutral-300" />
+        </div>
+      </div>
+    );
+  };
 
   // ── Note editor ───────────────────────────────────────────────────────────
 
@@ -320,6 +532,11 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
         note={activeNote}
         folder={activeFolder}
         onBack={() => setActiveNote(null)}
+        onGoDashboard={() => {
+          setActiveNote(null);
+          setActiveFolder(null);
+          setRefreshKey((k) => k + 1);
+        }}
         onUpdate={updateNote}
         onSelectTool={onSelectTool}
       />
@@ -329,6 +546,8 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
   // ── Folder detail (note list) ─────────────────────────────────────────────
 
   if (activeFolder) {
+    const isFolderGroup = activeChildFolders.length > 0;
+
     return (
       <div className="flex flex-col gap-4">
         <div className="flex items-start justify-between">
@@ -336,18 +555,25 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
             <p className="text-overline uppercase text-brand-700">Notepad</p>
             <h2 className="mt-0.5 text-h3 text-neutral-900">{activeFolder.label}</h2>
             <p className="mt-0.5 text-caption text-neutral-400">
-              {currentFolderNotes.length}{" "}
-              {currentFolderNotes.length === 1 ? "nota" : "notas"}
+              {isFolderGroup
+                ? `${activeChildFolders.length} ${
+                    activeChildFolders.length === 1 ? "especialidade" : "especialidades"
+                  }`
+                : `${currentFolderNotes.length} ${
+                    currentFolderNotes.length === 1 ? "nota" : "notas"
+                  }`}
             </p>
           </div>
-          <button
-            type="button"
-            onClick={() => createNote(activeFolder)}
-            className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-body font-medium text-white hover:bg-brand-700"
-          >
-            <Plus className="h-4 w-4" />
-            Nova nota
-          </button>
+          {!isFolderGroup && (
+            <button
+              type="button"
+              onClick={() => createNote(activeFolder)}
+              className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-body font-medium text-white hover:bg-brand-700"
+            >
+              <Plus className="h-4 w-4" />
+              Nova nota
+            </button>
+          )}
         </div>
 
         <button
@@ -358,7 +584,9 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
           ← Todas as pastas
         </button>
 
-        {currentFolderNotes.length === 0 ? (
+        {isFolderGroup ? (
+          <div className="space-y-2">{activeChildFolders.map(renderFolderRow)}</div>
+        ) : currentFolderNotes.length === 0 ? (
           <EmptyState
             icon={FileText}
             title="Nenhuma nota nesta pasta."
@@ -367,11 +595,16 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
           />
         ) : (
           <div className="space-y-2">
-            {currentFolderNotes.map((note) => (
-              <div
-                key={note.id}
-                className="group relative flex w-full items-center gap-3 rounded-xl border border-neutral-200 bg-white p-4 transition-colors hover:border-brand-300 hover:bg-brand-50"
-              >
+            {currentFolderNotes.map((note) => {
+              const noteDestination = getNotePatientDestination(note);
+              const noteClosed = isNoteEncounterClosed(note);
+              const visibleHdList = getVisibleHdList(note.hd_list);
+
+              return (
+                <div
+                  key={note.id}
+                  className="group relative flex w-full items-center gap-3 rounded-xl border border-neutral-200 bg-white p-4 transition-colors hover:border-brand-300 hover:bg-brand-50"
+                >
                 <button
                   type="button"
                   onClick={() => setActiveNote(note)}
@@ -379,12 +612,19 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
                 >
                   <FileText className="h-4 w-4 shrink-0 text-neutral-400" />
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-body font-medium text-neutral-800">
-                      {note.title || note.content.split("\n").find((l) => l.trim()) || "Nota vazia"}
-                    </p>
-                    {note.hd_list && note.hd_list.length > 0 && (
+                    <div className="flex items-center gap-2">
+                      <p className="truncate text-body font-medium text-neutral-800">
+                        {note.title || note.content.split("\n").find((l) => l.trim()) || "Nota vazia"}
+                      </p>
+                      {noteClosed && noteDestination && (
+                        <span className="shrink-0 rounded-full border border-brand-200 bg-brand-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand-700">
+                          {DESTINATION_LABEL[noteDestination]}
+                        </span>
+                      )}
+                    </div>
+                    {visibleHdList.length > 0 && (
                       <p className="mt-0.5 truncate text-caption text-neutral-500">
-                        HDs: {note.hd_list.join(", ")}
+                        HDs: {visibleHdList.join(", ")}
                       </p>
                     )}
                   </div>
@@ -408,8 +648,9 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
                   </button>
                   <ChevronRight className="h-4 w-4 text-neutral-300" />
                 </div>
-              </div>
-            ))}
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
@@ -461,52 +702,30 @@ export function NotepadPanel({ slug, onSelectTool }: NotepadPanelProps) {
         />
       ) : (
         <div className="space-y-6">
-          <div className="space-y-2">
-            {folders.map((folder) => {
-              const folderNotes = notes[folder.id] || [];
-              const isSubfolder = !!folder.parent_id;
-              
-              return (
-                <div
-                  key={folder.id}
-                  className={cn(
-                    "group relative flex w-full items-center gap-3 rounded-xl border border-neutral-200 bg-white p-4 transition-colors hover:border-brand-300 hover:bg-brand-50",
-                    isSubfolder && "ml-6 border-dashed bg-neutral-50/50"
-                  )}
-                >
-                  <button
-                    type="button"
-                    onClick={() => setActiveFolder(folder)}
-                    className="flex flex-1 items-center gap-3 text-left min-w-0"
-                  >
-                    <FolderOpen className={cn("h-5 w-5 shrink-0", isSubfolder ? "text-neutral-400" : "text-brand-500")} />
-                    <div className="min-w-0 flex-1">
-                      <p className="text-body font-medium text-neutral-800">{folder.label}</p>
-                      <p className="mt-0.5 text-caption text-neutral-500">
-                        {folderNotes.length} {folderNotes.length === 1 ? "nota" : "notas"} ·{" "}
-                        {new Date(folder.created_at).toLocaleDateString("pt-BR")}
-                      </p>
-                    </div>
-                  </button>
-
-                  <div className="flex shrink-0 items-center gap-3">
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        deleteFolder(folder.id);
-                      }}
-                      className="p-2 text-neutral-300 hover:text-red-500 transition-colors"
-                      title="Excluir pasta"
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </button>
-                    <ChevronRight className="h-4 w-4 text-neutral-300" />
-                  </div>
-                </div>
-              );
-            })}
+          <div className="grid grid-cols-2 gap-3">
+            <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+              <p className="text-caption font-medium uppercase tracking-wide text-amber-700">
+                Em atendimento
+              </p>
+              <p className="mt-1 text-h3 font-bold text-amber-900">{encounterStats.open}</p>
+              <p className="mt-0.5 text-caption text-amber-700">
+                {encounterStats.open === 1 ? "paciente aberto" : "pacientes abertos"}
+              </p>
+            </div>
+            <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+              <p className="text-caption font-medium uppercase tracking-wide text-emerald-700">
+                Atendidos
+              </p>
+              <p className="mt-1 text-h3 font-bold text-emerald-900">{encounterStats.closed}</p>
+              <p className="mt-0.5 text-caption text-emerald-700">
+                {encounterStats.closed === 1
+                  ? "atendimento finalizado"
+                  : "atendimentos finalizados"}
+              </p>
+            </div>
           </div>
+
+          <div className="space-y-2">{orderedFolders.map(renderFolderRow)}</div>
         </div>
       )}
 

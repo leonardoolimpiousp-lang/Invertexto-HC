@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Copy, Check, ChevronDown, ChevronUp } from "lucide-react";
 import { PROCEDIMENTOS, type Procedimento } from "@/lib/constants/procedimentos";
 import { CONTEXT_LABELS } from "@/lib/constants/specialties";
@@ -12,11 +12,33 @@ const INFO_SECTIONS = [
   { key: "complicacoes", label: "Complicações" },
 ] as const;
 
-function ProcedimentoCard({ proc }: { proc: Procedimento }) {
+function ProcedimentoCard({
+  proc,
+  initialExpanded = false,
+  scrollIntoView = false,
+}: {
+  proc: Procedimento;
+  initialExpanded?: boolean;
+  scrollIntoView?: boolean;
+}) {
   const [checked, setChecked] = useState<Record<number, boolean>>({});
-  const [expanded, setExpanded] = useState(true);
-  const [infoExpanded, setInfoExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(initialExpanded);
+  const [infoExpanded, setInfoExpanded] = useState(initialExpanded);
   const [copied, setCopied] = useState(false);
+  const cardRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (scrollIntoView && cardRef.current) {
+      cardRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [scrollIntoView]);
+
+  useEffect(() => {
+    if (initialExpanded) {
+      setExpanded(true);
+      setInfoExpanded(true);
+    }
+  }, [initialExpanded]);
 
   const toggle = (i: number) =>
     setChecked((prev) => ({ ...prev, [i]: !prev[i] }));
@@ -33,7 +55,14 @@ function ProcedimentoCard({ proc }: { proc: Procedimento }) {
   const info = proc.info;
 
   return (
-    <div className="rounded-xl border border-neutral-200 bg-white overflow-hidden">
+    <div
+      ref={cardRef}
+      className={`rounded-xl border bg-white overflow-hidden transition-shadow ${
+        initialExpanded
+          ? "border-brand-500 shadow-sm ring-2 ring-brand-100"
+          : "border-neutral-200"
+      }`}
+    >
       <div className="flex items-center justify-between p-4 gap-3">
         <div className="flex items-center gap-3 min-w-0">
           <button
@@ -153,8 +182,18 @@ function ProcedimentoCard({ proc }: { proc: Procedimento }) {
   );
 }
 
-export function ProcedimentosPanel() {
+interface ProcedimentosPanelProps {
+  initialId?: string;
+}
+
+export function ProcedimentosPanel({ initialId }: ProcedimentosPanelProps = {}) {
   const [activeContext, setActiveContext] = useState<ContextType | "all">("all");
+
+  useEffect(() => {
+    if (initialId) {
+      setActiveContext("all");
+    }
+  }, [initialId]);
 
   const contexts: Array<ContextType | "all"> = ["all", "ps", "uti", "sala_de_emergencia", "enfermaria", "cirurgia", "ambulatorial"];
 
@@ -195,7 +234,12 @@ export function ProcedimentosPanel() {
       ) : (
         <div className="space-y-3">
           {filtered.map((proc) => (
-            <ProcedimentoCard key={proc.id} proc={proc} />
+            <ProcedimentoCard
+              key={proc.id}
+              proc={proc}
+              initialExpanded={proc.id === initialId}
+              scrollIntoView={proc.id === initialId}
+            />
           ))}
         </div>
       )}

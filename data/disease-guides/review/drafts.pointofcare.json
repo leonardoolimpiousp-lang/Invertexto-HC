@@ -1,0 +1,5370 @@
+{
+  "generatedAt": "2026-05-05T13:16:54.185Z",
+  "total": 78,
+  "drafts": [
+    {
+      "id": "altered-mental-status-rapid-response",
+      "disease": "Alteração do Estado Mental - Resposta Rápida",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "alteração do estado mental - resposta rápida",
+          "weight": 10
+        },
+        {
+          "name": "alteracao",
+          "weight": 10
+        },
+        {
+          "name": "estado",
+          "weight": 6
+        },
+        {
+          "name": "mental",
+          "weight": 6
+        },
+        {
+          "name": "resposta",
+          "weight": 6
+        },
+        {
+          "name": "rapida",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Alteração do Estado Mental - Resposta Rápida.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/rapid-response/ams-rapid-response"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:07.327Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "hypotension-rapid-response",
+      "disease": "Hipotensão - Resposta Rápida",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "hipotensão - resposta rápida",
+          "weight": 10
+        },
+        {
+          "name": "hipotensao",
+          "weight": 10
+        },
+        {
+          "name": "resposta",
+          "weight": 6
+        },
+        {
+          "name": "rapida",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Hipotensão - Resposta Rápida.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/rapid-response/hypotension-rapid-response"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:07.378Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "respiratory-distress-rapid-response",
+      "disease": "Desconforto Respiratório - Resposta Rápida",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "desconforto respiratório - resposta rápida",
+          "weight": 10
+        },
+        {
+          "name": "desconforto",
+          "weight": 10
+        },
+        {
+          "name": "respiratorio",
+          "weight": 6
+        },
+        {
+          "name": "resposta",
+          "weight": 6
+        },
+        {
+          "name": "rapida",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Desconforto Respiratório - Resposta Rápida.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/rapid-response/respiratory-distress-rapid-response"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:07.434Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "preparing-for-intubation",
+      "disease": "Preparação para Intubação",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "intubação",
+          "weight": 10
+        },
+        {
+          "name": "via aérea",
+          "weight": 10
+        },
+        {
+          "name": "sequência rápida",
+          "weight": 6
+        },
+        {
+          "name": "insuficiência respiratória",
+          "weight": 6
+        },
+        {
+          "name": "preparação para intubação",
+          "weight": 6
+        },
+        {
+          "name": "preparacao",
+          "weight": 6
+        },
+        {
+          "name": "intubacao",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Preparação para Intubação.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/rapid-response/intubation"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:07.480Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "acute-coronary-syndrome-acs-and-myocardial-infarction-mi",
+      "disease": "Síndrome Coronariana Aguda (SCA) e Infarto Agudo do Miocárdio (IAM)",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "dor torácica",
+          "weight": 10
+        },
+        {
+          "name": "iam",
+          "weight": 10
+        },
+        {
+          "name": "sca",
+          "weight": 6
+        },
+        {
+          "name": "infarto",
+          "weight": 6
+        },
+        {
+          "name": "supra de st",
+          "weight": 6
+        },
+        {
+          "name": "síndrome coronariana aguda (sca) e infarto agudo do miocárdio (iam)",
+          "weight": 6
+        },
+        {
+          "name": "sindrome",
+          "weight": 6
+        },
+        {
+          "name": "coronariana",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Síndrome Coronariana Aguda (SCA) e Infarto Agudo do Miocárdio (IAM).",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/cardiology/acs-mi"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:07.543Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "acute-decompensated-heart-failure-adhf",
+      "disease": "Insuficiência Cardíaca Agudamente Descompensada",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "insuficiência cardíaca",
+          "weight": 10
+        },
+        {
+          "name": "congestão",
+          "weight": 10
+        },
+        {
+          "name": "edema agudo de pulmão",
+          "weight": 6
+        },
+        {
+          "name": "dispneia",
+          "weight": 6
+        },
+        {
+          "name": "insuficiência cardíaca agudamente descompensada",
+          "weight": 6
+        },
+        {
+          "name": "insuficiencia",
+          "weight": 6
+        },
+        {
+          "name": "cardiaca",
+          "weight": 6
+        },
+        {
+          "name": "agudamente",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Insuficiência Cardíaca Agudamente Descompensada.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/cardiology/adhf"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:07.603Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "acute-limb-ischemia",
+      "disease": "Isquemia Aguda de Membro",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "isquemia aguda de membro",
+          "weight": 10
+        },
+        {
+          "name": "isquemia",
+          "weight": 10
+        },
+        {
+          "name": "aguda",
+          "weight": 6
+        },
+        {
+          "name": "membro",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Isquemia Aguda de Membro.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/cardiology/acute-limb-ischemia"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:08.157Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "aortic-dissection",
+      "disease": "Dissecção de Aorta",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "dissecção de aorta",
+          "weight": 10
+        },
+        {
+          "name": "disseccao",
+          "weight": 10
+        },
+        {
+          "name": "aorta",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Dissecção de Aorta.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/cardiology/aortic-dissection"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:08.356Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "aortic-stenosis",
+      "disease": "Estenose Aórtica",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "estenose aórtica",
+          "weight": 10
+        },
+        {
+          "name": "estenose",
+          "weight": 10
+        },
+        {
+          "name": "aortica",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Estenose Aórtica.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/cardiology/aortic-stenosis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:08.420Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "bradycardia",
+      "disease": "Bradicardia",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "bradicardia",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Bradicardia.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/cardiology/bradycardia"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:08.750Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "cardiogenic-shock",
+      "disease": "Choque Cardiogênico",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "choque cardiogênico",
+          "weight": 10
+        },
+        {
+          "name": "choque",
+          "weight": 10
+        },
+        {
+          "name": "cardiogenico",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Choque Cardiogênico.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/cardiology/cardiogenic-shock"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:08.821Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "hypertensive-urgency-and-emergency",
+      "disease": "Urgência e Emergência Hipertensiva",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "urgência e emergência hipertensiva",
+          "weight": 10
+        },
+        {
+          "name": "urgencia",
+          "weight": 10
+        },
+        {
+          "name": "emergencia",
+          "weight": 6
+        },
+        {
+          "name": "hipertensiva",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Urgência e Emergência Hipertensiva.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/cardiology/hypertensive-urgency-emergency"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:09.013Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "pericarditis",
+      "disease": "Pericardite",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "pericardite",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Pericardite.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/cardiology/pericarditis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:09.287Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "syncope-and-loss-of-consciousness",
+      "disease": "Síncope e Perda de Consciência",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "síncope e perda de consciência",
+          "weight": 10
+        },
+        {
+          "name": "sincope",
+          "weight": 10
+        },
+        {
+          "name": "perda",
+          "weight": 6
+        },
+        {
+          "name": "consciencia",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Síncope e Perda de Consciência.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/cardiology/syncope"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:09.361Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "ards",
+      "disease": "Síndrome do Desconforto Respiratório Agudo (SDRA)",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "síndrome do desconforto respiratório agudo (sdra)",
+          "weight": 10
+        },
+        {
+          "name": "sindrome",
+          "weight": 10
+        },
+        {
+          "name": "desconforto",
+          "weight": 6
+        },
+        {
+          "name": "respiratorio",
+          "weight": 6
+        },
+        {
+          "name": "agudo",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Síndrome do Desconforto Respiratório Agudo (SDRA).",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/ards"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:09.664Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "asthma-exacerbation",
+      "disease": "Exacerbação de Asma",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "exacerbação de asma",
+          "weight": 10
+        },
+        {
+          "name": "exacerbacao",
+          "weight": 10
+        },
+        {
+          "name": "asma",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Exacerbação de Asma.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/asthma-exacerbation"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:09.861Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "copd-exacerbation",
+      "disease": "Exacerbação de DPOC",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "exacerbação de dpoc",
+          "weight": 10
+        },
+        {
+          "name": "exacerbacao",
+          "weight": 10
+        },
+        {
+          "name": "dpoc",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Exacerbação de DPOC.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/aecopd"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:10.184Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "icu-bundle",
+      "disease": "Pacote de Cuidados em UTI",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "pacote de cuidados em uti",
+          "weight": 10
+        },
+        {
+          "name": "pacote",
+          "weight": 10
+        },
+        {
+          "name": "cuidados",
+          "weight": 6
+        },
+        {
+          "name": "uti",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Pacote de Cuidados em UTI.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/icu-bundle"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:10.245Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "interstitial-lung-disease-ild",
+      "disease": "Doença Pulmonar Intersticial",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "doença pulmonar intersticial",
+          "weight": 10
+        },
+        {
+          "name": "doenca",
+          "weight": 10
+        },
+        {
+          "name": "pulmonar",
+          "weight": 6
+        },
+        {
+          "name": "intersticial",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Doença Pulmonar Intersticial.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/ild"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:10.473Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "pneumothorax",
+      "disease": "Pneumotórax",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "pneumotórax",
+          "weight": 10
+        },
+        {
+          "name": "pneumotorax",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Pneumotórax.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/pneumothorax"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:10.711Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "pulmonary-embolism-and-vte",
+      "disease": "Embolia Pulmonar e Tromboembolismo Venoso",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "tep",
+          "weight": 10
+        },
+        {
+          "name": "tromboembolismo",
+          "weight": 10
+        },
+        {
+          "name": "trombose venosa",
+          "weight": 6
+        },
+        {
+          "name": "dispneia súbita",
+          "weight": 6
+        },
+        {
+          "name": "embolia pulmonar e tromboembolismo venoso",
+          "weight": 6
+        },
+        {
+          "name": "embolia",
+          "weight": 6
+        },
+        {
+          "name": "pulmonar",
+          "weight": 6
+        },
+        {
+          "name": "venoso",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Embolia Pulmonar e Tromboembolismo Venoso.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/pe"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:10.931Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "pulmonary-hypertension",
+      "disease": "Hipertensão Pulmonar",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "hipertensão pulmonar",
+          "weight": 10
+        },
+        {
+          "name": "hipertensao",
+          "weight": 10
+        },
+        {
+          "name": "pulmonar",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Hipertensão Pulmonar.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/pulmonary-hypertension"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:11.121Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "respiratory-failure-and-intubation-extubation",
+      "disease": "Insuficiência Respiratória e Intubação/Extubação",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "insuficiência respiratória e intubação/extubação",
+          "weight": 10
+        },
+        {
+          "name": "insuficiencia",
+          "weight": 10
+        },
+        {
+          "name": "respiratoria",
+          "weight": 6
+        },
+        {
+          "name": "intubacao",
+          "weight": 6
+        },
+        {
+          "name": "extubacao",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Insuficiência Respiratória e Intubação/Extubação.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/pulmonology-and-critical-care/respiratory-failure-and-intubation"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:11.321Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "acute-liver-failure",
+      "disease": "Insuficiência Hepática Aguda",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "insuficiência hepática aguda",
+          "weight": 10
+        },
+        {
+          "name": "insuficiencia",
+          "weight": 10
+        },
+        {
+          "name": "hepatica",
+          "weight": 6
+        },
+        {
+          "name": "aguda",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Insuficiência Hepática Aguda.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/gastroenterology/acute-liver-failure"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:11.392Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "alcoholic-hepatitis",
+      "disease": "Hepatite Alcoólica",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "hepatite alcoólica",
+          "weight": 10
+        },
+        {
+          "name": "hepatite",
+          "weight": 10
+        },
+        {
+          "name": "alcoolica",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Hepatite Alcoólica.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/gastroenterology/alcoholic-hepatitis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:11.582Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "c-difficile-infection",
+      "disease": "Infecção por Clostridioides difficile",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "infecção por clostridioides difficile",
+          "weight": 10
+        },
+        {
+          "name": "infeccao",
+          "weight": 10
+        },
+        {
+          "name": "clostridioides",
+          "weight": 6
+        },
+        {
+          "name": "difficile",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Infecção por Clostridioides difficile.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/gastroenterology/c-difficile-infection"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:11.647Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "cirrhosis-and-decompensations",
+      "disease": "Cirrose e Descompensações",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "cirrose e descompensações",
+          "weight": 10
+        },
+        {
+          "name": "cirrose",
+          "weight": 10
+        },
+        {
+          "name": "descompensacoes",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Cirrose e Descompensações.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/gastroenterology/cirrhosis-and-complications"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:11.731Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "constipation",
+      "disease": "Constipação",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "constipação",
+          "weight": 10
+        },
+        {
+          "name": "constipacao",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Constipação.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/gastroenterology/constipation"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:11.910Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "diverticulitis",
+      "disease": "Diverticulite",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "diverticulite",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Diverticulite.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/gastroenterology/diverticulitis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:12.335Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "gi-bleed",
+      "disease": "Hemorragia Digestiva",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "hemorragia digestiva",
+          "weight": 10
+        },
+        {
+          "name": "hemorragia",
+          "weight": 10
+        },
+        {
+          "name": "digestiva",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Hemorragia Digestiva.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/gastroenterology/gi-bleed"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:12.406Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "inflammatory-bowel-disease-ibd-and-flares",
+      "disease": "Doença Inflamatória Intestinal e Agudizações",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "doença inflamatória intestinal e agudizações",
+          "weight": 10
+        },
+        {
+          "name": "doenca",
+          "weight": 10
+        },
+        {
+          "name": "inflamatoria",
+          "weight": 6
+        },
+        {
+          "name": "intestinal",
+          "weight": 6
+        },
+        {
+          "name": "agudizacoes",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Doença Inflamatória Intestinal e Agudizações.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/gastroenterology/ibd"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:12.473Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "nausea-and-vomiting",
+      "disease": "Náuseas e Vômitos",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "náuseas e vômitos",
+          "weight": 10
+        },
+        {
+          "name": "nauseas",
+          "weight": 10
+        },
+        {
+          "name": "vomitos",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Náuseas e Vômitos.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/gastroenterology/nausea-and-vomiting"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:12.539Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "peptic-ulcer-disease-pud-and-h-pylori",
+      "disease": "Doença Ulcerosa Péptica e H. pylori",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "doença ulcerosa péptica e h. pylori",
+          "weight": 10
+        },
+        {
+          "name": "doenca",
+          "weight": 10
+        },
+        {
+          "name": "ulcerosa",
+          "weight": 6
+        },
+        {
+          "name": "peptica",
+          "weight": 6
+        },
+        {
+          "name": "pylori",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Doença Ulcerosa Péptica e H. pylori.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/gastroenterology/pud-and-h-pylori"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:12.755Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "small-bowel-obstruction-sbo-and-ileus",
+      "disease": "Obstrução de Intestino Delgado e Íleo",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "obstrução de intestino delgado e íleo",
+          "weight": 10
+        },
+        {
+          "name": "obstrucao",
+          "weight": 10
+        },
+        {
+          "name": "intestino",
+          "weight": 6
+        },
+        {
+          "name": "delgado",
+          "weight": 6
+        },
+        {
+          "name": "ileo",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Obstrução de Intestino Delgado e Íleo.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/gastroenterology/small-bowel-obstruction"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:13.839Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "acute-kidney-injury-aki",
+      "disease": "Lesão Renal Aguda",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "lesão renal aguda",
+          "weight": 10
+        },
+        {
+          "name": "lesao",
+          "weight": 10
+        },
+        {
+          "name": "renal",
+          "weight": 6
+        },
+        {
+          "name": "aguda",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Lesão Renal Aguda.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/nephrology/acute-kidney-injury"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:13.904Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "esrd-and-missed-dialysis",
+      "disease": "Doença Renal Crônica Terminal e Diálise Perdida",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "doença renal crônica terminal e diálise perdida",
+          "weight": 10
+        },
+        {
+          "name": "doenca",
+          "weight": 10
+        },
+        {
+          "name": "renal",
+          "weight": 6
+        },
+        {
+          "name": "cronica",
+          "weight": 6
+        },
+        {
+          "name": "terminal",
+          "weight": 6
+        },
+        {
+          "name": "dialise",
+          "weight": 6
+        },
+        {
+          "name": "perdida",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Doença Renal Crônica Terminal e Diálise Perdida.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/nephrology/esrd-missed-dialysis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:14.280Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "hypercalcemia",
+      "disease": "Hipercalcemia",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "hipercalcemia",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Hipercalcemia.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/nephrology/hypercalcemia"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:14.346Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "hypernatremia",
+      "disease": "Hipernatremia",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "hipernatremia",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Hipernatremia.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/nephrology/hypernatremia"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:14.411Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "hyponatremia",
+      "disease": "Hiponatremia",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "hiponatremia",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Hiponatremia.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/nephrology/hyponatremia"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:14.484Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "metabolic-acidosis",
+      "disease": "Acidose Metabólica",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "acidose metabólica",
+          "weight": 10
+        },
+        {
+          "name": "acidose",
+          "weight": 10
+        },
+        {
+          "name": "metabolica",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Acidose Metabólica.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/nephrology/metabolic-acidosis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:14.702Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "nephrolithiasis",
+      "disease": "Nefrolitíase",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "nefrolitíase",
+          "weight": 10
+        },
+        {
+          "name": "nefrolitiase",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Nefrolitíase.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/nephrology/nephrolithiasis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:14.774Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "rhabdomyolysis",
+      "disease": "Rabdomiólise",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "rabdomiólise",
+          "weight": 10
+        },
+        {
+          "name": "rabdomiolise",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Rabdomiólise.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/nephrology/rhabdomyolysis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:14.852Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "acute-leukemia",
+      "disease": "Leucemia Aguda",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "leucemia aguda",
+          "weight": 10
+        },
+        {
+          "name": "leucemia",
+          "weight": 10
+        },
+        {
+          "name": "aguda",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Leucemia Aguda.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/acute-leukemia"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:15.407Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "anemia-inpatient",
+      "disease": "Anemia em Paciente Internado",
+      "contexts": [
+        "PS",
+        "Enfermaria",
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "anemia em paciente internado",
+          "weight": 10
+        },
+        {
+          "name": "anemia",
+          "weight": 10
+        },
+        {
+          "name": "paciente",
+          "weight": 6
+        },
+        {
+          "name": "internado",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Anemia em Paciente Internado.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/anemia-inpatient"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:15.473Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "diffuse-lymphadenopathy",
+      "disease": "Linfadenopatia Difusa",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "linfadenopatia difusa",
+          "weight": 10
+        },
+        {
+          "name": "linfadenopatia",
+          "weight": 10
+        },
+        {
+          "name": "difusa",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Linfadenopatia Difusa.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/diffuse-lymphadenopathy"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:15.967Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "disseminated-intravascular-coagulopathy-dic",
+      "disease": "Coagulação Intravascular Disseminada (CIVD)",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "coagulação intravascular disseminada (civd)",
+          "weight": 10
+        },
+        {
+          "name": "coagulacao",
+          "weight": 10
+        },
+        {
+          "name": "intravascular",
+          "weight": 6
+        },
+        {
+          "name": "disseminada",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Coagulação Intravascular Disseminada (CIVD).",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/dic"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:16.152Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "eosinophilia",
+      "disease": "Eosinofilia",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "eosinofilia",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Eosinofilia.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/eosinophilia"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:16.360Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "heparin-induced-thrombocytopenia-hit",
+      "disease": "Trombocitopenia Induzida por Heparina",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "trombocitopenia induzida por heparina",
+          "weight": 10
+        },
+        {
+          "name": "trombocitopenia",
+          "weight": 10
+        },
+        {
+          "name": "induzida",
+          "weight": 6
+        },
+        {
+          "name": "heparina",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Trombocitopenia Induzida por Heparina.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/hit"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:16.554Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "neutropenic-fever",
+      "disease": "Neutropenia Febril",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "neutropenia febril",
+          "weight": 10
+        },
+        {
+          "name": "neutropenia",
+          "weight": 10
+        },
+        {
+          "name": "febril",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Neutropenia Febril.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/neutropenic-fever"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:16.757Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "new-pancreatic-mass",
+      "disease": "Nova Massa Pancreática",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "nova massa pancreática",
+          "weight": 10
+        },
+        {
+          "name": "nova",
+          "weight": 10
+        },
+        {
+          "name": "massa",
+          "weight": 6
+        },
+        {
+          "name": "pancreatica",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Nova Massa Pancreática.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/new-pancreatic-mass"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:16.957Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "new-solitary-lung-nodule",
+      "disease": "Novo Nódulo Pulmonar Solitário",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "novo nódulo pulmonar solitário",
+          "weight": 10
+        },
+        {
+          "name": "novo",
+          "weight": 10
+        },
+        {
+          "name": "nodulo",
+          "weight": 6
+        },
+        {
+          "name": "pulmonar",
+          "weight": 6
+        },
+        {
+          "name": "solitario",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Novo Nódulo Pulmonar Solitário.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/new-lung-nodule"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:17.168Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "oncology-admission-intake",
+      "disease": "Admissão Oncológica",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "admissão oncológica",
+          "weight": 10
+        },
+        {
+          "name": "admissao",
+          "weight": 10
+        },
+        {
+          "name": "oncologica",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Admissão Oncológica.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/oncology-admission-intake"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:17.454Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "pancytopenia",
+      "disease": "Pancitopenia",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "pancitopenia",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Pancitopenia.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/pancytopenia"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:17.626Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "sickle-cell-disease-and-vaso-occlusive-crisis",
+      "disease": "Doença Falciforme e Crise Vaso-Oclusiva",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "doença falciforme e crise vaso-oclusiva",
+          "weight": 10
+        },
+        {
+          "name": "doenca",
+          "weight": 10
+        },
+        {
+          "name": "falciforme",
+          "weight": 6
+        },
+        {
+          "name": "crise",
+          "weight": 6
+        },
+        {
+          "name": "vaso",
+          "weight": 6
+        },
+        {
+          "name": "oclusiva",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Doença Falciforme e Crise Vaso-Oclusiva.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/sickle-cell-disease"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:17.855Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "transfusion-reaction",
+      "disease": "Reação Transfusional",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "reação transfusional",
+          "weight": 10
+        },
+        {
+          "name": "reacao",
+          "weight": 10
+        },
+        {
+          "name": "transfusional",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Reação Transfusional.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/transfusion"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:18.479Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "tumor-lysis-syndrome-tls",
+      "disease": "Síndrome de Lise Tumoral",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "síndrome de lise tumoral",
+          "weight": 10
+        },
+        {
+          "name": "sindrome",
+          "weight": 10
+        },
+        {
+          "name": "lise",
+          "weight": 6
+        },
+        {
+          "name": "tumoral",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Síndrome de Lise Tumoral.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/hematology-and-oncology/tls"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:19.155Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "cellulitis-skin-and-soft-tissue-infection-ssti",
+      "disease": "Celulite e Infecção de Pele/Partes Moles",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "celulite",
+          "weight": 10
+        },
+        {
+          "name": "erisipela",
+          "weight": 10
+        },
+        {
+          "name": "infecção de pele",
+          "weight": 6
+        },
+        {
+          "name": "partes moles",
+          "weight": 6
+        },
+        {
+          "name": "celulite e infecção de pele/partes moles",
+          "weight": 6
+        },
+        {
+          "name": "infeccao",
+          "weight": 6
+        },
+        {
+          "name": "pele",
+          "weight": 6
+        },
+        {
+          "name": "partes",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Celulite e Infecção de Pele/Partes Moles.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/infectious-disease/cellulitis-and-ssti"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:19.429Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "cholangitis",
+      "disease": "Colangite",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "colangite",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Colangite.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/infectious-disease/cholangitis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:19.501Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "endocarditis-and-bacteremia",
+      "disease": "Endocardite e Bacteremia",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "endocardite e bacteremia",
+          "weight": 10
+        },
+        {
+          "name": "endocardite",
+          "weight": 10
+        },
+        {
+          "name": "bacteremia",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Endocardite e Bacteremia.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/infectious-disease/endocarditis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:19.558Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "fever-of-unknown-origin-fuo",
+      "disease": "Febre de Origem Indeterminada",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "febre de origem indeterminada",
+          "weight": 10
+        },
+        {
+          "name": "febre",
+          "weight": 10
+        },
+        {
+          "name": "origem",
+          "weight": 6
+        },
+        {
+          "name": "indeterminada",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Febre de Origem Indeterminada.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/infectious-disease/fever-of-unknown-origin"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:20.116Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "hiv-and-aids",
+      "disease": "HIV e AIDS",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "hiv e aids",
+          "weight": 10
+        },
+        {
+          "name": "hiv",
+          "weight": 10
+        },
+        {
+          "name": "aids",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é HIV e AIDS.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/infectious-disease/hiv"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:20.328Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "infectious-disease-social-history-intake",
+      "disease": "História Social em Infectologia",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "história social em infectologia",
+          "weight": 10
+        },
+        {
+          "name": "historia",
+          "weight": 10
+        },
+        {
+          "name": "social",
+          "weight": 6
+        },
+        {
+          "name": "infectologia",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é História Social em Infectologia.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/infectious-disease/id-social-history"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:20.510Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "meningitis-and-encephalitis",
+      "disease": "Meningite e Encefalite",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "meningite e encefalite",
+          "weight": 10
+        },
+        {
+          "name": "meningite",
+          "weight": 10
+        },
+        {
+          "name": "encefalite",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Meningite e Encefalite.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/infectious-disease/meningitis-and-encephalitis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:20.562Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "pjp-pneumocystis-pneumonia-pcp",
+      "disease": "Pneumonia por Pneumocystis jirovecii",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "pneumonia por pneumocystis jirovecii",
+          "weight": 10
+        },
+        {
+          "name": "pneumonia",
+          "weight": 10
+        },
+        {
+          "name": "pneumocystis",
+          "weight": 6
+        },
+        {
+          "name": "jirovecii",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Pneumonia por Pneumocystis jirovecii.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/infectious-disease/pjp"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:20.755Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "tuberculosis",
+      "disease": "Tuberculose",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "tuberculose",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Tuberculose.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/infectious-disease/tuberculosis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:20.948Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "uti-and-pyelonephritis",
+      "disease": "Infecção Urinária e Pielonefrite",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "itu",
+          "weight": 10
+        },
+        {
+          "name": "pielonefrite",
+          "weight": 10
+        },
+        {
+          "name": "disúria",
+          "weight": 6
+        },
+        {
+          "name": "infecção urinária",
+          "weight": 6
+        },
+        {
+          "name": "infecção urinária e pielonefrite",
+          "weight": 6
+        },
+        {
+          "name": "infeccao",
+          "weight": 6
+        },
+        {
+          "name": "urinaria",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Infecção Urinária e Pielonefrite.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/infectious-disease/uti-and-pyelonephritis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:21.005Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "diabetic-ketoacidosis-dka",
+      "disease": "Cetoacidose Diabética",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "cetoacidose",
+          "weight": 10
+        },
+        {
+          "name": "diabetes descompensado",
+          "weight": 10
+        },
+        {
+          "name": "acidose metabólica",
+          "weight": 6
+        },
+        {
+          "name": "hiperglicemia",
+          "weight": 6
+        },
+        {
+          "name": "cetoacidose diabética",
+          "weight": 6
+        },
+        {
+          "name": "diabetica",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Cetoacidose Diabética.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/endocrinology/dka"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:21.058Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "hypoglycemia",
+      "disease": "Hipoglicemia",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "hipoglicemia",
+          "weight": 10
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Hipoglicemia.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/endocrinology/hypoglycemia"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:21.238Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "inpatient-diabetes-management",
+      "disease": "Manejo do Diabetes em Paciente Internado",
+      "contexts": [
+        "PS",
+        "Enfermaria",
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "manejo do diabetes em paciente internado",
+          "weight": 10
+        },
+        {
+          "name": "manejo",
+          "weight": 10
+        },
+        {
+          "name": "diabetes",
+          "weight": 6
+        },
+        {
+          "name": "paciente",
+          "weight": 6
+        },
+        {
+          "name": "internado",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Manejo do Diabetes em Paciente Internado.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/endocrinology/diabetes"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:21.297Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "acute-arthritis",
+      "disease": "Artrite Aguda",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "artrite aguda",
+          "weight": 10
+        },
+        {
+          "name": "artrite",
+          "weight": 10
+        },
+        {
+          "name": "aguda",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Artrite Aguda.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/rheumatology-immunology/acute-arthritis"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:21.483Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "rheumatology-review-of-systems",
+      "disease": "Revisão de Sistemas em Reumatologia",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "revisão de sistemas em reumatologia",
+          "weight": 10
+        },
+        {
+          "name": "revisao",
+          "weight": 10
+        },
+        {
+          "name": "sistemas",
+          "weight": 6
+        },
+        {
+          "name": "reumatologia",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Revisão de Sistemas em Reumatologia.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/rheumatology-immunology/rhematology-review-of-systems"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:21.858Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "systemic-lupus-erythematosus-sle",
+      "disease": "Lúpus Eritematoso Sistêmico",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "lúpus eritematoso sistêmico",
+          "weight": 10
+        },
+        {
+          "name": "lupus",
+          "weight": 10
+        },
+        {
+          "name": "eritematoso",
+          "weight": 6
+        },
+        {
+          "name": "sistemico",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Lúpus Eritematoso Sistêmico.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/rheumatology-immunology/lupus"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:22.056Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "altered-mental-status",
+      "disease": "Alteração do Estado Mental",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "alteração do estado mental",
+          "weight": 10
+        },
+        {
+          "name": "alteracao",
+          "weight": 10
+        },
+        {
+          "name": "estado",
+          "weight": 6
+        },
+        {
+          "name": "mental",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Alteração do Estado Mental.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/neurology/ams"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:22.236Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "delirium-and-agitation",
+      "disease": "Delirium e Agitação",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "delirium e agitação",
+          "weight": 10
+        },
+        {
+          "name": "delirium",
+          "weight": 10
+        },
+        {
+          "name": "agitacao",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Delirium e Agitação.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/neurology/delirium-and-agitation"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:22.300Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "headache-and-migraine",
+      "disease": "Cefaleia e Enxaqueca",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "cefaleia e enxaqueca",
+          "weight": 10
+        },
+        {
+          "name": "cefaleia",
+          "weight": 10
+        },
+        {
+          "name": "enxaqueca",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Cefaleia e Enxaqueca.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/neurology/headache"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:22.353Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "seizure",
+      "disease": "Crise Convulsiva",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "crise convulsiva",
+          "weight": 10
+        },
+        {
+          "name": "crise",
+          "weight": 10
+        },
+        {
+          "name": "convulsiva",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Crise Convulsiva.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/neurology/seizure"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:22.523Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "spinal-cord-compression",
+      "disease": "Compressão Medular",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "compressão medular",
+          "weight": 10
+        },
+        {
+          "name": "compressao",
+          "weight": 10
+        },
+        {
+          "name": "medular",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é Compressão Medular.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/neurology/spinal-cord-compression"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:22.798Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    },
+    {
+      "id": "stroke-and-tia",
+      "disease": "AVC e AIT",
+      "contexts": [
+        "Sala de Emergencia",
+        "UTI"
+      ],
+      "hdTags": [
+        {
+          "name": "avc",
+          "weight": 10
+        },
+        {
+          "name": "ait",
+          "weight": 10
+        },
+        {
+          "name": "déficit focal",
+          "weight": 6
+        },
+        {
+          "name": "acidente vascular cerebral",
+          "weight": 6
+        },
+        {
+          "name": "avc e ait",
+          "weight": 6
+        }
+      ],
+      "sections": [
+        {
+          "title": "Lista Inicial",
+          "content": [
+            "Confirmar que a HD principal é AVC e AIT.",
+            "Avaliar sinais de gravidade, instabilidade hemodinâmica e necessidade de UTI.",
+            "Checar alergias, comorbidades, medicações em uso e contraindicações relevantes.",
+            "Definir prioridades imediatas: suporte, exames iniciais, tratamento específico e monitorização."
+          ]
+        },
+        {
+          "title": "Avaliação Diagnóstica",
+          "content": [
+            "Revisar história dirigida, exame físico e evolução temporal do quadro.",
+            "Solicitar exames laboratoriais e de imagem conforme gravidade e contexto clínico.",
+            "Pesquisar diagnósticos diferenciais perigosos e fatores precipitantes.",
+            "Registrar critérios objetivos que sustentam a hipótese diagnóstica."
+          ]
+        },
+        {
+          "title": "Plano",
+          "content": [
+            "Iniciar medidas terapêuticas de suporte e tratamento direcionado quando indicado.",
+            "Definir critérios de internação, UTI, observação ou seguimento ambulatorial.",
+            "Reavaliar resposta clínica e ajustar conduta conforme resultados e evolução.",
+            "Documentar pendências, alertas e pontos que exigem discussão com preceptor/especialista."
+          ]
+        }
+      ],
+      "source": {
+        "name": "Point of Care Medicine",
+        "url": "https://www.pointofcaremedicine.com/neurology/stroke"
+      },
+      "review": {
+        "status": "pending",
+        "notes": "Revisar contexto clínico, tags de HD e conteúdo antes de aprovar para o catálogo final."
+      },
+      "metadata": {
+        "category": "Resposta Rápida",
+        "setting": "Resposta Rápida",
+        "ingestedAt": "2026-05-05T12:41:22.860Z",
+        "language": "pt-BR",
+        "translatedAt": "2026-05-05T13:16:54.185Z"
+      }
+    }
+  ]
+}

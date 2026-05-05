@@ -1,300 +1,247 @@
 "use client";
 
 import { useState } from "react";
-import { Copy, Check } from "lucide-react";
+import { ArrowLeft, ChevronRight } from "lucide-react";
+import { localCalculatorCatalog } from "@/lib/calculators/catalog";
+import {
+  clinicalScoreProjects,
+  SCORE_SPECIALTIES,
+  type ClinicalScoreProject,
+  type ScoreSpecialty,
+} from "@/lib/calculators/score-dashboard";
+import { ScoreForm, getScoreClinicalTags, hasScoreForm } from "@/components/tools/score-forms";
 
-// ── Helpers ────────────────────────────────────────────────────────────────
+const ROOT_CALCULATOR_SLUGS = new Set(["pam", "imc"]);
 
-function Row({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex justify-between py-2 border-b border-neutral-100 last:border-0 gap-4">
-      <span className="text-small text-neutral-500 shrink-0">{label}</span>
-      <span className="text-small font-semibold text-neutral-800 text-right">{value}</span>
-    </div>
+function CalculatorCatalog({ initialSlug }: { initialSlug?: string }) {
+  const [activeScoreSlug, setActiveScoreSlug] = useState<string | null>(
+    initialSlug && hasScoreForm(initialSlug) ? initialSlug : null,
   );
-}
+  const [activeSpecialty, setActiveSpecialty] = useState<ScoreSpecialty | "Todas">("Todas");
 
-function ResultBox({ result }: { result: string }) {
-  const [copied, setCopied] = useState(false);
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(result);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  return (
-    <div className="relative mt-4 rounded-xl border border-brand-200 bg-brand-50 p-4">
-      <p className="text-small font-medium text-brand-800 whitespace-pre-wrap">{result}</p>
-      <button
-        type="button"
-        onClick={handleCopy}
-        className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium text-brand-700 hover:bg-brand-100"
-        aria-label="Copiar resultado"
-      >
-        {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
-        {copied ? "Copiado" : "Copiar"}
-      </button>
-    </div>
+  const rootCalculators = localCalculatorCatalog.filter((calculator) =>
+    ROOT_CALCULATOR_SLUGS.has(calculator.slug),
   );
-}
+  const filteredScores =
+    activeSpecialty === "Todas"
+      ? clinicalScoreProjects
+      : clinicalScoreProjects.filter((score) => score.specialties.includes(activeSpecialty));
 
-function NumInput({
-  label,
-  value,
-  onChange,
-  unit,
-  min,
-  step = "1",
-}: {
-  label: string;
-  value: string;
-  onChange: (v: string) => void;
-  unit?: string;
-  min?: string;
-  step?: string;
-}) {
-  return (
-    <div>
-      <label className="text-small font-medium text-neutral-700">{label}</label>
-      <div className="mt-1 flex items-center gap-2">
-        <input
-          type="number"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          min={min}
-          step={step}
-          className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-body text-neutral-800 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 focus:outline-none"
-        />
-        {unit && <span className="text-small text-neutral-500 shrink-0">{unit}</span>}
-      </div>
-    </div>
-  );
-}
+  const specialtyCounts = SCORE_SPECIALTIES.reduce<Record<ScoreSpecialty, number>>((acc, specialty) => {
+    acc[specialty] = clinicalScoreProjects.filter((score) =>
+      score.specialties.includes(specialty),
+    ).length;
+    return acc;
+  }, {} as Record<ScoreSpecialty, number>);
 
-// ── Calculadora: Clearance de Creatinina (CG) ─────────────────────────────
+  const renderCalculatorCard = (calculator: (typeof localCalculatorCatalog)[number]) => {
+    const clickable = hasScoreForm(calculator.slug);
+    const clinicalTags = getScoreClinicalTags(calculator.slug);
+    const baseClass = `rounded-xl border border-neutral-200 bg-white p-3${
+      clickable ? " w-full text-left transition-colors hover:border-brand-400 hover:bg-brand-50" : ""
+    }`;
 
-function CalcCreatinina() {
-  const [age, setAge] = useState("");
-  const [weight, setWeight] = useState("");
-  const [creatinine, setCreatinine] = useState("");
-  const [sex, setSex] = useState<"M" | "F">("M");
-  const [result, setResult] = useState("");
+    const inner = (
+      <>
+        <h4 className="text-body font-semibold text-neutral-800">{calculator.name}</h4>
+        <p className="mt-1 text-caption text-neutral-500">
+          Contextos: {calculator.contexts.join(", ")}
+        </p>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {calculator.tags.map((tag) => (
+            <span
+              key={tag.name}
+              className="rounded-full bg-neutral-100 px-2 py-0.5 text-[11px] text-neutral-500"
+            >
+              {tag.name}
+            </span>
+          ))}
+        </div>
+        {clinicalTags.length > 0 && (
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {clinicalTags.map((tag) => (
+              <span
+                key={`${calculator.slug}-${tag.label}`}
+                className="rounded-full border border-brand-200 px-2 py-0.5 text-[11px] text-brand-700"
+                title={tag.value === "Ativo" ? tag.label : `${tag.label}: ${tag.value}`}
+              >
+                {tag.value === "Ativo" ? tag.label : tag.value}
+              </span>
+            ))}
+          </div>
+        )}
+      </>
+    );
 
-  const calculate = () => {
-    const a = parseFloat(age);
-    const w = parseFloat(weight);
-    const cr = parseFloat(creatinine);
-    if (!a || !w || !cr) return;
-    let clcr = ((140 - a) * w) / (72 * cr);
-    if (sex === "F") clcr *= 0.85;
-    const stage =
-      clcr >= 90 ? "G1 — Normal ou aumentado (≥90)" :
-      clcr >= 60 ? "G2 — Levemente reduzido (60–89)" :
-      clcr >= 45 ? "G3a — Leve a moderadamente reduzido (45–59)" :
-      clcr >= 30 ? "G3b — Moderada a gravemente reduzido (30–44)" :
-      clcr >= 15 ? "G4 — Gravemente reduzido (15–29)" :
-                   "G5 — Falência renal (<15)";
-    setResult(
-      `ClCr (Cockcroft-Gault): ${clcr.toFixed(1)} mL/min\n` +
-      `Estágio DRC: ${stage}\n\n` +
-      `⚠ Referência: Cockcroft & Gault (1976). Use eGFR CKD-EPI para estadiamento formal.`
+    if (clickable) {
+      return (
+        <button
+          key={calculator.slug}
+          type="button"
+          onClick={() => setActiveScoreSlug(calculator.slug)}
+          className={baseClass}
+        >
+          {inner}
+        </button>
+      );
+    }
+
+    return (
+      <article key={calculator.slug} className={baseClass}>
+        {inner}
+      </article>
     );
   };
 
-  return (
-    <div className="space-y-3">
-      <h3 className="text-small font-bold uppercase tracking-wider text-neutral-400">Clearance de Creatinina</h3>
-      <div className="grid grid-cols-2 gap-3">
-        <NumInput label="Idade" value={age} onChange={setAge} unit="anos" min="1" />
-        <NumInput label="Peso" value={weight} onChange={setWeight} unit="kg" min="1" step="0.1" />
+  const renderScoreProjectCard = (score: ClinicalScoreProject) => {
+    const clickable = hasScoreForm(score.slug);
+    const clinicalTags = getScoreClinicalTags(score.slug);
+
+    return (
+      <button
+        key={score.slug}
+        type="button"
+        onClick={() => {
+          if (clickable) {
+            setActiveScoreSlug(score.slug);
+          }
+        }}
+        disabled={!clickable}
+        className={`rounded-xl border bg-white p-3 text-left transition-colors ${
+          clickable
+            ? "border-neutral-200 hover:border-brand-400 hover:bg-brand-50"
+            : "cursor-default border-neutral-100 opacity-80"
+        }`}
+      >
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <h4 className="text-body font-semibold text-neutral-800">{score.name}</h4>
+            <div className="mt-2 flex flex-wrap gap-1.5">
+              {score.specialties.map((specialty) => (
+                <span
+                  key={`${score.slug}-${specialty}`}
+                  className="rounded-full bg-neutral-100 px-2 py-0.5 text-[11px] text-neutral-600"
+                >
+                  {specialty}
+                </span>
+              ))}
+            </div>
+          </div>
+          <span
+            className={`shrink-0 rounded-full px-2 py-0.5 text-[11px] font-medium ${
+              score.status === "developed"
+                ? "bg-brand-100 text-brand-700"
+                : "bg-neutral-100 text-neutral-500"
+            }`}
+          >
+            {score.status === "developed" ? "Desenvolvida" : "Planejada"}
+          </span>
+        </div>
+
+        {clinicalTags.length > 0 && (
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {clinicalTags.map((tag) => (
+              <span
+                key={`${score.slug}-${tag.label}`}
+                className="rounded-full border border-brand-200 px-2 py-0.5 text-[11px] text-brand-700"
+                title={tag.value === "Ativo" ? tag.label : `${tag.label}: ${tag.value}`}
+              >
+                {tag.value === "Ativo" ? tag.label : tag.value}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {clickable && (
+          <div className="mt-3 flex items-center gap-1 text-caption font-medium text-brand-700">
+            Abrir calculadora
+            <ChevronRight className="h-3.5 w-3.5" aria-hidden />
+          </div>
+        )}
+      </button>
+    );
+  };
+
+  if (activeScoreSlug) {
+    return (
+      <div className="space-y-4">
+        <button
+          type="button"
+          onClick={() => setActiveScoreSlug(null)}
+          className="inline-flex items-center gap-1.5 text-caption text-neutral-500 hover:text-neutral-800"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" />
+          Voltar aos escores clínicos
+        </button>
+        <section className="rounded-xl border border-neutral-200 bg-white p-4">
+          <ScoreForm slug={activeScoreSlug} />
+        </section>
       </div>
-      <NumInput label="Creatinina sérica" value={creatinine} onChange={setCreatinine} unit="mg/dL" min="0.1" step="0.1" />
-      <div>
-        <label className="text-small font-medium text-neutral-700">Sexo</label>
-        <div className="mt-1 flex gap-2">
-          {(["M", "F"] as const).map((s) => (
+    );
+  }
+
+  return (
+    <div className="space-y-5">
+      <section className="space-y-3">
+        <div>
+          <h3 className="text-small font-bold uppercase tracking-wider text-neutral-400">
+            Escores Clínicos
+          </h3>
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => setActiveSpecialty("Todas")}
+            className={`rounded-full border px-3 py-1 text-caption font-medium transition-colors ${
+              activeSpecialty === "Todas"
+                ? "border-brand-500 bg-brand-50 text-brand-700"
+                : "border-neutral-200 bg-white text-neutral-600 hover:border-brand-300"
+            }`}
+          >
+            Todas ({clinicalScoreProjects.length})
+          </button>
+
+          {SCORE_SPECIALTIES.map((specialty) => (
             <button
-              key={s}
+              key={specialty}
               type="button"
-              onClick={() => setSex(s)}
-              className={`rounded-lg border px-4 py-2 text-small font-medium transition-colors ${
-                sex === s
+              onClick={() => setActiveSpecialty(specialty)}
+              className={`rounded-full border px-3 py-1 text-caption font-medium transition-colors ${
+                activeSpecialty === specialty
                   ? "border-brand-500 bg-brand-50 text-brand-700"
-                  : "border-neutral-200 text-neutral-600 hover:border-brand-300"
+                  : "border-neutral-200 bg-white text-neutral-600 hover:border-brand-300"
               }`}
             >
-              {s === "M" ? "Masculino" : "Feminino"}
+              {specialty} ({specialtyCounts[specialty]})
             </button>
           ))}
         </div>
-      </div>
-      <button
-        type="button"
-        onClick={calculate}
-        className="w-full rounded-lg bg-brand-600 px-4 py-2.5 text-small font-semibold text-white hover:bg-brand-700 transition-colors"
-      >
-        Calcular
-      </button>
-      {result && <ResultBox result={result} />}
+
+        <div className="grid gap-2 md:grid-cols-2">
+          {filteredScores.map((score) => renderScoreProjectCard(score))}
+        </div>
+      </section>
+
+      <section className="space-y-2">
+        <h3 className="text-small font-bold uppercase tracking-wider text-neutral-400">
+          Calculadoras gerais
+        </h3>
+
+        {rootCalculators.map((calculator) => renderCalculatorCard(calculator))}
+      </section>
     </div>
   );
 }
 
-// ── Calculadora: IMC ───────────────────────────────────────────────────────
-
-function CalcIMC() {
-  const [weight, setWeight] = useState("");
-  const [height, setHeight] = useState("");
-  const [result, setResult] = useState("");
-
-  const calculate = () => {
-    const w = parseFloat(weight);
-    const h = parseFloat(height) / 100;
-    if (!w || !h) return;
-    const imc = w / (h * h);
-    const class_ =
-      imc < 18.5 ? "Baixo peso" :
-      imc < 25 ? "Peso normal" :
-      imc < 30 ? "Sobrepeso" :
-      imc < 35 ? "Obesidade grau I" :
-      imc < 40 ? "Obesidade grau II" :
-               "Obesidade grau III (mórbida)";
-    const pesoideal_m = 50 + 0.9 * ((parseFloat(height)) - 152);
-    setResult(
-      `IMC: ${imc.toFixed(1)} kg/m²\nClassificação: ${class_}\nPeso ideal (Devine, masc.): ≈${pesoideal_m.toFixed(0)} kg\n\n` +
-      `Referência: OMS 2000.`
-    );
-  };
-
-  return (
-    <div className="space-y-3">
-      <h3 className="text-small font-bold uppercase tracking-wider text-neutral-400">IMC & Peso Ideal</h3>
-      <div className="grid grid-cols-2 gap-3">
-        <NumInput label="Peso" value={weight} onChange={setWeight} unit="kg" min="1" step="0.1" />
-        <NumInput label="Altura" value={height} onChange={setHeight} unit="cm" min="100" />
-      </div>
-      <button
-        type="button"
-        onClick={calculate}
-        className="w-full rounded-lg bg-brand-600 px-4 py-2.5 text-small font-semibold text-white hover:bg-brand-700 transition-colors"
-      >
-        Calcular
-      </button>
-      {result && <ResultBox result={result} />}
-    </div>
-  );
+interface CalculadorasPanelProps {
+  initialSlug?: string;
 }
 
-// ── Calculadora: Dose Pediátrica ───────────────────────────────────────────
-
-function CalcDosePed() {
-  const [weight, setWeight] = useState("");
-  const [dose, setDose] = useState("");
-  const [result, setResult] = useState("");
-
-  const calculate = () => {
-    const w = parseFloat(weight);
-    const d = parseFloat(dose);
-    if (!w || !d) return;
-    const totalDose = w * d;
-    setResult(
-      `Dose total: ${totalDose.toFixed(2)} mg\n(${w} kg × ${d} mg/kg)\n\n` +
-      `⚠ Confirme sempre a dose máxima absoluta para a idade e a droga.`
-    );
-  };
-
-  return (
-    <div className="space-y-3">
-      <h3 className="text-small font-bold uppercase tracking-wider text-neutral-400">Dose Pediátrica por Peso</h3>
-      <NumInput label="Peso da criança" value={weight} onChange={setWeight} unit="kg" min="0.5" step="0.1" />
-      <NumInput label="Dose prescrita" value={dose} onChange={setDose} unit="mg/kg" min="0.01" step="0.01" />
-      <button
-        type="button"
-        onClick={calculate}
-        className="w-full rounded-lg bg-brand-600 px-4 py-2.5 text-small font-semibold text-white hover:bg-brand-700 transition-colors"
-      >
-        Calcular
-      </button>
-      {result && <ResultBox result={result} />}
-    </div>
-  );
-}
-
-// ── Calculadora: Balanço Hídrico ───────────────────────────────────────────
-
-function CalcBalancoHidrico() {
-  const [entradas, setEntradas] = useState("");
-  const [saidas, setSaidas] = useState("");
-  const [result, setResult] = useState("");
-
-  const calculate = () => {
-    const e = parseFloat(entradas) || 0;
-    const s = parseFloat(saidas) || 0;
-    const bh = e - s;
-    const status = bh > 0 ? "Balanço POSITIVO → risco de sobrecarga hídrica" :
-                   bh < 0 ? "Balanço NEGATIVO → risco de hipovolemia" :
-                             "Balanço NEUTRO";
-    setResult(`Entradas: ${e} mL\nSaídas: ${s} mL\nBalanço Hídrico: ${bh >= 0 ? "+" : ""}${bh} mL\n\n${status}`);
-  };
-
-  return (
-    <div className="space-y-3">
-      <h3 className="text-small font-bold uppercase tracking-wider text-neutral-400">Balanço Hídrico</h3>
-      <NumInput label="Entradas totais (EV + VO + SNG)" value={entradas} onChange={setEntradas} unit="mL" min="0" />
-      <NumInput label="Saídas totais (diurese + drenos + outros)" value={saidas} onChange={setSaidas} unit="mL" min="0" />
-      <button
-        type="button"
-        onClick={calculate}
-        className="w-full rounded-lg bg-brand-600 px-4 py-2.5 text-small font-semibold text-white hover:bg-brand-700 transition-colors"
-      >
-        Calcular
-      </button>
-      {result && <ResultBox result={result} />}
-    </div>
-  );
-}
-
-// ── Main Export ────────────────────────────────────────────────────────────
-
-const CALC_TABS = [
-  { id: "creatinina", label: "Clearance Cr" },
-  { id: "imc", label: "IMC" },
-  { id: "dose-ped", label: "Dose Pediátrica" },
-  { id: "bh", label: "Balanço Hídrico" },
-] as const;
-
-type CalcTab = (typeof CALC_TABS)[number]["id"];
-
-export function CalculadorasPanel() {
-  const [tab, setTab] = useState<CalcTab>("creatinina");
-
+export function CalculadorasPanel({ initialSlug }: CalculadorasPanelProps = {}) {
   return (
     <div className="space-y-4">
-      {/* tab bar */}
-      <div className="flex flex-wrap gap-1.5">
-        {CALC_TABS.map((t) => (
-          <button
-            key={t.id}
-            type="button"
-            onClick={() => setTab(t.id)}
-            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-              tab === t.id
-                ? "bg-brand-100 text-brand-700"
-                : "text-neutral-500 hover:bg-neutral-100"
-            }`}
-          >
-            {t.label}
-          </button>
-        ))}
-      </div>
-
-      <div className="rounded-xl border border-neutral-100 bg-neutral-50 p-4">
-        {tab === "creatinina" && <CalcCreatinina />}
-        {tab === "imc" && <CalcIMC />}
-        {tab === "dose-ped" && <CalcDosePed />}
-        {tab === "bh" && <CalcBalancoHidrico />}
-      </div>
-
+      <CalculatorCatalog initialSlug={initialSlug} />
       <p className="text-xs text-neutral-400">
         Ferramenta de apoio à decisão. Confirme com literatura e julgamento clínico.
       </p>

@@ -7,35 +7,46 @@ import { Badge } from "@/components/ui/Badge";
 
 // Tool Panels
 import { CalculadorasPanel } from "@/components/tools/CalculadorasPanel";
-import { EscoresPanel } from "@/components/tools/EscoresPanel";
 import { CidPanel } from "@/components/tools/CidPanel";
 import { ReceituariosPanel } from "@/components/tools/ReceituariosPanel";
 import { PlantonistaPanel } from "@/components/tools/PlantonistaPanel";
 import { ProcedimentosPanel } from "@/components/tools/ProcedimentosPanel";
+import { GuiasDoencaPanel } from "@/components/tools/GuiasDoencaPanel";
+import { DuvidasPlantaoPanel } from "@/components/tools/DuvidasPlantaoPanel";
+import { ScoreResidentePanel } from "@/components/tools/ScoreResidentePanel";
+import { PassagemPlantaoPanel } from "@/components/tools/PassagemPlantaoPanel";
 
 interface ToolPanelProps {
   toolId: ToolId;
+  slug: string;
+  initialItemId?: string | null;
   onClose: () => void;
 }
 
-export function ToolPanel({ toolId, onClose }: ToolPanelProps) {
+export function ToolPanel({ toolId, slug, initialItemId, onClose }: ToolPanelProps) {
   const tool = TOOLS.find((t) => t.id === toolId);
   if (!tool) return null;
 
   const renderContent = () => {
     switch (toolId) {
+      case "passagem":
+        return <PassagemPlantaoPanel slug={slug} initialItemId={initialItemId ?? undefined} />;
       case "calculadoras":
-        return <CalculadorasPanel />;
-      case "escores":
-        return <EscoresPanel />;
+        return <CalculadorasPanel initialSlug={initialItemId ?? undefined} />;
       case "cid":
-        return <CidPanel />;
+        return <CidPanel initialQuery={initialItemId ?? undefined} />;
       case "receituarios":
         return <ReceituariosPanel />;
+      case "duvidas":
+        return <DuvidasPlantaoPanel slug={slug} />;
       case "plantonista":
         return <PlantonistaPanel />;
       case "procedimentos":
-        return <ProcedimentosPanel />;
+        return <ProcedimentosPanel initialId={initialItemId ?? undefined} />;
+      case "score_residente":
+        return <ScoreResidentePanel slug={slug} initialProcedureId={initialItemId ?? undefined} />;
+      case "guias":
+        return <GuiasDoencaPanel initialId={initialItemId ?? undefined} />;
       default:
         return (
           <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
@@ -75,7 +86,9 @@ export function ToolPanel({ toolId, onClose }: ToolPanelProps) {
           </div>
           <div>
             <h2 className="text-h4 text-neutral-800">{tool.label}</h2>
-            <p className="text-small text-neutral-500">{tool.description}</p>
+            {tool.description ? (
+              <p className="text-small text-neutral-500">{tool.description}</p>
+            ) : null}
           </div>
         </div>
         <button

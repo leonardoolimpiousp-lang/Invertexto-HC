@@ -8,7 +8,7 @@ import {
   isReservedSlug,
   normalizeSlug,
 } from "@/lib/utils/slug";
-import type { EducationLevel } from "@/types/database";
+import type { Database, EducationLevel } from "@/types/database";
 
 export type CadastroState = {
   status: "idle" | "error";
@@ -17,6 +17,14 @@ export type CadastroState = {
 };
 
 const VALID_LEVELS: EducationLevel[] = ["medico", "residente", "interno"];
+
+type InsertResult = {
+  error: { message: string } | null;
+};
+
+type InsertableTable<TInsert> = {
+  insert(values: TInsert): Promise<InsertResult>;
+};
 
 export async function createProfile(
   _prev: CadastroState,
@@ -64,13 +72,24 @@ export async function createProfile(
     slug = generateRandomSlug(14);
   }
 
-  // @ts-expect-error - profiles is not in generated types yet
-  const { error: insertProfileError } = await supabase.from("profiles").insert({
+  const profileInsert: Database["public"]["Tables"]["profiles"]["Insert"] = {
     slug,
     full_name: fullName,
     level: level as EducationLevel,
     hospital,
-  });
+  };
+
+  const profilesTable = supabase.from("profiles") as unknown as InsertableTable<
+    Database["public"]["Tables"]["profiles"]["Insert"]
+  >;
+  const notesTable = supabase.from("notes") as unknown as InsertableTable<
+    Database["public"]["Tables"]["notes"]["Insert"]
+  >;
+  const accessLogTable = supabase.from("access_log") as unknown as InsertableTable<
+    Database["public"]["Tables"]["access_log"]["Insert"]
+  >;
+
+  const { error: insertProfileError } = await profilesTable.insert(profileInsert);
 
   if (insertProfileError) {
     return {
@@ -79,10 +98,14 @@ export async function createProfile(
     };
   }
 
-  // @ts-expect-error - notes is not in generated types yet
-  await supabase.from("notes").insert({ slug, content: "" });
-  // @ts-expect-error - access_log is not in generated types yet
-  await supabase.from("access_log").insert({ slug, event: "create" });
+  const noteInsert: Database["public"]["Tables"]["notes"]["Insert"] = { slug, content: "" };
+  const accessLogInsert: Database["public"]["Tables"]["access_log"]["Insert"] = {
+    slug,
+    event: "create",
+  };
+
+  await notesTable.insert(noteInsert);
+  await accessLogTable.insert(accessLogInsert);
 
   redirect(`/${slug}?welcome=1`);
 }

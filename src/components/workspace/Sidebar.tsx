@@ -64,7 +64,7 @@ export function Sidebar({ activeTool, onSelectTool, onNotepadHome }: SidebarProp
 
         <nav
           aria-label="Ferramentas clínicas"
-          className="flex flex-1 flex-col gap-1 overflow-y-auto p-3"
+          className="flex flex-1 flex-col gap-0.5 overflow-y-auto p-2"
         >
           {/* Notepad — item fixo acima das ferramentas */}
           <button
@@ -73,16 +73,16 @@ export function Sidebar({ activeTool, onSelectTool, onNotepadHome }: SidebarProp
             aria-label="Notepad"
             title="Notepad"
             className={cn(
-              "group flex items-center gap-3 rounded-xl p-3 text-left transition-colors duration-fast",
+              "group flex items-center gap-2 rounded-lg p-2 text-left transition-colors duration-fast",
               "text-neutral-600 hover:bg-neutral-100 hover:text-brand-700",
             )}
           >
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-neutral-50 group-hover:bg-white">
-              <NotebookPen className="h-5 w-5" aria-hidden />
+            <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-neutral-50 group-hover:bg-white">
+              <NotebookPen className="h-4 w-4" aria-hidden />
             </div>
-            <span className="text-small font-semibold">Notepad</span>
+            <span className="text-caption font-semibold">Notepad</span>
           </button>
-          <div className="my-2 border-t border-neutral-100 mx-2" />
+          <div className="my-1 border-t border-neutral-100 mx-2" />
 
           {TOOLS.map((tool) => {
             const isActive = activeTool === tool.id;
@@ -95,19 +95,19 @@ export function Sidebar({ activeTool, onSelectTool, onNotepadHome }: SidebarProp
                 aria-label={tool.label}
                 title={tool.label}
                 className={cn(
-                  "group flex items-center gap-3 rounded-xl p-3 text-left transition-colors duration-fast",
+                  "group flex items-center gap-2 rounded-lg p-2 text-left transition-colors duration-fast",
                   isActive
                     ? "bg-brand-50 text-brand-700"
                     : "text-neutral-600 hover:bg-neutral-100 hover:text-brand-700",
                 )}
               >
                 <div className={cn(
-                  "flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors",
+                  "flex h-7 w-7 shrink-0 items-center justify-center rounded-md transition-colors",
                   isActive ? "bg-brand-100" : "bg-neutral-50 group-hover:bg-white"
                 )}>
-                  <tool.icon className="h-5 w-5" aria-hidden />
+                  <tool.icon className="h-4 w-4" aria-hidden />
                 </div>
-                <span className="text-small font-medium truncate">{tool.label}</span>
+                <span className="text-caption font-medium truncate">{tool.label}</span>
               </button>
             );
           })}

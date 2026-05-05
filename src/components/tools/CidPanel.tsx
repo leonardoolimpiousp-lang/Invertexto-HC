@@ -1,26 +1,62 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import { Copy, Check, Search } from "lucide-react";
 import { CID10_DATA } from "@/lib/constants/cid10";
+import type { Cid10Entry } from "@/lib/cid10/types";
 
-export function CidPanel() {
-  const [query, setQuery] = useState("");
+interface CidPanelProps {
+  initialQuery?: string;
+}
+
+export function CidPanel({ initialQuery }: CidPanelProps = {}) {
+  const [query, setQuery] = useState(initialQuery ?? "");
   const [copied, setCopied] = useState<string | null>(null);
+  const [results, setResults] = useState<Cid10Entry[]>(CID10_DATA);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return CID10_DATA.slice(0, 20);
-    return CID10_DATA.filter(
-      (e) =>
-        e.code.toLowerCase().includes(q) ||
-        e.description.toLowerCase().includes(q),
-    ).slice(0, 30);
+  useEffect(() => {
+    const controller = new AbortController();
+    const timeout = setTimeout(async () => {
+      setIsLoading(true);
+      try {
+        const params = new URLSearchParams({
+          q: query.trim(),
+          limit: "10000",
+        });
+        const response = await fetch(`/api/cid10/search?${params.toString()}`, {
+          signal: controller.signal,
+        });
+
+        if (!response.ok) {
+          throw new Error("Falha ao buscar CID-10");
+        }
+
+        const data = (await response.json()) as { results?: Cid10Entry[] };
+        if (Array.isArray(data.results)) {
+          setResults(data.results);
+        }
+      } catch {
+        const q = query.trim().toLowerCase();
+        const fallback = CID10_DATA.filter(
+          (e) =>
+            e.code.toLowerCase().includes(q) ||
+            e.description.toLowerCase().includes(q),
+        );
+        setResults(fallback);
+      } finally {
+        setIsLoading(false);
+      }
+    }, 250);
+
+    return () => {
+      clearTimeout(timeout);
+      controller.abort();
+    };
   }, [query]);
 
-  const handleCopy = async (entry: (typeof CID10_DATA)[number]) => {
-    const text = `${entry.code} — ${entry.description}`;
-    await navigator.clipboard.writeText(text);
+  const handleCopy = async (entry: Cid10Entry) => {
+    await navigator.clipboard.writeText(entry.code);
     setCopied(entry.code);
     setTimeout(() => setCopied(null), 2000);
   };
@@ -41,6 +77,9 @@ export function CidPanel() {
 
       {/* results */}
       <div className="max-h-[420px] overflow-y-auto rounded-xl border border-neutral-100 bg-white divide-y divide-neutral-100">
+        {isLoading && (
+          <p className="p-2 text-center text-xs text-neutral-400">Buscando CID-10...</p>
+        )}
         {results.length === 0 ? (
           <p className="p-6 text-center text-small text-neutral-400">
             Nenhum resultado para &quot;{query}&quot;.
