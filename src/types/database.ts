@@ -58,6 +58,7 @@ export interface Database {
           specialty: Specialty | null;
           sub_specialty: string | null;
           label: string;
+          parent_id: string | null;
           created_at: string;
           updated_at: string;
         };
@@ -68,6 +69,7 @@ export interface Database {
           specialty?: Specialty | null;
           sub_specialty?: string | null;
           label: string;
+          parent_id?: string | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -82,6 +84,7 @@ export interface Database {
           conduct_doubts: boolean;
           unexpected_outcome: boolean;
           procedures: string[];
+          title: string | null;
           created_at: string;
           updated_at: string;
         };
@@ -93,6 +96,7 @@ export interface Database {
           conduct_doubts?: boolean;
           unexpected_outcome?: boolean;
           procedures?: string[];
+          title?: string | null;
           created_at?: string;
           updated_at?: string;
         };
